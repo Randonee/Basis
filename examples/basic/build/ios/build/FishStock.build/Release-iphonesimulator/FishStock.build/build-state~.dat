@@ -1,217 +1,0 @@
-TFishStock
-v5
-r1
-cCheck dependencies
-cProcessInfoPlistFile /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator/FishStock.app/Info.plist FishStock/FishStock-Info.plist
-cCpResource FishStock/assets build/Release-iphonesimulator/FishStock.app/assets
-cProcessPCH++ /var/folders/l6/c90174rd5w57jmxfx91xjyww0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FishStock-Prefix-cwzgqjvzbxqsrlbpwswkkovuzpmz/FishStock-Prefix.pch.pth FishStock/FishStock-Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FishStock.build/Release-iphonesimulator/FishStock.build/Objects-normal/i386/Main.o /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/FishStock/Classes/Main.mm normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cLd /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator/FishStock.app/FishStock normal i386
-cGenerateDSYMFile /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator/FishStock.app.dSYM /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator/FishStock.app/FishStock
-cTouch /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator/FishStock.app
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk
-c00000000504916AD0000000000000110
-t1346967213
-s272
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation
-c00000000505F7A9C00000000001EAFC0
-t1348434588
-s2011072
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
-c00000000505F7A9C00000000003D2B80
-t1348434588
-s4008832
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/CoreAudio.framework/CoreAudio
-c00000000505F7A9C00000000000B5DA0
-t1348434588
-s744864
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-c00000000505F7A9C0000000000228FD0
-t1348434588
-s2265040
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c00000000505F7A9E00000000003DCEF0
-t1348434590
-s4050672
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
-c00000000505F7A9D00000000000015F7
-t1348434589
-s5623
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/MediaPlayer.framework/MediaPlayer
-c00000000505F7AA000000000002C6C10
-t1348434592
-s2911248
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/OpenAL.framework/OpenAL
-c00000000505F7AA10000000000030EB0
-t1348434593
-s200368
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/OpenGLES.framework/OpenGLES
-c00000000505F7AA10000000000015400
-t1348434593
-s87040
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
-c00000000505F7AA100000000001D57A0
-t1348434593
-s1922976
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
-c00000000505F7AA20000000000000E8D
-t1348434594
-s3725
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
-c00000000505F7AA40000000000AB3D60
-t1348434596
-s11222368
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/usr/include/Availability.h
-c00000000505F7AB30000000000001B54
-t1348434611
-s6996
-
-N/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/FishStock/Classes/Main.mm
-c00000000506A1A3C00000000000003C5
-t1349130812
-s965
-
-N/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/FishStock/FishStock-Prefix.pch
-c00000000506A1A150000000000000141
-t1349130773
-s321
-i<Availability.h>
-i<UIKit/UIKit.h>
-i<Foundation/Foundation.h>
-
-N/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/FishStock/assets
-c00000000506A19F00000000000000044
-t1349130736
-s68
-
-N/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/FishStock.build/Release-iphonesimulator/FishStock.build/Objects-normal/i386/FishStock.LinkFileList
-c00000000506A1A3C00000000000000A3
-t1349130812
-s163
-
-N/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/FishStock.build/Release-iphonesimulator/FishStock.build/Objects-normal/i386/Main.o
-t2
-s0
-
-N/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator/FishStock.app
-t2
-s0
-
-N/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator/FishStock.app.dSYM
-t2
-s0
-
-N/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator/FishStock.app/FishStock
-t2
-s0
-
-N/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator/FishStock.app/Info.plist
-t2
-s0
-
-N/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator/FishStock.app/PkgInfo
-t2
-s0
-
-N/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator/FishStock.app/assets
-t2
-s0
-
-N/var/folders/l6/c90174rd5w57jmxfx91xjyww0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FishStock-Prefix-cwzgqjvzbxqsrlbpwswkkovuzpmz/FishStock-Prefix.pch.pth
-t2
-s0
-
-NFishStock/FishStock-Info.plist
-c00000000506A1A150000000000000554
-t1349130773
-s1364
-
-CCheck dependencies
-r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesa53136bc511ab641^9f1d38bc511ab641^---0#1#0#--18"Check dependencies36"5EA91D48-A72C-4699-9425-A677C657E880-
-
-CCompileC build/FishStock.build/Release-iphonesimulator/FishStock.build/Objects-normal/i386/Main.o /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/FishStock/Classes/Main.mm normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s370823612.467838
-e370823612.608421
-r1
-xCompileC
-xbuild/FishStock.build/Release-iphonesimulator/FishStock.build/Objects-normal/i386/Main.o
-x/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/FishStock/Classes/Main.mm
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection107"Compile /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/FishStock/Classes/Main.mm47e477bc511ab641^cec19bbc511ab641^---0#0#0#-19%DVTDocumentLocation2@115"file://localhost/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/FishStock/Classes/Main.mm0000000000000000^3903"CompileC build/FishStock.build/Release-iphonesimulator/FishStock.build/Objects-normal/i386/Main.o FishStock/Classes/Main.mm normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/brlcad/rel-7.12.2/bin:/opt/subversion/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/subversion/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -std=gnu++11 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -mios-simulator-version-min=3.2 -iquote /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/FishStock.build/Release-iphonesimulator/FishStock.build/FishStock-generated-files.hmap -I/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/FishStock.build/Release-iphonesimulator/FishStock.build/FishStock-own-target-headers.hmap -I/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/FishStock.build/Release-iphonesimulator/FishStock.build/FishStock-all-target-headers.hmap -iquote /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/FishStock.build/Release-iphonesimulator/FishStock.build/FishStock-project-headers.hmap -I/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/FishStock.build/Release-iphonesimulator/FishStock.build/DerivedSources/i386 -I/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/FishStock.build/Release-iphonesimulator/FishStock.build/DerivedSources -F/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/l6/c90174rd5w57jmxfx91xjyww0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FishStock-Prefix-cwzgqjvzbxqsrlbpwswkkovuzpmz/FishStock-Prefix.pch -MMD -MT dependencies -MF /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/FishStock.build/Release-iphonesimulator/FishStock.build/Objects-normal/i386/Main.d --serialize-diagnostics /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/FishStock.build/Release-iphonesimulator/FishStock.build/Objects-normal/i386/Main.dia -c /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/FishStock/Classes/Main.mm -o /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/FishStock.build/Release-iphonesimulator/FishStock.build/Objects-normal/i386/Main.o36"CB73DE73-3152-4ADF-866C-11A3643917D2-
-
-CCpResource FishStock/assets build/Release-iphonesimulator/FishStock.app/assets
-s370823612.247880
-e370823612.250838
-r1
-xCpResource
-xFishStock/assets
-xbuild/Release-iphonesimulator/FishStock.app/assets
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection55"Copy build/Release-iphonesimulator/FishStock.app/assets89973fbc511ab641^aa2a40bc511ab641^---0#0#0#-19%DVTDocumentLocation2@140"file://localhost/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator/FishStock.app/assets000000000080d041^929"CpResource FishStock/assets build/Release-iphonesimulator/FishStock.app/assets    cd /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/brlcad/rel-7.12.2/bin:/opt/subversion/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/subversion/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/FishStock/assets /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator/FishStock.app36"6ECAB248-4424-444C-BC40-C3228F5F56E2-
-
-CGenerateDSYMFile /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator/FishStock.app.dSYM /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator/FishStock.app/FishStock
-s370823613.975332
-e370823614.221233
-r1
-xGenerateDSYMFile
-x/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator/FishStock.app.dSYM
-x/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator/FishStock.app/FishStock
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection133"Generating /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator/FishStock.app.dSYM7dcef9bd511ab641^72a338be511ab641^---0#0#0#-19%DVTDocumentLocation2@138"file://localhost/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator/FishStock.app.dSYM000000000080d041^877"GenerateDSYMFile build/Release-iphonesimulator/FishStock.app.dSYM build/Release-iphonesimulator/FishStock.app/FishStock    cd /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/brlcad/rel-7.12.2/bin:/opt/subversion/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/subversion/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator/FishStock.app/FishStock -o /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator/FishStock.app.dSYM36"819992BE-6A59-4145-9B5B-EC0453F2DDE3-
-
-CLd /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator/FishStock.app/FishStock normal i386
-s370823612.615211
-e370823613.968476
-r1
-xLd
-x/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator/FishStock.app/FishStock
-xnormal
-xi386
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection132"Link /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator/FishStock.app/FishStock17a09dbc511ab641^30f1f7bd511ab641^---0#0#0#--1836"Ld build/Release-iphonesimulator/FishStock.app/FishStock normal i386    cd /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios    setenv IPHONEOS_DEPLOYMENT_TARGET 3.2    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/brlcad/rel-7.12.2/bin:/opt/subversion/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/subversion/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -L/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator -L/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/FishStock/lib/i386 -F/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator -filelist /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/FishStock.build/Release-iphonesimulator/FishStock.build/Objects-normal/i386/FishStock.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -lstd -lregexp -lzlib -lnme -lbasis -lcurl_ssl -lpng -ljpeg -lz -lApplicationMain -Xlinker -no_implicit_dylibs -mios-simulator-version-min=3.2 -framework UIKit -framework OpenAL -framework OpenGLES -framework QuartzCore -framework CoreAudio -framework CoreGraphics -framework AudioToolbox -framework AVFoundation -framework Foundation -framework UIKit -framework MediaPlayer -framework CoreGraphics -framework QuartzCore -o /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator/FishStock.app/FishStock36"6AB06865-DBBC-43A1-A8CD-DADE41F8922C-
-
-CProcessInfoPlistFile /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator/FishStock.app/Info.plist FishStock/FishStock-Info.plist
-s370823612.223233
-e370823612.235232
-r1
-xProcessInfoPlistFile
-x/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator/FishStock.app/Info.plist
-xFishStock/FishStock-Info.plist
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection38"Process FishStock/FishStock-Info.plist744139bc511ab641^813f3cbc511ab641^---0#0#0#-19%DVTDocumentLocation2@120"file://localhost/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/FishStock/FishStock-Info.plist0000000000000000^902"ProcessInfoPlistFile build/Release-iphonesimulator/FishStock.app/Info.plist FishStock/FishStock-Info.plist    cd /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/brlcad/rel-7.12.2/bin:/opt/subversion/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/subversion/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-infoPlistUtility FishStock/FishStock-Info.plist -genpkginfo /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator/FishStock.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator/FishStock.app/Info.plist36"46756317-13AE-4A53-8872-9340FBAF0A02-
-
-CProcessPCH++ /var/folders/l6/c90174rd5w57jmxfx91xjyww0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FishStock-Prefix-cwzgqjvzbxqsrlbpwswkkovuzpmz/FishStock-Prefix.pch.pth FishStock/FishStock-Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s370823612.259087
-e370823612.460757
-r1
-xProcessPCH++
-x/var/folders/l6/c90174rd5w57jmxfx91xjyww0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FishStock-Prefix-cwzgqjvzbxqsrlbpwswkkovuzpmz/FishStock-Prefix.pch.pth
-xFishStock/FishStock-Prefix.pch
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Precompile FishStock/FishStock-Prefix.pch217642bc511ab641^e9f375bc511ab641^---0#0#0#-19%DVTDocumentLocation2@120"file://localhost/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/FishStock/FishStock-Prefix.pch0000000000000000^3832"ProcessPCH++ /var/folders/l6/c90174rd5w57jmxfx91xjyww0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FishStock-Prefix-cwzgqjvzbxqsrlbpwswkkovuzpmz/FishStock-Prefix.pch.pth FishStock/FishStock-Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/brlcad/rel-7.12.2/bin:/opt/subversion/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/subversion/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++-header -arch i386 -fmessage-length=0 -std=gnu++11 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -mios-simulator-version-min=3.2 -iquote /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/FishStock.build/Release-iphonesimulator/FishStock.build/FishStock-generated-files.hmap -I/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/FishStock.build/Release-iphonesimulator/FishStock.build/FishStock-own-target-headers.hmap -I/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/FishStock.build/Release-iphonesimulator/FishStock.build/FishStock-all-target-headers.hmap -iquote /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/FishStock.build/Release-iphonesimulator/FishStock.build/FishStock-project-headers.hmap -I/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/FishStock.build/Release-iphonesimulator/FishStock.build/DerivedSources/i386 -I/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/FishStock.build/Release-iphonesimulator/FishStock.build/DerivedSources -F/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator -DNS_BLOCK_ASSERTIONS=1 --serialize-diagnostics /var/folders/l6/c90174rd5w57jmxfx91xjyww0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FishStock-Prefix-cwzgqjvzbxqsrlbpwswkkovuzpmz/FishStock-Prefix.pch.dia -c /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/FishStock/FishStock-Prefix.pch -o /var/folders/l6/c90174rd5w57jmxfx91xjyww0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FishStock-Prefix-cwzgqjvzbxqsrlbpwswkkovuzpmz/FishStock-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/l6/c90174rd5w57jmxfx91xjyww0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FishStock-Prefix-cwzgqjvzbxqsrlbpwswkkovuzpmz/FishStock-Prefix.pch.d36"1638C794-B36B-497E-8240-F41A8353AF1A-
-
-CTouch /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator/FishStock.app
-s370823614.229315
-e370823614.236765
-r1
-xTouch
-x/Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator/FishStock.app
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection123"Touch /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator/FishStock.appc9c73abe511ab641^54aa3cbe511ab641^---0#0#0#--593"Touch build/Release-iphonesimulator/FishStock.app    cd /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/brlcad/rel-7.12.2/bin:/opt/subversion/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/subversion/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /usr/bin/touch -c /Users/acs/Documents/workspaces4.5.1/harry/Basis/examples/basic/build/ios/build/Release-iphonesimulator/FishStock.app36"2E3AC5D1-FDEE-469F-B2F6-BB57EACAFB75-
-
