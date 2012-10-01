@@ -29,7 +29,7 @@ class ComponentDisplayView extends BasisView
 		addSubview(_inputField);
 		_inputField.y = 30;
 		_inputField.x = 5;
-		_inputField.addEventListener(EventTypes.CONTROL_VALUE_CHANGED, onInputChanged);
+		_inputField.addEventListener(EventTypes.TEXTFIELD_TEXT_DID_CHANGE, onInputChanged);
 		
 		_outputLabel = new Label();
 		addSubview(_outputLabel);
@@ -48,7 +48,7 @@ class ComponentDisplayView extends BasisView
 		_sampleButton.height = 30;
 		_sampleButton.y = 160;
 		_sampleButton.x = 50;
-		_sampleButton.setLabel("login");
+		_sampleButton.setLabel("Button");
 		_sampleButton.addEventListener(EventTypes.CONTROL_TOUCH_UP_INSIDE, onButtonClick);
 		
 		

@@ -21,4 +21,8 @@ class EventTypes
 	public static inline var CONTROL_APPLICATION_RESERVED:String = "CONTROL_APPLICATION_RESERVED";
 	public static inline var CONTROL_SYSTEMR_ESERVED:String = "CONTROL_SYSTEMR_ESERVED";
 	public static inline var CONTROL_ALL_EVENTS:String = "CONTROL_ALL_EVENTS";
+	
+	public static inline var TEXTFIELD_TEXT_DID_BEGIN_EDITING:String = "TextFieldTextDidBeginEditing";
+	public static inline var TEXTFIELD_TEXT_DID_CHANGE:String = "TextFieldTextDidChange";
+	public static inline var TEXTFIELD_TEXT_DID_END_EDITING:String = "TextFieldTextDidEndEditing";
 }
