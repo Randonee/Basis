@@ -1,0 +1,744 @@
+<xml>
+<files id="haxe">
+<compilerflag value="-Iinclude"/>
+  <file name="src/sys/io/Process.cpp">
+   <depend name="include/cpp/Lib.h"/>
+   <depend name="include/haxe/io/Input.h"/>
+   <depend name="include/haxe/io/Output.h"/>
+   <depend name="include/sys/io/Process.h"/>
+   <depend name="include/sys/io/_Process/Stdin.h"/>
+   <depend name="include/sys/io/_Process/Stdout.h"/>
+  </file>
+  <file name="src/sys/io/_Process/Stdout.cpp">
+   <depend name="include/cpp/Lib.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/haxe/io/Eof.h"/>
+   <depend name="include/haxe/io/Error.h"/>
+   <depend name="include/haxe/io/Input.h"/>
+   <depend name="include/sys/io/_Process/Stdout.h"/>
+  </file>
+  <file name="src/sys/io/_Process/Stdin.cpp">
+   <depend name="include/cpp/Lib.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/haxe/io/Eof.h"/>
+   <depend name="include/haxe/io/Output.h"/>
+   <depend name="include/sys/io/_Process/Stdin.h"/>
+  </file>
+  <file name="src/sys/io/FileSeek.cpp">
+   <depend name="include/sys/io/FileSeek.h"/>
+  </file>
+  <file name="src/sys/io/FileOutput.cpp">
+   <depend name="include/cpp/Lib.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/haxe/io/Error.h"/>
+   <depend name="include/haxe/io/Output.h"/>
+   <depend name="include/sys/io/FileOutput.h"/>
+   <depend name="include/sys/io/FileSeek.h"/>
+  </file>
+  <file name="src/sys/io/FileInput.cpp">
+   <depend name="include/cpp/Lib.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/haxe/io/Eof.h"/>
+   <depend name="include/haxe/io/Error.h"/>
+   <depend name="include/haxe/io/Input.h"/>
+   <depend name="include/sys/io/FileInput.h"/>
+   <depend name="include/sys/io/FileSeek.h"/>
+  </file>
+  <file name="src/sys/io/File.cpp">
+   <depend name="include/cpp/Lib.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/haxe/io/Input.h"/>
+   <depend name="include/haxe/io/Output.h"/>
+   <depend name="include/sys/io/File.h"/>
+   <depend name="include/sys/io/FileInput.h"/>
+   <depend name="include/sys/io/FileOutput.h"/>
+  </file>
+  <file name="src/sys/FileSystem.cpp">
+   <depend name="include/Date.h"/>
+   <depend name="include/cpp/Lib.h"/>
+   <depend name="include/sys/FileSystem.h"/>
+   <depend name="include/sys/_FileSystem/FileKind.h"/>
+  </file>
+  <file name="src/sys/_FileSystem/FileKind.cpp">
+   <depend name="include/sys/_FileSystem/FileKind.h"/>
+  </file>
+  <file name="src/nme/Lib.cpp">
+   <depend name="include/haxe/Log.h"/>
+   <depend name="include/neash/Lib.h"/>
+   <depend name="include/neash/display/BitmapData.h"/>
+   <depend name="include/neash/display/DisplayObject.h"/>
+   <depend name="include/neash/display/DisplayObjectContainer.h"/>
+   <depend name="include/neash/display/IBitmapDrawable.h"/>
+   <depend name="include/neash/display/InteractiveObject.h"/>
+   <depend name="include/neash/display/ManagedStage.h"/>
+   <depend name="include/neash/display/MovieClip.h"/>
+   <depend name="include/neash/display/Sprite.h"/>
+   <depend name="include/neash/display/Stage.h"/>
+   <depend name="include/neash/events/EventDispatcher.h"/>
+   <depend name="include/neash/events/IEventDispatcher.h"/>
+   <depend name="include/neash/net/URLRequest.h"/>
+   <depend name="include/nme/Lib.h"/>
+  </file>
+  <file name="src/neash/utils/WeakRef.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/neash/Loader.h"/>
+   <depend name="include/neash/utils/WeakRef.h"/>
+  </file>
+  <file name="src/neash/utils/Endian.cpp">
+   <depend name="include/neash/utils/Endian.h"/>
+  </file>
+  <file name="src/neash/utils/ByteArray.cpp">
+   <depend name="include/cpp/Lib.h"/>
+   <depend name="include/cpp/zip/Compress.h"/>
+   <depend name="include/cpp/zip/Uncompress.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/neash/Loader.h"/>
+   <depend name="include/neash/errors/EOFError.h"/>
+   <depend name="include/neash/errors/Error.h"/>
+   <depend name="include/neash/utils/ByteArray.h"/>
+   <depend name="include/neash/utils/IDataInput.h"/>
+  </file>
+  <file name="src/neash/utils/IDataInput.cpp">
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/neash/utils/ByteArray.h"/>
+   <depend name="include/neash/utils/IDataInput.h"/>
+  </file>
+  <file name="src/neash/net/URLVariables.cpp">
+   <depend name="include/Reflect.h"/>
+   <depend name="include/StringTools.h"/>
+   <depend name="include/neash/net/URLVariables.h"/>
+  </file>
+  <file name="src/neash/net/URLRequestMethod.cpp">
+   <depend name="include/neash/net/URLRequestMethod.h"/>
+  </file>
+  <file name="src/neash/net/URLRequest.cpp">
+   <depend name="include/Reflect.h"/>
+   <depend name="include/Std.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/neash/net/URLRequest.h"/>
+   <depend name="include/neash/net/URLVariables.h"/>
+   <depend name="include/neash/utils/ByteArray.h"/>
+   <depend name="include/neash/utils/IDataInput.h"/>
+  </file>
+  <file name="src/neash/net/URLLoaderDataFormat.cpp">
+   <depend name="include/neash/net/URLLoaderDataFormat.h"/>
+  </file>
+  <file name="src/neash/net/URLLoader.cpp">
+   <depend name="include/List.h"/>
+   <depend name="include/Std.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/neash/Loader.h"/>
+   <depend name="include/neash/events/ErrorEvent.h"/>
+   <depend name="include/neash/events/Event.h"/>
+   <depend name="include/neash/events/EventDispatcher.h"/>
+   <depend name="include/neash/events/HTTPStatusEvent.h"/>
+   <depend name="include/neash/events/IEventDispatcher.h"/>
+   <depend name="include/neash/events/IOErrorEvent.h"/>
+   <depend name="include/neash/events/ProgressEvent.h"/>
+   <depend name="include/neash/events/TextEvent.h"/>
+   <depend name="include/neash/net/URLLoader.h"/>
+   <depend name="include/neash/net/URLLoaderDataFormat.h"/>
+   <depend name="include/neash/net/URLRequest.h"/>
+   <depend name="include/neash/net/URLVariables.h"/>
+   <depend name="include/neash/utils/ByteArray.h"/>
+   <depend name="include/neash/utils/IDataInput.h"/>
+  </file>
+  <file name="src/neash/media/SoundTransform.cpp">
+   <depend name="include/neash/media/SoundTransform.h"/>
+  </file>
+  <file name="src/neash/media/SoundChannel.cpp">
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/neash/Loader.h"/>
+   <depend name="include/neash/events/Event.h"/>
+   <depend name="include/neash/events/EventDispatcher.h"/>
+   <depend name="include/neash/events/IEventDispatcher.h"/>
+   <depend name="include/neash/events/SampleDataEvent.h"/>
+   <depend name="include/neash/media/SoundChannel.h"/>
+   <depend name="include/neash/media/SoundTransform.h"/>
+   <depend name="include/neash/utils/ByteArray.h"/>
+   <depend name="include/neash/utils/IDataInput.h"/>
+  </file>
+  <file name="src/neash/geom/Transform.cpp">
+   <depend name="include/neash/display/DisplayObject.h"/>
+   <depend name="include/neash/display/IBitmapDrawable.h"/>
+   <depend name="include/neash/events/EventDispatcher.h"/>
+   <depend name="include/neash/events/IEventDispatcher.h"/>
+   <depend name="include/neash/geom/ColorTransform.h"/>
+   <depend name="include/neash/geom/Matrix.h"/>
+   <depend name="include/neash/geom/Rectangle.h"/>
+   <depend name="include/neash/geom/Transform.h"/>
+  </file>
+  <file name="src/neash/geom/Rectangle.cpp">
+   <depend name="include/neash/geom/Matrix.h"/>
+   <depend name="include/neash/geom/Point.h"/>
+   <depend name="include/neash/geom/Rectangle.h"/>
+  </file>
+  <file name="src/neash/geom/Point.cpp">
+   <depend name="include/neash/geom/Point.h"/>
+  </file>
+  <file name="src/neash/geom/Matrix.cpp">
+   <depend name="include/neash/geom/Matrix.h"/>
+   <depend name="include/neash/geom/Point.h"/>
+  </file>
+  <file name="src/neash/geom/ColorTransform.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/neash/geom/ColorTransform.h"/>
+  </file>
+  <file name="src/neash/filters/BitmapFilter.cpp">
+   <depend name="include/neash/filters/BitmapFilter.h"/>
+  </file>
+  <file name="src/neash/events/SampleDataEvent.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/neash/events/Event.h"/>
+   <depend name="include/neash/events/SampleDataEvent.h"/>
+   <depend name="include/neash/utils/ByteArray.h"/>
+   <depend name="include/neash/utils/IDataInput.h"/>
+  </file>
+  <file name="src/neash/events/ProgressEvent.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/neash/events/Event.h"/>
+   <depend name="include/neash/events/ProgressEvent.h"/>
+  </file>
+  <file name="src/neash/events/KeyboardEvent.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/neash/events/Event.h"/>
+   <depend name="include/neash/events/KeyboardEvent.h"/>
+  </file>
+  <file name="src/neash/events/JoystickEvent.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/neash/events/Event.h"/>
+   <depend name="include/neash/events/JoystickEvent.h"/>
+  </file>
+  <file name="src/neash/events/IOErrorEvent.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/neash/events/ErrorEvent.h"/>
+   <depend name="include/neash/events/Event.h"/>
+   <depend name="include/neash/events/IOErrorEvent.h"/>
+   <depend name="include/neash/events/TextEvent.h"/>
+  </file>
+  <file name="src/neash/events/HTTPStatusEvent.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/neash/events/Event.h"/>
+   <depend name="include/neash/events/HTTPStatusEvent.h"/>
+  </file>
+  <file name="src/neash/events/FocusEvent.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/neash/display/DisplayObject.h"/>
+   <depend name="include/neash/display/IBitmapDrawable.h"/>
+   <depend name="include/neash/display/InteractiveObject.h"/>
+   <depend name="include/neash/events/Event.h"/>
+   <depend name="include/neash/events/EventDispatcher.h"/>
+   <depend name="include/neash/events/FocusEvent.h"/>
+   <depend name="include/neash/events/IEventDispatcher.h"/>
+  </file>
+  <file name="src/neash/events/EventPhase.cpp">
+   <depend name="include/neash/events/EventPhase.h"/>
+  </file>
+  <file name="src/neash/events/Listener.cpp">
+   <depend name="include/Reflect.h"/>
+   <depend name="include/neash/events/Event.h"/>
+   <depend name="include/neash/events/Listener.h"/>
+  </file>
+  <file name="src/neash/events/ErrorEvent.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/neash/events/ErrorEvent.h"/>
+   <depend name="include/neash/events/Event.h"/>
+   <depend name="include/neash/events/TextEvent.h"/>
+  </file>
+  <file name="src/neash/events/TextEvent.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/neash/events/Event.h"/>
+   <depend name="include/neash/events/TextEvent.h"/>
+  </file>
+  <file name="src/neash/errors/RangeError.cpp">
+   <depend name="include/neash/errors/Error.h"/>
+   <depend name="include/neash/errors/RangeError.h"/>
+  </file>
+  <file name="src/neash/errors/EOFError.cpp">
+   <depend name="include/neash/errors/EOFError.h"/>
+   <depend name="include/neash/errors/Error.h"/>
+  </file>
+  <file name="src/neash/errors/ArgumentError.cpp">
+   <depend name="include/neash/errors/ArgumentError.h"/>
+   <depend name="include/neash/errors/Error.h"/>
+  </file>
+  <file name="src/neash/errors/Error.cpp">
+   <depend name="include/neash/errors/Error.h"/>
+  </file>
+  <file name="src/neash/display/TriangleCulling.cpp">
+   <depend name="include/neash/display/TriangleCulling.h"/>
+  </file>
+  <file name="src/neash/display/Tilesheet.cpp">
+   <depend name="include/neash/Loader.h"/>
+   <depend name="include/neash/display/BitmapData.h"/>
+   <depend name="include/neash/display/Graphics.h"/>
+   <depend name="include/neash/display/IBitmapDrawable.h"/>
+   <depend name="include/neash/display/Tilesheet.h"/>
+   <depend name="include/neash/geom/Point.h"/>
+   <depend name="include/neash/geom/Rectangle.h"/>
+  </file>
+  <file name="src/neash/display/StageScaleMode.cpp">
+   <depend name="include/neash/display/StageScaleMode.h"/>
+  </file>
+  <file name="src/neash/display/StageQuality.cpp">
+   <depend name="include/neash/display/StageQuality.h"/>
+  </file>
+  <file name="src/neash/display/StageDisplayState.cpp">
+   <depend name="include/neash/display/StageDisplayState.h"/>
+  </file>
+  <file name="src/neash/display/StageAlign.cpp">
+   <depend name="include/neash/display/StageAlign.h"/>
+  </file>
+  <file name="src/neash/display/TouchInfo.cpp">
+   <depend name="include/neash/display/DisplayObject.h"/>
+   <depend name="include/neash/display/IBitmapDrawable.h"/>
+   <depend name="include/neash/display/InteractiveObject.h"/>
+   <depend name="include/neash/display/TouchInfo.h"/>
+   <depend name="include/neash/events/EventDispatcher.h"/>
+   <depend name="include/neash/events/IEventDispatcher.h"/>
+  </file>
+  <file name="src/neash/display/SpreadMethod.cpp">
+   <depend name="include/neash/display/SpreadMethod.h"/>
+  </file>
+  <file name="src/neash/display/MovieClip.cpp">
+   <depend name="include/neash/display/DisplayObject.h"/>
+   <depend name="include/neash/display/DisplayObjectContainer.h"/>
+   <depend name="include/neash/display/IBitmapDrawable.h"/>
+   <depend name="include/neash/display/InteractiveObject.h"/>
+   <depend name="include/neash/display/MovieClip.h"/>
+   <depend name="include/neash/display/Sprite.h"/>
+   <depend name="include/neash/events/EventDispatcher.h"/>
+   <depend name="include/neash/events/IEventDispatcher.h"/>
+  </file>
+  <file name="src/neash/display/Sprite.cpp">
+   <depend name="include/Type.h"/>
+   <depend name="include/neash/display/DisplayObject.h"/>
+   <depend name="include/neash/display/DisplayObjectContainer.h"/>
+   <depend name="include/neash/display/IBitmapDrawable.h"/>
+   <depend name="include/neash/display/InteractiveObject.h"/>
+   <depend name="include/neash/display/Sprite.h"/>
+   <depend name="include/neash/display/Stage.h"/>
+   <depend name="include/neash/events/EventDispatcher.h"/>
+   <depend name="include/neash/events/IEventDispatcher.h"/>
+   <depend name="include/neash/geom/Rectangle.h"/>
+  </file>
+  <file name="src/neash/display/ManagedStage.cpp">
+   <depend name="include/neash/Loader.h"/>
+   <depend name="include/neash/display/DisplayObject.h"/>
+   <depend name="include/neash/display/DisplayObjectContainer.h"/>
+   <depend name="include/neash/display/IBitmapDrawable.h"/>
+   <depend name="include/neash/display/InteractiveObject.h"/>
+   <depend name="include/neash/display/ManagedStage.h"/>
+   <depend name="include/neash/display/Stage.h"/>
+   <depend name="include/neash/events/EventDispatcher.h"/>
+   <depend name="include/neash/events/IEventDispatcher.h"/>
+  </file>
+  <file name="src/neash/display/Stage.cpp">
+   <depend name="include/IntHash.h"/>
+   <depend name="include/Reflect.h"/>
+   <depend name="include/Std.h"/>
+   <depend name="include/Type.h"/>
+   <depend name="include/haxe/Log.h"/>
+   <depend name="include/haxe/Timer.h"/>
+   <depend name="include/neash/Loader.h"/>
+   <depend name="include/neash/display/DisplayObject.h"/>
+   <depend name="include/neash/display/DisplayObjectContainer.h"/>
+   <depend name="include/neash/display/IBitmapDrawable.h"/>
+   <depend name="include/neash/display/InteractiveObject.h"/>
+   <depend name="include/neash/display/Sprite.h"/>
+   <depend name="include/neash/display/Stage.h"/>
+   <depend name="include/neash/display/StageAlign.h"/>
+   <depend name="include/neash/display/StageDisplayState.h"/>
+   <depend name="include/neash/display/StageQuality.h"/>
+   <depend name="include/neash/display/StageScaleMode.h"/>
+   <depend name="include/neash/display/TouchInfo.h"/>
+   <depend name="include/neash/events/Event.h"/>
+   <depend name="include/neash/events/EventDispatcher.h"/>
+   <depend name="include/neash/events/FocusEvent.h"/>
+   <depend name="include/neash/events/IEventDispatcher.h"/>
+   <depend name="include/neash/events/JoystickEvent.h"/>
+   <depend name="include/neash/events/KeyboardEvent.h"/>
+   <depend name="include/neash/events/MouseEvent.h"/>
+   <depend name="include/neash/events/TouchEvent.h"/>
+   <depend name="include/neash/geom/Point.h"/>
+   <depend name="include/neash/geom/Rectangle.h"/>
+   <depend name="include/neash/media/SoundChannel.h"/>
+   <depend name="include/neash/net/URLLoader.h"/>
+  </file>
+  <file name="src/neash/events/TouchEvent.cpp">
+   <depend name="include/neash/display/DisplayObject.h"/>
+   <depend name="include/neash/display/IBitmapDrawable.h"/>
+   <depend name="include/neash/display/InteractiveObject.h"/>
+   <depend name="include/neash/events/Event.h"/>
+   <depend name="include/neash/events/EventDispatcher.h"/>
+   <depend name="include/neash/events/IEventDispatcher.h"/>
+   <depend name="include/neash/events/MouseEvent.h"/>
+   <depend name="include/neash/events/TouchEvent.h"/>
+   <depend name="include/neash/geom/Point.h"/>
+  </file>
+  <file name="src/neash/events/MouseEvent.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/neash/display/DisplayObject.h"/>
+   <depend name="include/neash/display/IBitmapDrawable.h"/>
+   <depend name="include/neash/display/InteractiveObject.h"/>
+   <depend name="include/neash/events/Event.h"/>
+   <depend name="include/neash/events/EventDispatcher.h"/>
+   <depend name="include/neash/events/IEventDispatcher.h"/>
+   <depend name="include/neash/events/MouseEvent.h"/>
+   <depend name="include/neash/geom/Point.h"/>
+  </file>
+  <file name="src/neash/events/Event.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/neash/events/Event.h"/>
+   <depend name="include/neash/events/EventPhase.h"/>
+  </file>
+  <file name="src/neash/display/LineScaleMode.cpp">
+   <depend name="include/neash/display/LineScaleMode.h"/>
+  </file>
+  <file name="src/neash/display/JointStyle.cpp">
+   <depend name="include/neash/display/JointStyle.h"/>
+  </file>
+  <file name="src/neash/display/InterpolationMethod.cpp">
+   <depend name="include/neash/display/InterpolationMethod.h"/>
+  </file>
+  <file name="src/neash/display/IGraphicsData.cpp">
+   <depend name="include/neash/display/IGraphicsData.h"/>
+  </file>
+  <file name="src/neash/display/GraphicsPathWinding.cpp">
+   <depend name="include/neash/display/GraphicsPathWinding.h"/>
+  </file>
+  <file name="src/neash/display/Graphics.cpp">
+   <depend name="include/neash/Loader.h"/>
+   <depend name="include/neash/display/BitmapData.h"/>
+   <depend name="include/neash/display/CapsStyle.h"/>
+   <depend name="include/neash/display/GradientType.h"/>
+   <depend name="include/neash/display/Graphics.h"/>
+   <depend name="include/neash/display/IBitmapDrawable.h"/>
+   <depend name="include/neash/display/IGraphicsData.h"/>
+   <depend name="include/neash/display/InterpolationMethod.h"/>
+   <depend name="include/neash/display/JointStyle.h"/>
+   <depend name="include/neash/display/LineScaleMode.h"/>
+   <depend name="include/neash/display/SpreadMethod.h"/>
+   <depend name="include/neash/display/Tilesheet.h"/>
+   <depend name="include/neash/display/TriangleCulling.h"/>
+   <depend name="include/neash/geom/Matrix.h"/>
+  </file>
+  <file name="src/neash/display/GradientType.cpp">
+   <depend name="include/neash/display/GradientType.h"/>
+  </file>
+  <file name="src/neash/display/DisplayObjectContainer.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/neash/Loader.h"/>
+   <depend name="include/neash/display/DisplayObject.h"/>
+   <depend name="include/neash/display/DisplayObjectContainer.h"/>
+   <depend name="include/neash/display/IBitmapDrawable.h"/>
+   <depend name="include/neash/display/InteractiveObject.h"/>
+   <depend name="include/neash/errors/ArgumentError.h"/>
+   <depend name="include/neash/errors/Error.h"/>
+   <depend name="include/neash/errors/RangeError.h"/>
+   <depend name="include/neash/events/Event.h"/>
+   <depend name="include/neash/events/EventDispatcher.h"/>
+   <depend name="include/neash/events/IEventDispatcher.h"/>
+   <depend name="include/neash/geom/Point.h"/>
+  </file>
+  <file name="src/neash/display/InteractiveObject.cpp">
+   <depend name="include/neash/Loader.h"/>
+   <depend name="include/neash/display/DisplayObject.h"/>
+   <depend name="include/neash/display/IBitmapDrawable.h"/>
+   <depend name="include/neash/display/InteractiveObject.h"/>
+   <depend name="include/neash/events/EventDispatcher.h"/>
+   <depend name="include/neash/events/IEventDispatcher.h"/>
+  </file>
+  <file name="src/neash/display/DisplayObject.cpp">
+   <depend name="include/Type.h"/>
+   <depend name="include/neash/Loader.h"/>
+   <depend name="include/neash/display/BlendMode.h"/>
+   <depend name="include/neash/display/DisplayObject.h"/>
+   <depend name="include/neash/display/DisplayObjectContainer.h"/>
+   <depend name="include/neash/display/Graphics.h"/>
+   <depend name="include/neash/display/IBitmapDrawable.h"/>
+   <depend name="include/neash/display/InteractiveObject.h"/>
+   <depend name="include/neash/display/Stage.h"/>
+   <depend name="include/neash/events/Event.h"/>
+   <depend name="include/neash/events/EventDispatcher.h"/>
+   <depend name="include/neash/events/EventPhase.h"/>
+   <depend name="include/neash/events/IEventDispatcher.h"/>
+   <depend name="include/neash/geom/ColorTransform.h"/>
+   <depend name="include/neash/geom/Matrix.h"/>
+   <depend name="include/neash/geom/Point.h"/>
+   <depend name="include/neash/geom/Rectangle.h"/>
+   <depend name="include/neash/geom/Transform.h"/>
+  </file>
+  <file name="src/neash/events/EventDispatcher.cpp">
+   <depend name="include/Hash.h"/>
+   <depend name="include/Type.h"/>
+   <depend name="include/neash/events/ErrorEvent.h"/>
+   <depend name="include/neash/events/Event.h"/>
+   <depend name="include/neash/events/EventDispatcher.h"/>
+   <depend name="include/neash/events/EventPhase.h"/>
+   <depend name="include/neash/events/IEventDispatcher.h"/>
+   <depend name="include/neash/events/IOErrorEvent.h"/>
+   <depend name="include/neash/events/Listener.h"/>
+   <depend name="include/neash/events/TextEvent.h"/>
+   <depend name="include/neash/utils/WeakRef.h"/>
+  </file>
+  <file name="src/neash/events/IEventDispatcher.cpp">
+   <depend name="include/neash/events/Event.h"/>
+   <depend name="include/neash/events/IEventDispatcher.h"/>
+  </file>
+  <file name="src/neash/display/CapsStyle.cpp">
+   <depend name="include/neash/display/CapsStyle.h"/>
+  </file>
+  <file name="src/neash/display/BlendMode.cpp">
+   <depend name="include/neash/display/BlendMode.h"/>
+  </file>
+  <file name="src/neash/display/BitmapData.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/neash/Loader.h"/>
+   <depend name="include/neash/display/BitmapData.h"/>
+   <depend name="include/neash/display/IBitmapDrawable.h"/>
+   <depend name="include/neash/filters/BitmapFilter.h"/>
+   <depend name="include/neash/geom/ColorTransform.h"/>
+   <depend name="include/neash/geom/Matrix.h"/>
+   <depend name="include/neash/geom/Point.h"/>
+   <depend name="include/neash/geom/Rectangle.h"/>
+   <depend name="include/neash/utils/ByteArray.h"/>
+   <depend name="include/neash/utils/IDataInput.h"/>
+  </file>
+  <file name="src/neash/display/IBitmapDrawable.cpp">
+   <depend name="include/neash/display/IBitmapDrawable.h"/>
+   <depend name="include/neash/geom/ColorTransform.h"/>
+   <depend name="include/neash/geom/Matrix.h"/>
+   <depend name="include/neash/geom/Rectangle.h"/>
+  </file>
+  <file name="src/neash/Lib.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/haxe/Timer.h"/>
+   <depend name="include/neash/Lib.h"/>
+   <depend name="include/neash/Loader.h"/>
+   <depend name="include/neash/display/BitmapData.h"/>
+   <depend name="include/neash/display/DisplayObject.h"/>
+   <depend name="include/neash/display/DisplayObjectContainer.h"/>
+   <depend name="include/neash/display/IBitmapDrawable.h"/>
+   <depend name="include/neash/display/InteractiveObject.h"/>
+   <depend name="include/neash/display/ManagedStage.h"/>
+   <depend name="include/neash/display/MovieClip.h"/>
+   <depend name="include/neash/display/Sprite.h"/>
+   <depend name="include/neash/display/Stage.h"/>
+   <depend name="include/neash/events/EventDispatcher.h"/>
+   <depend name="include/neash/events/IEventDispatcher.h"/>
+   <depend name="include/neash/net/URLRequest.h"/>
+  </file>
+  <file name="src/haxe/io/Output.cpp">
+   <depend name="include/cpp/Lib.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/haxe/io/Eof.h"/>
+   <depend name="include/haxe/io/Error.h"/>
+   <depend name="include/haxe/io/Input.h"/>
+   <depend name="include/haxe/io/Output.h"/>
+  </file>
+  <file name="src/haxe/io/Input.cpp">
+   <depend name="include/StringBuf.h"/>
+   <depend name="include/cpp/Lib.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/haxe/io/BytesBuffer.h"/>
+   <depend name="include/haxe/io/Eof.h"/>
+   <depend name="include/haxe/io/Error.h"/>
+   <depend name="include/haxe/io/Input.h"/>
+  </file>
+  <file name="src/haxe/io/Error.cpp">
+   <depend name="include/haxe/io/Error.h"/>
+  </file>
+  <file name="src/haxe/io/Eof.cpp">
+   <depend name="include/haxe/io/Eof.h"/>
+  </file>
+  <file name="src/haxe/io/BytesBuffer.cpp">
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/haxe/io/BytesBuffer.h"/>
+   <depend name="include/haxe/io/Error.h"/>
+  </file>
+  <file name="src/haxe/io/Bytes.cpp">
+   <depend name="include/StringBuf.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/haxe/io/Error.h"/>
+  </file>
+  <file name="src/haxe/Timer.cpp">
+   <depend name="include/haxe/Log.h"/>
+   <depend name="include/haxe/Timer.h"/>
+   <depend name="include/neash/Loader.h"/>
+  </file>
+  <file name="src/neash/Loader.cpp">
+   <depend name="include/cpp/Lib.h"/>
+   <depend name="include/neash/Loader.h"/>
+  </file>
+  <file name="src/haxe/Log.cpp">
+   <depend name="include/haxe/Log.h"/>
+  </file>
+  <file name="src/cpp/zip/Uncompress.cpp">
+   <depend name="include/cpp/Lib.h"/>
+   <depend name="include/cpp/zip/Flush.h"/>
+   <depend name="include/cpp/zip/Uncompress.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/haxe/io/BytesBuffer.h"/>
+   <depend name="include/haxe/io/Error.h"/>
+  </file>
+  <file name="src/cpp/zip/Flush.cpp">
+   <depend name="include/cpp/zip/Flush.h"/>
+  </file>
+  <file name="src/cpp/zip/Compress.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/cpp/Lib.h"/>
+   <depend name="include/cpp/zip/Compress.h"/>
+   <depend name="include/cpp/zip/Flush.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+  </file>
+  <file name="src/cpp/rtti/FieldNumericIntegerLookup.cpp">
+   <depend name="include/cpp/rtti/FieldNumericIntegerLookup.h"/>
+  </file>
+  <file name="src/com/season/basis/ViewManager.cpp">
+   <depend name="include/com/season/basis/BasisView.h"/>
+   <depend name="include/com/season/basis/ViewManager.h"/>
+   <depend name="include/cpp/Lib.h"/>
+  </file>
+  <file name="src/com/season/basis/TextField.cpp">
+   <depend name="include/com/season/basis/BasisView.h"/>
+   <depend name="include/com/season/basis/Control.h"/>
+   <depend name="include/com/season/basis/TextField.h"/>
+   <depend name="include/com/season/basis/ViewManager.h"/>
+   <depend name="include/cpp/Lib.h"/>
+  </file>
+  <file name="src/com/season/basis/Label.cpp">
+   <depend name="include/com/season/basis/BasisView.h"/>
+   <depend name="include/com/season/basis/Label.h"/>
+   <depend name="include/com/season/basis/ViewManager.h"/>
+   <depend name="include/cpp/Lib.h"/>
+  </file>
+  <file name="src/com/season/basis/EventTypes.cpp">
+   <depend name="include/com/season/basis/EventTypes.h"/>
+  </file>
+  <file name="src/com/season/basis/Button.cpp">
+   <depend name="include/com/season/basis/BasisView.h"/>
+   <depend name="include/com/season/basis/Button.h"/>
+   <depend name="include/com/season/basis/Control.h"/>
+   <depend name="include/com/season/basis/ViewManager.h"/>
+   <depend name="include/cpp/Lib.h"/>
+  </file>
+  <file name="src/com/season/basis/Control.cpp">
+   <depend name="include/com/season/basis/BasisView.h"/>
+   <depend name="include/com/season/basis/Control.h"/>
+   <depend name="include/com/season/basis/ViewManager.h"/>
+  </file>
+  <file name="src/com/basis/example/views/ComponentDisplayView.cpp">
+   <depend name="include/com/basis/example/views/ComponentDisplayView.h"/>
+   <depend name="include/com/season/basis/BasisView.h"/>
+   <depend name="include/com/season/basis/Button.h"/>
+   <depend name="include/com/season/basis/Control.h"/>
+   <depend name="include/com/season/basis/Label.h"/>
+   <depend name="include/com/season/basis/TextField.h"/>
+  </file>
+  <file name="src/com/season/basis/BasisView.cpp">
+   <depend name="include/com/season/basis/BasisView.h"/>
+   <depend name="include/com/season/basis/ViewManager.h"/>
+   <depend name="include/cpp/Lib.h"/>
+  </file>
+  <file name="src/com/basis/example/Main.cpp">
+   <depend name="include/com/basis/example/Main.h"/>
+   <depend name="include/com/basis/example/views/ComponentDisplayView.h"/>
+   <depend name="include/com/season/basis/BasisView.h"/>
+   <depend name="include/com/season/basis/ViewManager.h"/>
+  </file>
+  <file name="src/Type.cpp">
+   <depend name="include/Reflect.h"/>
+   <depend name="include/Type.h"/>
+   <depend name="include/ValueType.h"/>
+  </file>
+  <file name="src/ValueType.cpp">
+   <depend name="include/ValueType.h"/>
+  </file>
+  <file name="src/Sys.cpp">
+   <depend name="include/Hash.h"/>
+   <depend name="include/Sys.h"/>
+   <depend name="include/cpp/Lib.h"/>
+   <depend name="include/haxe/io/Input.h"/>
+   <depend name="include/haxe/io/Output.h"/>
+   <depend name="include/sys/io/FileInput.h"/>
+   <depend name="include/sys/io/FileOutput.h"/>
+  </file>
+  <file name="src/cpp/Lib.cpp">
+   <depend name="include/cpp/Lib.h"/>
+  </file>
+  <file name="src/StringTools.cpp">
+   <depend name="include/StringTools.h"/>
+  </file>
+  <file name="src/StringBuf.cpp">
+   <depend name="include/StringBuf.h"/>
+  </file>
+  <file name="src/Std.cpp">
+   <depend name="include/Std.h"/>
+  </file>
+  <file name="src/Reflect.cpp">
+   <depend name="include/Reflect.h"/>
+  </file>
+  <file name="src/List.cpp">
+   <depend name="include/List.h"/>
+   <depend name="include/Std.h"/>
+   <depend name="include/StringBuf.h"/>
+  </file>
+  <file name="src/IntIter.cpp">
+   <depend name="include/IntIter.h"/>
+  </file>
+  <file name="src/IntHash.cpp">
+   <depend name="include/IntHash.h"/>
+   <depend name="include/Std.h"/>
+   <depend name="include/StringBuf.h"/>
+  </file>
+  <file name="src/Hash.cpp">
+   <depend name="include/Hash.h"/>
+   <depend name="include/Std.h"/>
+   <depend name="include/StringBuf.h"/>
+  </file>
+  <file name="src/Date.cpp">
+   <depend name="include/Date.h"/>
+   <depend name="include/Std.h"/>
+  </file>
+  <file name="src/ApplicationMain.cpp">
+   <depend name="include/ApplicationMain.h"/>
+   <depend name="include/Reflect.h"/>
+   <depend name="include/Type.h"/>
+   <depend name="include/com/basis/example/Main.h"/>
+   <depend name="include/neash/display/BitmapData.h"/>
+   <depend name="include/neash/display/DisplayObject.h"/>
+   <depend name="include/neash/display/DisplayObjectContainer.h"/>
+   <depend name="include/neash/display/IBitmapDrawable.h"/>
+   <depend name="include/neash/display/InteractiveObject.h"/>
+   <depend name="include/neash/display/MovieClip.h"/>
+   <depend name="include/neash/display/Sprite.h"/>
+   <depend name="include/neash/display/Stage.h"/>
+   <depend name="include/neash/events/EventDispatcher.h"/>
+   <depend name="include/neash/events/IEventDispatcher.h"/>
+   <depend name="include/nme/Lib.h"/>
+  </file>
+  <file name="src/__boot__.cpp">
+  </file>
+  <file name="src/__files__.cpp">
+  </file>
+  <file name="src/__resources__.cpp">
+  </file>
+</files>
+<files id="__lib__">
+<compilerflag value="-Iinclude"/>
+  <file name="src/__lib__.cpp">
+   <depend name="include/ApplicationMain.h"/>
+  </file>
+</files>
+<files id="__main__">
+<compilerflag value="-Iinclude"/>
+  <file name="src/__main__.cpp">
+   <depend name="include/ApplicationMain.h"/>
+  </file>
+</files>
+<set name="HAXE_OUTPUT" value="ApplicationMain" />
+<include name="${HXCPP}/build-tool/BuildCommon.xml"/>
+</xml>
