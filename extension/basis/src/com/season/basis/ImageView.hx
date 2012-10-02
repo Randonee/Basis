@@ -19,6 +19,6 @@ class ImageView extends BasisView
 	
 	override private function init():Void
 	{
-		_tag = ViewManager.createView(TYPE, this);
+		_tag = ViewManager.createView(TYPE);
 	}
 }

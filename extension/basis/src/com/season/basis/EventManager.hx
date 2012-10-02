@@ -18,6 +18,10 @@ class EventManager
 	
 	/**
 	* Adds an event listener
+	*
+	* @param type event type
+	* @param view the view that will be dispatching the event
+	* @param handler the function that will be called when the event occurs
 	**/
 	public function addEventListener(type:String, view:BasisView, handler:BasisView->String->Void):Void
 	{
@@ -44,6 +48,10 @@ class EventManager
 	
 	/**
 	* Removes an event listener
+	*
+	* @param type event type
+	* @param view the view that will be dispatching the event
+	* @param handler the function that will be called when the event occurs
 	**/
 	public function removeEventListener(type:String, view:BasisView, handler:BasisView->String->Void):Void
 	{
@@ -69,7 +77,10 @@ class EventManager
 	}
 	
 	/**
-	* Handles an event
+	* Handles events from objective c
+	*
+	* @param type event type
+	* @param tag the the id of the view
 	**/
 	public function handleEvent(type:String, tag:Int):Void
 	{

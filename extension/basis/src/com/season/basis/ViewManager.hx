@@ -13,14 +13,23 @@ class ViewManager
 	static private var _eventManager:EventManager;
 	
 	
-	public static function createView(type:Int, view:BasisView):Int
+	/**
+	* Creates a new view
+	*
+	* @param type the type of view to be added
+	**/
+	public static function createView(type:Int):Int
 	{
 		#if cpp
-			var tag:Int = cpp_call_create_view(type);
-			return tag;
+			return cpp_call_create_view(type);
 		#end	
 	}
 	
+	/**
+	* Adds a view to the base window of the aplication
+	*
+	* @param view the view to be added
+	**/
 	public static function addToRootView(view:BasisView):Void
 	{
 		#if cpp
@@ -28,16 +37,35 @@ class ViewManager
 		#end	
 	}
 	
+	/**
+	* Adds an event listener
+	*
+	* @param type event type
+	* @param view the view that will be dispatching the event
+	* @param handler the function that will be called when the event occurs
+	**/
 	public static function addEventListener(type:String, view:BasisView, handler:BasisView->String->Void):Void
 	{
 		getEventManager().addEventListener(type, view, handler);
 	}
 	
+	/**
+	* removes an event listener
+	*
+	* @param type event type
+	* @param view the view that will be dispatching the event
+	* @param handler the function that will be called when the event occurs
+	**/
 	public static function removeEventListener(type:String, view:BasisView, handler:BasisView->String->Void):Void
 	{
 		getEventManager().removeEventListener(type, view, handler);
 	}
 	
+	/**
+	* Gets the event manager instance
+	*
+	* @returns eventManager instance
+	**/
 	private static function getEventManager():EventManager
 	{
 		if(_eventManager == null)
