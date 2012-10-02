@@ -34,10 +34,12 @@ namespace basis
     }
     DEFINE_PRIM (viewmanager_createView, 1);
     
-    void removeAllEventListenersForView(int viewTag)
+    void viewmanager_setEventHandler(value handler)
     {
-    	[eventManager removeAllEventListenersForView:viewTag];
+    	[eventManager setEventHandler:new AutoGCRoot(handler)];
     }
+    DEFINE_PRIM (viewmanager_setEventHandler, 1);
+    
     
 	void removeView(int tag)
 	{
@@ -46,20 +48,8 @@ namespace basis
 		if(view != nil)
 		{
 			[views removeObjectForKey:[NSNumber numberWithInt:tag]];
-			removeAllEventListenersForView(tag);
 		}
 	}
-    
-    void viewmanager_addEventListener(value type, value viewTag, value callback)
-    {
-    	[eventManager addEventListener:val_string(type) :val_int(viewTag) :new AutoGCRoot(callback)];
-    }
-    DEFINE_PRIM (viewmanager_addEventListener, 3);
-    
-    void removeEventListener(const char *type, int viewTag, AutoGCRoot *callback)
-    {
-    	[eventManager removeEventListener:type :viewTag :callback];
-    }
     
     void viewmanager_addToRootView(value tag)
     {

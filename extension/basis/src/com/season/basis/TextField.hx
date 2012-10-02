@@ -19,7 +19,7 @@ class TextField extends Control
 	
 	override private function init():Void
 	{
-		_tag = ViewManager.createView(TYPE);
+		_tag = ViewManager.createView(TYPE, this);
 	}
 	
 	public var text(getText, setText) : String;

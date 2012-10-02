@@ -19,7 +19,7 @@ class Button extends Control
 	
 	override private function init():Void
 	{
-		_tag = ViewManager.createView(TYPE);
+		_tag = ViewManager.createView(TYPE, this);
 	}
 	
 	public function setLabel(text:String):Void

@@ -3,7 +3,7 @@
 	<set name="GCC_THIN_ARCHIVE" value="1" if="iphone"/>
 	
 	<include name="${HXCPP}/build-tool/BuildCommon.xml"/>
-	
+
 	<set name="mobile" value="1" if="iphone"/>
 	<set name="mobile" value="1" if="android"/>
 	<set name="mobile" value="1" if="webos"/>
@@ -12,6 +12,9 @@
 	<set name="SLIBEXT" value=".lib" if="windows"/>
 	<set name="SLIBEXT" value=".a" unless="windows"/>
 	<set name="SLIBEXT" value=".so" if="webos"/>
+
+
+	
     
     <files id="iphone">
         <depend name="${HXCPP}/include/hx/Macros.h"/>
@@ -26,9 +29,10 @@
 	<files id="common">
 		
 	</files>
-	
+
 	<set name="tool" value="exe" unless="iphone"/>
 	<set name="tool" value="static" if="iphone"/>
+	
 	
 	<set name="IOS_ARCH" value="-v7" if="HXCPP_ARMV7"/>
 	
@@ -46,6 +50,7 @@
 	<set name="name_prefix" value="lib" if="iphone" />
 	
 	<target id="NDLL" output="${name_prefix}basis${name_extra}" tool="linker" toolid="${ndll-tool}">
+
 		<outdir name="../ndll/${BINDIR}" />
 		<ext value=".ndll" unless="mobile"/>
 		<files id="iphone" if="iphone"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
 	
-	<app title="FishStock" file="FishStock" main="com.basis.example.Main" package="com.basis.example" version="1.0.0" icon="assets/nme.svg" company="SeasonSoftware" />
+	<app title="Basic Example" file="BasicExample" main="com.basis.example.Main" package="com.basis.example" version="1.0.0" icon="assets/nme.svg" company="SeasonSoftware" />
 	
 	<window width="640" height="960" fps="30" orientation="portrait" resizable="true" />
  	
@@ -16,7 +16,7 @@
 	<ndll name="zlib" />
 	<ndll name="nme" haxelib="nme" />
 	
-	<include path="../../extention/basis" />
+	<include path="../../extension/basis" />
 	
 	<setenv name="HXCPP_LOAD_DEBUG" value="1" />
 	

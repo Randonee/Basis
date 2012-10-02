@@ -15,7 +15,7 @@ void viewInitEventLiteners(UIView *view)
 
 static void onDidMoveToSuperview(void (^listener)(id _self, UIView* subview))
 {
-    Method didMoveToSuperviewMethod = class_getInstanceMethod([UIView class], @selector(didMoveToSuperview));
+ /*   Method didMoveToSuperviewMethod = class_getInstanceMethod([UIView class], @selector(didMoveToSuperview));
     IMP originalImp = method_getImplementation(didMoveToSuperviewMethod);
 
     void (^block)(id, UIView*) = ^(id _self, UIView* subview) {
@@ -25,6 +25,7 @@ static void onDidMoveToSuperview(void (^listener)(id _self, UIView* subview))
 
     IMP newImp = imp_implementationWithBlock((__bridge void*)block);
     method_setImplementation(addSubviewMethod, newImp);
+    */
 }
 
 

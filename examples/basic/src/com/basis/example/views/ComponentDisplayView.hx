@@ -55,12 +55,12 @@ class ComponentDisplayView extends BasisView
 		addSubview(_sampleButton);
 	}
 	
-	private function onButtonClick(tag:Int, type):Void
+	private function onButtonClick(view:BasisView, type):Void
 	{
 		_inputField.text = "Button Clicked";
 	}
 	
-	private function onInputChanged(tag:Int, type):Void
+	private function onInputChanged(view:BasisView, type):Void
 	{
 		_outputField.text = _inputField.text;
 	}

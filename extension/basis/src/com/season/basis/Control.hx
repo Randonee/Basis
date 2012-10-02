@@ -8,10 +8,10 @@ import neko.Lib;
 import nme.Lib;
 #end
 
-class ImageView extends BasisView
+class Control extends BasisView
 {
-	public static inline var TYPE:Int = 5;
-
+	public static inline var TYPE:Int = 2;
+	
 	public function new()
 	{
 		super ();
@@ -19,6 +19,6 @@ class ImageView extends BasisView
 	
 	override private function init():Void
 	{
-		_tag = ViewManager.createView(TYPE);
+		_tag = ViewManager.createView(TYPE, this);
 	}
 }

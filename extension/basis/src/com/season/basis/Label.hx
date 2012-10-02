@@ -19,7 +19,7 @@ class Label extends BasisView
 	
 	override private function init():Void
 	{
-		_tag = ViewManager.createView(TYPE);
+		_tag = ViewManager.createView(TYPE, this);
 	}
 	
 	

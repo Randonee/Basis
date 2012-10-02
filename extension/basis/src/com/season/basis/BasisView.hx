@@ -97,13 +97,13 @@ class BasisView
 	
 	private function init():Void
 	{
-		_tag = ViewManager.createView(TYPE);
+		_tag = ViewManager.createView(TYPE, this);
 	}
 	
 	
-	public function addEventListener(type:String, handler:Int->String->Void):Void
+	public function addEventListener(type:String, handler:BasisView->String->Void):Void
 	{
-		ViewManager.addEventListener(type, _tag, handler);
+		ViewManager.addEventListener(type, this, handler);
 	}
 	
 	public function addSubview(view:BasisView):Void

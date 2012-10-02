@@ -1,108 +1,18 @@
 #import "EventManager.h"
 
 
-
-typedef struct EventHandler
-{
-	const char *type;
-	int viewTag;
-	AutoGCRoot *callback;
-	
-}EventHandler;
-
 @implementation EventManager
 
-NSMutableDictionary *eventListeners;
+AutoGCRoot *eventHandler;
 
--(id)init
+-(void) setEventHandler:(AutoGCRoot *) handler
 {
-	if (self = [super init])
-	{
-		eventListeners = [[NSMutableDictionary alloc] init];
-	}
- 	return self;
- }
-
--(void) removeAllEventListenersForView:(int) viewTag
-{
-	for (NSString* key in eventListeners)
-	{
-		NSMutableDictionary *handlersByType = [eventListeners objectForKey:key];
-    	[handlersByType removeObjectForKey:[NSNumber numberWithInt:viewTag]];
-	}
-}
-
-
--(void) addEventListener:(const char *) type :(int) viewTag :(AutoGCRoot *)callback
-{
-	[self removeEventListener:type :viewTag :callback];
-
-	NSMutableDictionary *handlersByType = [eventListeners objectForKey:[NSString stringWithUTF8String:type]];
-    NSMutableArray *handlersByTag;
-    
-    if(handlersByType == nil)
-    {
-        handlersByType = [[NSMutableDictionary alloc] init];
-        [eventListeners setObject:handlersByType forKey:[NSString stringWithUTF8String:type]];
-    }
-    
-    handlersByTag = [handlersByType objectForKey:[NSNumber numberWithInt:viewTag]];
-    
-    if(handlersByTag == nil)
-    {
-        handlersByTag = [[NSMutableArray alloc] init];
-        [handlersByType setObject:handlersByTag forKey:[NSNumber numberWithInt:viewTag]];
-    }
-    
-    EventHandler handler = {type, viewTag, callback};
-    [handlersByTag addObject:[NSValue value:&handler withObjCType:@encode(EventHandler)]];
-}
-
--(void) removeEventListener:(const char *) type :(int) viewTag :(AutoGCRoot *)callback
-{
-	NSMutableDictionary *handlersByType = [eventListeners objectForKey:[NSString stringWithUTF8String:type]];
-    
-    if(handlersByType != nil)
-    {
-    	NSMutableArray *handlersByTag = [handlersByType objectForKey:[NSNumber numberWithInt:viewTag]];
-    
-	    if(handlersByTag != nil)
-	    {
-	    	for(int a = 0; a < handlersByTag.count; ++a)
-	    	{
-	    		EventHandler *handler = NULL;
-	    		NSValue *value = [handlersByTag objectAtIndex:a];
-	    		[value getValue:handler];
-	    		
-	    		if(handler->viewTag == viewTag)
-	    		{
-	    			[handlersByTag  removeObjectAtIndex:a];
-	    			return;
-	    		}
-	    	}
-	    }
-    }
+	eventHandler = handler;
 }
 
 -(void) callHanlders:(int) viewTag :(char*) type
 {
-	NSMutableDictionary *handlersByType = [eventListeners objectForKey:[NSString stringWithUTF8String:type]];
-    
-    if(handlersByType != nil)
-    {
-    	NSMutableArray *handlersByTag = [handlersByType objectForKey:[NSNumber numberWithInt:viewTag]];
-    
-	    if(handlersByTag != nil)
-	    {
-	    	for(int a = 0; a < handlersByTag.count; ++a)
-	    	{
-	    		EventHandler handler;
-	    		NSValue *value = [handlersByTag objectAtIndex:a];
-	    		[value getValue:&handler];
-	    		val_call2(handler.callback->get(), alloc_int(viewTag), alloc_string(type));
-	    	}
-	    }
-    }
+	val_call2(eventHandler->get(), alloc_string(type), alloc_int(viewTag));
 }
 
 

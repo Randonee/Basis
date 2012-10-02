@@ -4,9 +4,7 @@
 
 @interface EventManager : NSObject
 
--(void) removeAllEventListenersForView:(int) viewTag;
--(void) removeEventListener:(const char *) type :(int) viewTag :(AutoGCRoot *)callback;
--(void) addEventListener:(const char *) type :(int) viewTag :(AutoGCRoot *)callback;
+-(void) setEventHandler:(AutoGCRoot *) handler;
 
 -(void) onUIControlEventTouchDown:(id) view :(id) event;
 -(void) onUIControlEventTouchDownRepeat:(id) view :(id) event;
