@@ -73,7 +73,6 @@ class EventManager
 	**/
 	public function handleEvent(type:String, tag:Int):Void
 	{
-		trace(type);
 		var objectListeners:Hash<Array<BasisEventListener>> = _eventListeners.get(Std.string(tag));
 		
 		if(objectListeners != null)
