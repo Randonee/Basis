@@ -1,6 +1,6 @@
 package com.season.basis;
 
-#if cpp
+#if ios
 import cpp.Lib;
 #elseif neko
 import neko.Lib;
@@ -22,7 +22,7 @@ class Util
 	}
 	
 	
-	#if cpp
+	#if ios
 	private static var cpp_basis_log = Lib.load ("basis", "basis_log", 1);
 	#end
 	

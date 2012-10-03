@@ -1,6 +1,6 @@
 package com.season.basis;
 
-#if cpp
+#if ios
 import cpp.Lib;
 #elseif neko
 import neko.Lib;
@@ -20,7 +20,7 @@ class ViewManager
 	**/
 	public static function createView(type:Int):Int
 	{
-		#if cpp
+		#if ios
 			return cpp_call_create_view(type);
 		#end	
 	}
@@ -32,7 +32,7 @@ class ViewManager
 	**/
 	public static function addToRootView(view:BasisView):Void
 	{
-		#if cpp
+		#if ios
 			cpp_call_add_to_root_view(view.tag);
 		#end	
 	}
@@ -71,14 +71,14 @@ class ViewManager
 		if(_eventManager == null)
 		{
 			_eventManager = new EventManager();
-			#if cpp
+			#if ios
 				cpp_call_set_event_handler(_eventManager.handleEvent);
 			#end
 		}
 		return _eventManager;
 	}
 	
-	#if cpp
+	#if ios
 	private static var cpp_call_create_view = Lib.load ("basis", "viewmanager_createView", 1);
 	private static var cpp_call_add_to_root_view = Lib.load ("basis", "viewmanager_addToRootView", 1);
 	private static var cpp_call_set_event_handler = Lib.load ("basis", "viewmanager_setEventHandler", 1);

@@ -1,6 +1,6 @@
 package com.season.basis;
 
-#if cpp
+#if ios
 import cpp.Lib;
 #elseif neko
 import neko.Lib;
@@ -28,7 +28,7 @@ class Label extends BasisView
 	private function getText():String {return cpp_label_getText(_tag);}
 	
 	
-	#if cpp
+	#if ios
 	private static var cpp_label_setText = Lib.load ("basis", "label_setText", 2);
 	private static var cpp_label_getText = Lib.load ("basis", "label_getText", 1);
 	#end

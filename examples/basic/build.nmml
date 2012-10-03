@@ -22,6 +22,8 @@
 	
 	<!-- This is a required iOS framework -->
 	<dependency name="UIKit.framework" if="ios" />
+	<dependency name="MapKit.framework" if="ios" />
+	<dependency name="CoreLocation.framework" if="ios" />
 	<dependency name="MediaPlayer.framework" if="ios" />
 	<dependency name="CoreGraphics.framework" if="ios" />
 	<dependency name="QuartzCore.framework" if="ios" />

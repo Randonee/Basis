@@ -1,6 +1,6 @@
 package com.season.basis;
 
-#if cpp
+#if ios
 import cpp.Lib;
 #elseif neko
 import neko.Lib;

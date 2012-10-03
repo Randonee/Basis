@@ -6,6 +6,7 @@ import com.season.basis.Label;
 import com.season.basis.TextField;
 import com.season.basis.Button;
 import com.season.basis.EventTypes;
+import com.season.basis.MapView;
 
 class ComponentDisplayView extends BasisView
 {
@@ -14,6 +15,7 @@ class ComponentDisplayView extends BasisView
 	private var _outputField:TextField;
 	private var _outputLabel:Label;
 	private var _sampleButton:Button;
+	private var _mapView:MapView;
 	
 	public function new()
 	{
@@ -50,9 +52,15 @@ class ComponentDisplayView extends BasisView
 		_sampleButton.x = 50;
 		_sampleButton.setLabel("Button");
 		_sampleButton.addEventListener(EventTypes.CONTROL_TOUCH_UP_INSIDE, onButtonClick);
-		
-		
 		addSubview(_sampleButton);
+		
+		
+		_mapView = new MapView();
+		_mapView.width = 300;
+		_mapView.height = 250;
+		_mapView.x = 10;
+		_mapView.y = 200;
+		addSubview(_mapView);
 	}
 	
 	private function onButtonClick(view:BasisView, type):Void

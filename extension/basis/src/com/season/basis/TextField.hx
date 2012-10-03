@@ -1,6 +1,6 @@
 package com.season.basis;
 
-#if cpp
+#if ios
 import cpp.Lib;
 #elseif neko
 import neko.Lib;
@@ -27,7 +27,7 @@ class TextField extends Control
 	private function getText():String {return cpp_textField_getText(_tag);}
 	
 	
-	#if cpp
+	#if ios
 	private static var cpp_textField_setText = Lib.load ("viewmanager", "textField_setText", 2);
 	private static var cpp_textField_getText = Lib.load ("viewmanager", "textField_getText", 1);
 	#end

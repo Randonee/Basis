@@ -8,10 +8,10 @@ import neko.Lib;
 import nme.Lib;
 #end
 
-class Control extends BasisView
+class MapView extends BasisView
 {
-	public static inline var TYPE:Int = 2;
-	
+	public static inline var TYPE:Int = 6;
+
 	public function new()
 	{
 		super ();
@@ -21,4 +21,9 @@ class Control extends BasisView
 	{
 		_tag = ViewManager.createView(TYPE);
 	}
+	
+	
+	#if ios
+	#end
+	
 }

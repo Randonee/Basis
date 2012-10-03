@@ -11,8 +11,6 @@ import nme.Lib;
 class BasisView
 {
 	public static inline var TYPE:Int = 0;
-	private static var _locUpdateCB:Dynamic;
-	
 	
 	public var tag(getTag, setTag) : Int;
 	private function setTag( value : Int ):Int{_tag = value; return _tag;}
@@ -21,7 +19,7 @@ class BasisView
 	public var superview(getSuperView, null) : BasisView;
 	private function getSuperView():BasisView 
 	{
-		#if cpp
+		#if ios
 			var view:BasisView = new BasisView();
 			view.tag = cpp_getSuperview(tag);
 			return view;
@@ -31,13 +29,13 @@ class BasisView
 	public var x(getX, setX) : Float;
 	private function getX():Float
 	{
-		#if cpp
+		#if ios
 			return cpp_call_view_get_x(tag);
 		#end	
 	}
 	private function setX(value:Float):Float
 	{
-		#if cpp
+		#if ios
 			cpp_call_view_set_x(tag, value);
 			return cpp_call_view_get_x(tag);
 		#end
@@ -46,13 +44,13 @@ class BasisView
 	public var y(getY, setY) : Float;
 	private function getY():Float 
 	{
-		#if cpp
+		#if ios
 			return cpp_call_view_get_y(tag);
 		#end	
 	}
 	private function setY(value:Float):Float
 	{
-		#if cpp
+		#if ios
 			cpp_call_view_set_y(tag, value);
 			return cpp_call_view_get_y(tag);
 		#end	
@@ -61,13 +59,13 @@ class BasisView
 	public var width(getWidth, setWidth) : Float;
 	private function getWidth():Float
 	{
-		#if cpp
+		#if ios
 			return cpp_call_view_get_width(tag);
 		#end	
 	}
 	private function setWidth(value:Float):Float
 	{
-		#if cpp
+		#if ios
 			cpp_call_view_set_width(tag, value);
 			return cpp_call_view_get_width(tag);
 		#end
@@ -76,13 +74,13 @@ class BasisView
 	public var height(getHeight, setHeight) : Float;
 	private function getHeight():Float
 	{
-		#if cpp
+		#if ios
 			return cpp_call_view_get_height(tag);
 		#end
 	}
 	private function setHeight(value:Float):Float
 	{
-		#if cpp
+		#if ios
 			cpp_call_view_set_height(tag, value);
 			return cpp_call_view_get_height(tag);
 		#end
@@ -107,34 +105,31 @@ class BasisView
 	
 	public function addSubview(view:BasisView):Void
 	{
-		#if cpp
+		#if ios
 			cpp_addSubview(_tag, view.tag);
 		#end
 	}
 	
 	public function removeSubview(view:BasisView):Void
 	{
-		#if cpp
+		#if ios
 			cpp_removeSubview(_tag, view.tag);
 		#end
 	}
 	
-	#if cpp
-	private static var cpp_addSubview = Lib.load ("basis", "view_addSubview", 2);
-	private static var cpp_getSuperview = Lib.load ("basis", "view_getSuperview", 1);
-	private static var cpp_removeSubview = Lib.load ("basis", "view_removeSubview", 2);
-	
-	private static var cpp_call_view_set_x = Lib.load ("basis", "view_setFrameX", 2);
-	private static var cpp_call_view_get_x = Lib.load ("basis", "view_getFrameX", 1);
-	private static var cpp_call_view_set_y = Lib.load ("basis", "view_setFrameY", 2);
-	private static var cpp_call_view_get_y = Lib.load ("basis", "view_getFrameY", 1);
-	private static var cpp_call_view_set_width = Lib.load ("basis", "view_setFrameWidth", 2);
-	private static var cpp_call_view_get_width = Lib.load ("basis", "view_getFrameWidth", 1);
-	private static var cpp_call_view_set_height = Lib.load ("basis", "view_setFrameHeight", 2);
-	private static var cpp_call_view_get_height = Lib.load ("basis", "view_getFrameHeight", 1);
+	#if ios
+		private static var cpp_addSubview = Lib.load ("basis", "view_addSubview", 2);
+		private static var cpp_getSuperview = Lib.load ("basis", "view_getSuperview", 1);
+		private static var cpp_removeSubview = Lib.load ("basis", "view_removeSubview", 2);
+		
+		private static var cpp_call_view_set_x = Lib.load ("basis", "view_setFrameX", 2);
+		private static var cpp_call_view_get_x = Lib.load ("basis", "view_getFrameX", 1);
+		private static var cpp_call_view_set_y = Lib.load ("basis", "view_setFrameY", 2);
+		private static var cpp_call_view_get_y = Lib.load ("basis", "view_getFrameY", 1);
+		private static var cpp_call_view_set_width = Lib.load ("basis", "view_setFrameWidth", 2);
+		private static var cpp_call_view_get_width = Lib.load ("basis", "view_getFrameWidth", 1);
+		private static var cpp_call_view_set_height = Lib.load ("basis", "view_setFrameHeight", 2);
+		private static var cpp_call_view_get_height = Lib.load ("basis", "view_getFrameHeight", 1);
 	#end
 	
-	#if java
-		private static var asdf = Lib.load ("basis", "ddddd", 2);
-	#end
 }

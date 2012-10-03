@@ -1,5 +1,7 @@
 #import "ViewManager.h"
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 #import <Foundation/Foundation.h>
 #import "EventManager.h"
 
@@ -87,12 +89,16 @@ namespace basis
                 
             case 4:
                 view = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 200, 30)];
-                [view setBorderStyle:UITextBorderStyleRoundedRect];
+                [(UITextField *)view setBorderStyle:UITextBorderStyleRoundedRect];
                 initFunction = &textFieldInitEventListeners;
                 break;
                 
             case 5:
                 view = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+                break;
+                
+           	case 6:
+                view = [[MKMapView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
                 break;
                 
             default:

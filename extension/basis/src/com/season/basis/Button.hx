@@ -1,6 +1,6 @@
 package com.season.basis;
 
-#if cpp
+#if ios
 import cpp.Lib;
 #elseif neko
 import neko.Lib;
@@ -24,20 +24,20 @@ class Button extends Control
 	
 	public function setLabel(text:String):Void
 	{
-		#if cpp
+		#if ios
 			cpp_button_setLabel(_tag, text);
 		#end
 	}
 	
 	public function setImageForState(assetName:String):Void
 	{
-		#if cpp
+		#if ios
 			cpp_button_setImageForState(_tag, assetName);
 		#end
 	}
 	
 	
-	#if cpp
+	#if ios
 	private static var cpp_button_setLabel = Lib.load ("basis", "button_setLabel", 2);
 	private static var cpp_button_setImageForState = Lib.load ("basis", "button_setImageForState", 2);
 	#end

@@ -25,10 +25,6 @@
 			<arg line="run hxcpp Build.xml -Diphoneos" />
 		</exec>
 		
-		<exec dir="extension/basis/project" failonerror="true" executable="haxelib">
-			<arg line="run hxcpp Build.xml -Dandroid" />
-		</exec>
-		
 		<exec dir="examples/basic" failonerror="true" executable="haxelib">
 			<arg line="run nme test build.nmml ios -simulator" />
 		</exec>
