@@ -100,7 +100,6 @@ class BasisView
 		_tag = ViewManager.createView(TYPE);
 	}
 	
-	
 	public function addEventListener(type:String, handler:BasisView->String->Void):Void
 	{
 		ViewManager.addEventListener(type, this, handler);

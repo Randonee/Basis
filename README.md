@@ -13,8 +13,6 @@ Supported platforms:
 
 **License:**
 
-This extension and example license:
-
     Unless indicated otherwise, this code was created by Aaron Spjut and
     provided under a MIT-style license. 
     Copyright (c) Aaron Spjut. All rights reserved.
