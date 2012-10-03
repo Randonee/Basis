@@ -1,9 +1,18 @@
-<project basedir="." default="default">
+<project basedir="." default="iphone">
 	
-	<target name="default">
-			
+	<!--
+		This is an ant build file.
+		To use:
+		1. install ant: http://ant.apache.org
+		2. Goto the directory containing this file
+		3. Run one of the following commands to run an example
+			a) ant iphone
+			b) ant android
+	-->
+	
+	<target name="iphone">
 		<delete dir="extension/basis/project/obj" failOnError="false" includeEmptyDirs="true"/>
-		
+				
 		<exec dir="extension/basis/project" failonerror="true" executable="haxelib">
 			<arg line="run hxcpp Build.xml -Diphonesim" />
 		</exec>
@@ -15,6 +24,7 @@
 		<exec dir="extension/basis/project" failonerror="true" executable="haxelib">
 			<arg line="run hxcpp Build.xml -Diphoneos" />
 		</exec>
+		
 		<exec dir="extension/basis/project" failonerror="true" executable="haxelib">
 			<arg line="run hxcpp Build.xml -Dandroid" />
 		</exec>
@@ -22,6 +32,18 @@
 		<exec dir="examples/basic" failonerror="true" executable="haxelib">
 			<arg line="run nme test build.nmml ios -simulator" />
 		</exec>
-
 	</target>
+	
+	<target name="android">
+		<delete dir="extension/basis/project/obj" failOnError="false" includeEmptyDirs="true"/>
+		
+		<exec dir="extension/basis/project" failonerror="true" executable="haxelib">
+			<arg line="run hxcpp Build.xml -Dandroid" />
+		</exec>
+		
+		<exec dir="examples/basic" failonerror="true" executable="haxelib">
+			<arg line="run nme test build.nmml android" />
+		</exec>
+	</target>
+	
 </project>
