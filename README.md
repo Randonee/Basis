@@ -8,7 +8,14 @@ The goal of basis is to provide cross platform access to native UI components.
 Supported platforms:
 
 * iOS
+* Android
 
+
+To build the iOS native extension run these commands from extension/basis/project
+
+	haxelib run hxcpp Build.xml -Diphonesim
+	haxelib run hxcpp Build.xml -Diphoneos -DHXCPP_ARMV7
+	haxelib run hxcpp Build.xml -Diphoneos
 
 
 **License:**
