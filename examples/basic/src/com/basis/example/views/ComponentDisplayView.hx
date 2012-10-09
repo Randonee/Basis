@@ -58,13 +58,14 @@ class ComponentDisplayView extends BasisView
 		this.width = 300;
 		this.height = 400;
 		
-		/*
+		#if ios
 		_mapView = new MapView();
 		_mapView.width = 300;
 		_mapView.height = 250;
 		_mapView.x = 10;
 		_mapView.y = 200;
-		addSubview(_mapView);*/
+		addSubview(_mapView);
+		#end
 	}
 	
 	private function onButtonClick(view:BasisView, type):Void
