@@ -30,16 +30,28 @@
 		</exec>
 	</target>
 	
+	
 	<target name="android">
-		<delete dir="extension/basis/project/obj" failOnError="false" includeEmptyDirs="true"/>
-		
-		<exec dir="extension/basis/project" failonerror="true" executable="haxelib">
-			<arg line="run hxcpp Build.xml -Dandroid" />
-		</exec>
-		
 		<exec dir="examples/basic" failonerror="true" executable="haxelib">
-			<arg line="run nme test build.nmml android" />
+			<arg line="run nme test build.nmml android_empty" />
 		</exec>
 	</target>
 	
+	<target name="androidemu">
+		<exec dir="examples/basic" failonerror="true" executable="haxelib">
+			<arg line="run nme build build.nmml android_empty" />
+		</exec>
+		
+		<exec dir="." failonerror="false" executable="/opt/android_sdk/platform-tools/adb">
+			<arg line="uninstall com.basis.example" />
+		</exec>
+		
+		<exec dir="." failonerror="true" executable="/opt/android_sdk/platform-tools/adb">
+			<arg line="install examples/basic/build/android_empty/bin/bin/BasicExample-debug.apk" />
+		</exec>
+		
+		<exec dir="." failonerror="true" executable="/opt/android_sdk/platform-tools/adb">
+			<arg line="shell am start -a android.intent.action.MAIN -n com.basis.example/com.basis.example.MainActivity" />
+		</exec>
+	</target>
 </project>

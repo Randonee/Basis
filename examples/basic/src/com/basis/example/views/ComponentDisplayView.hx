@@ -1,7 +1,6 @@
 package com.basis.example.views;
 
 import com.season.basis.BasisView;
-import com.season.basis.ViewManager;
 import com.season.basis.Label;
 import com.season.basis.TextField;
 import com.season.basis.Button;
@@ -20,6 +19,8 @@ class ComponentDisplayView extends BasisView
 	public function new()
 	{
 		super();
+		this.width = 300;
+		this.height = 400;
 		
 		_inputLabel = new Label();
 		addSubview(_inputLabel);
@@ -54,13 +55,16 @@ class ComponentDisplayView extends BasisView
 		_sampleButton.addEventListener(EventTypes.CONTROL_TOUCH_UP_INSIDE, onButtonClick);
 		addSubview(_sampleButton);
 		
+		this.width = 300;
+		this.height = 400;
 		
+		/*
 		_mapView = new MapView();
 		_mapView.width = 300;
 		_mapView.height = 250;
 		_mapView.x = 10;
 		_mapView.y = 200;
-		addSubview(_mapView);
+		addSubview(_mapView);*/
 	}
 	
 	private function onButtonClick(view:BasisView, type):Void

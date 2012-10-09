@@ -4,11 +4,13 @@ package com.season.basis;
 import cpp.Lib;
 #elseif neko
 import neko.Lib;
-#else
-import nme.Lib;
 #end
 
-class ViewManager
+#if android
+import com.season.basis.android.BaseActivity;
+#end
+
+class BasisViewManager
 {	
 	static private var _eventManager:EventManager;
 	
@@ -22,7 +24,11 @@ class ViewManager
 	{
 		#if ios
 			return cpp_call_create_view(type);
-		#end	
+		#end
+		
+		#if android
+			return 0;
+		#end
 	}
 	
 	/**
@@ -34,7 +40,10 @@ class ViewManager
 	{
 		#if ios
 			cpp_call_add_to_root_view(view.tag);
-		#end	
+		#elseif android
+			BaseActivity.getInstance().setContentView(view.nativeView);
+		#end
+		
 	}
 	
 	/**

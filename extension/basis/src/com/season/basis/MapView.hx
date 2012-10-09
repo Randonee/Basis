@@ -4,8 +4,6 @@ package com.season.basis;
 import cpp.Lib;
 #elseif neko
 import neko.Lib;
-#else
-import nme.Lib;
 #end
 
 class MapView extends BasisView
@@ -19,7 +17,7 @@ class MapView extends BasisView
 	
 	override private function init():Void
 	{
-		_tag = ViewManager.createView(TYPE);
+		_tag = BasisViewManager.createView(TYPE);
 	}
 	
 	

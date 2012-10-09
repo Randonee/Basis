@@ -1,11 +1,11 @@
 package com.season.basis;
 
+
 #if ios
-import cpp.Lib;
-#elseif neko
-import neko.Lib;
-#else
-import nme.Lib;
+	import cpp.Lib;
+#elseif android
+	import com.season.basis.android.BaseActivity;
+	import com.season.basis.android.Button;
 #end
 
 class Button extends Control
@@ -19,7 +19,11 @@ class Button extends Control
 	
 	override private function init():Void
 	{
-		_tag = ViewManager.createView(TYPE);
+		#if ios
+			_tag = BasisViewManager.createView(TYPE);
+		#elseif android
+			_nativeView = new com.season.basis.android.Button(BaseActivity.getInstance());
+		#end
 	}
 	
 	public function setLabel(text:String):Void

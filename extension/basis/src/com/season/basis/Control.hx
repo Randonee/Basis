@@ -4,8 +4,6 @@ package com.season.basis;
 import cpp.Lib;
 #elseif neko
 import neko.Lib;
-#else
-import nme.Lib;
 #end
 
 class Control extends BasisView
@@ -19,6 +17,6 @@ class Control extends BasisView
 	
 	override private function init():Void
 	{
-		_tag = ViewManager.createView(TYPE);
+		_tag = BasisViewManager.createView(TYPE);
 	}
 }

@@ -4,9 +4,15 @@ package com.season.basis;
 import cpp.Lib;
 #elseif neko
 import neko.Lib;
-#else
-import nme.Lib;
 #end
+
+#if android
+import com.season.basis.android.RelativeLayout;
+import com.season.basis.android.View;
+import com.season.basis.android.BaseActivity;
+import com.season.basis.android.LayoutParams;
+#end
+
 
 class BasisView
 {
@@ -15,14 +21,25 @@ class BasisView
 	public var tag(getTag, setTag) : Int;
 	private function setTag( value : Int ):Int{_tag = value; return _tag;}
 	private function getTag():Int {return _tag;}
-	
 	public var superview(getSuperView, null) : BasisView;
+	
+	#if android
+		public var nativeView(getNativeView, null) : View;
+		private function getNativeView():View {return _nativeView;}
+		private var _nativeView:View;
+	#end
+	
+	
 	private function getSuperView():BasisView 
 	{
 		#if ios
 			var view:BasisView = new BasisView();
 			view.tag = cpp_getSuperview(tag);
 			return view;
+		#end
+		
+		#if android
+			return null;
 		#end
 	}
 	
@@ -31,13 +48,22 @@ class BasisView
 	{
 		#if ios
 			return cpp_call_view_get_x(tag);
-		#end	
+		#end
+		
+		#if android
+			return _nativeView.getLeft();
+		#end
 	}
 	private function setX(value:Float):Float
 	{
 		#if ios
 			cpp_call_view_set_x(tag, value);
 			return cpp_call_view_get_x(tag);
+		#end
+		
+		#if android
+			_nativeView.layout(Std.int(value), _nativeView.getTop(), Std.int(value) + _nativeView.getWidth(), _nativeView.getTop() + _nativeView.getHeight());
+			return _nativeView.getLeft();
 		#end
 	}
 	
@@ -46,14 +72,23 @@ class BasisView
 	{
 		#if ios
 			return cpp_call_view_get_y(tag);
-		#end	
+		#end
+		
+		#if android
+			return _nativeView.getTop();
+		#end
 	}
 	private function setY(value:Float):Float
 	{
 		#if ios
 			cpp_call_view_set_y(tag, value);
 			return cpp_call_view_get_y(tag);
-		#end	
+		#end
+		
+		#if android
+			_nativeView.layout(_nativeView.getLeft(), Std.int(value), _nativeView.getLeft() + _nativeView.getWidth(), Std.int(value) + _nativeView.getTop());
+			return _nativeView.getTop();
+		#end
 	}
 	
 	public var width(getWidth, setWidth) : Float;
@@ -61,13 +96,22 @@ class BasisView
 	{
 		#if ios
 			return cpp_call_view_get_width(tag);
-		#end	
+		#end
+		
+		#if android
+			return _nativeView.getWidth();
+		#end
 	}
 	private function setWidth(value:Float):Float
 	{
 		#if ios
 			cpp_call_view_set_width(tag, value);
 			return cpp_call_view_get_width(tag);
+		#end
+		
+		#if android
+			_nativeView.layout(_nativeView.getLeft(), _nativeView.getTop(), Std.int(value), _nativeView.getTop() + _nativeView.getHeight());
+			return _nativeView.getWidth();
 		#end
 	}
 	
@@ -77,12 +121,21 @@ class BasisView
 		#if ios
 			return cpp_call_view_get_height(tag);
 		#end
+		
+		#if android
+			return _nativeView.getHeight();
+		#end
 	}
 	private function setHeight(value:Float):Float
 	{
 		#if ios
 			cpp_call_view_set_height(tag, value);
 			return cpp_call_view_get_height(tag);
+		#end
+		
+		#if android
+			_nativeView.layout(_nativeView.getLeft(), _nativeView.getTop(), _nativeView.getWidth(), Std.int(value));
+			return _nativeView.getHeight();
 		#end
 	}
 	
@@ -95,18 +148,24 @@ class BasisView
 	
 	private function init():Void
 	{
-		_tag = ViewManager.createView(TYPE);
+		#if ios
+			_tag = BasisViewManager.createView(TYPE);
+		#elseif android
+			_nativeView = new RelativeLayout(BaseActivity.getInstance());
+		#end
 	}
 	
 	public function addEventListener(type:String, handler:BasisView->String->Void):Void
 	{
-		ViewManager.addEventListener(type, this, handler);
+		BasisViewManager.addEventListener(type, this, handler);
 	}
 	
 	public function addSubview(view:BasisView):Void
 	{
 		#if ios
 			cpp_addSubview(_tag, view.tag);
+		#elseif android
+			cast(_nativeView, RelativeLayout).addView(view.nativeView);
 		#end
 	}
 	
@@ -114,6 +173,8 @@ class BasisView
 	{
 		#if ios
 			cpp_removeSubview(_tag, view.tag);
+		#elseif android
+			//nativeView
 		#end
 	}
 	

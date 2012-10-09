@@ -1,11 +1,10 @@
 package com.season.basis;
 
 #if ios
-import cpp.Lib;
-#elseif neko
-import neko.Lib;
-#else
-import nme.Lib;
+	import cpp.Lib;
+#elseif android
+	import com.season.basis.android.BaseActivity;
+	import com.season.basis.android.EditText;
 #end
 
 class TextField extends Control
@@ -19,12 +18,33 @@ class TextField extends Control
 	
 	override private function init():Void
 	{
-		_tag = ViewManager.createView(TYPE);
+		#if ios
+			_tag = BasisViewManager.createView(TYPE);
+		#elseif android
+			_nativeView = new EditText(BaseActivity.getInstance());
+		#end
 	}
 	
 	public var text(getText, setText) : String;
-	private function setText( value : String ):String{cpp_textField_setText(_tag, value); return cpp_textField_getText(_tag);}
-	private function getText():String {return cpp_textField_getText(_tag);}
+	private function setText( value : String ):String
+	{
+		#if ios
+			cpp_textField_setText(_tag, value);
+			return cpp_textField_getText(_tag);
+		#elseif android
+			cast(_nativeView, EditText).setText(value);
+			return value;
+		#end
+	}
+	
+	private function getText():String 
+	{
+		#if ios
+			return cpp_textField_getText(_tag);
+		#elseif android
+			return "";
+		#end
+	}
 	
 	
 	#if ios
