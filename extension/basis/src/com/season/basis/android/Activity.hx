@@ -4,7 +4,7 @@ package com.season.basis.android;
 extern class Activity extends ContextThemeWrapper
 {
 	public function new():Void;
-	public function addContentView(view:View, params:LayoutParams):Void;
+	public function addContentView(view:View, params:ViewGroupLayoutParams):Void;
 	public function getCurrentFocus():View;
-	public function setContentView(view:View):Void;
+	public function setContentView(view:Dynamic):Void;
 }

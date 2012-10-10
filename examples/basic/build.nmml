@@ -7,6 +7,8 @@
  	
 	<set name="BUILD_DIR" value="build" />
 	
+	<set name="RES_DIR" value="res" />
+	
 	<classpath name="src" />
 	
 	<haxelib name="nme" if="ios"/>

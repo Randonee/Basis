@@ -1,20 +1,20 @@
 package com.basis.example.views;
 
-import com.season.basis.BasisView;
-import com.season.basis.Label;
-import com.season.basis.TextField;
-import com.season.basis.Button;
-import com.season.basis.EventTypes;
-import com.season.basis.MapView;
+import com.season.basis.ios.ui.UIView;
+import com.season.basis.ios.ui.UILabel;
+import com.season.basis.ios.ui.UITextField;
+import com.season.basis.ios.ui.UIButton;
+import com.season.basis.ios.EventTypes;
+import com.season.basis.ios.mapkit.MKMapView;
 
-class ComponentDisplayView extends BasisView
+class ComponentDisplayView extends UIView
 {
-	private var _inputLabel:Label;
-	private var _inputField:TextField;
-	private var _outputField:TextField;
-	private var _outputLabel:Label;
-	private var _sampleButton:Button;
-	private var _mapView:MapView;
+	private var _inputLabel:UILabel;
+	private var _inputField:UITextField;
+	private var _outputField:UITextField;
+	private var _outputLabel:UILabel;
+	private var _sampleButton:UIButton;
+	private var _mapView:MKMapView;
 	
 	public function new()
 	{
@@ -22,31 +22,31 @@ class ComponentDisplayView extends BasisView
 		this.width = 300;
 		this.height = 400;
 		
-		_inputLabel = new Label();
+		_inputLabel = new UILabel();
 		addSubview(_inputLabel);
 		_inputLabel.text  = "Input";
 		_inputLabel.height = 20;
 		_inputLabel.x = 5;
 		
-		_inputField= new TextField();
+		_inputField= new UITextField();
 		addSubview(_inputField);
 		_inputField.y = 30;
 		_inputField.x = 5;
 		_inputField.addEventListener(EventTypes.TEXTFIELD_TEXT_DID_CHANGE, onInputChanged);
 		
-		_outputLabel = new Label();
+		_outputLabel = new UILabel();
 		addSubview(_outputLabel);
 		_outputLabel.text  = "Output";
 		_outputLabel.height = 20;
 		_outputLabel.x = 5;
 		_outputLabel.y = 80;
 		
-		_outputField= new TextField();
+		_outputField= new UITextField();
 		addSubview(_outputField);
 		_outputField.y = 110;
 		_outputField.x = 5;
 		
-		_sampleButton = new Button();
+		_sampleButton = new UIButton();
 		_sampleButton.width = 70;
 		_sampleButton.height = 30;
 		_sampleButton.y = 160;
@@ -58,22 +58,20 @@ class ComponentDisplayView extends BasisView
 		this.width = 300;
 		this.height = 400;
 		
-		#if ios
-		_mapView = new MapView();
+		_mapView = new MKMapView();
 		_mapView.width = 300;
 		_mapView.height = 250;
 		_mapView.x = 10;
 		_mapView.y = 200;
 		addSubview(_mapView);
-		#end
 	}
 	
-	private function onButtonClick(view:BasisView, type):Void
+	private function onButtonClick(view:UIView, type):Void
 	{
 		_inputField.text = "Button Clicked";
 	}
 	
-	private function onInputChanged(view:BasisView, type):Void
+	private function onInputChanged(view:UIView, type):Void
 	{
 		_outputField.text = _inputField.text;
 	}

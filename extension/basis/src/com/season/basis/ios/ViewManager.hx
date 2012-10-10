@@ -1,16 +1,10 @@
-package com.season.basis;
+package com.season.basis.ios;
 
-#if ios
 import cpp.Lib;
-#elseif neko
-import neko.Lib;
-#end
 
-#if android
-import com.season.basis.android.BaseActivity;
-#end
+import com.season.basis.ios.ui.UIView;
 
-class BasisViewManager
+class ViewManager
 {	
 	static private var _eventManager:EventManager;
 	
@@ -22,13 +16,7 @@ class BasisViewManager
 	**/
 	public static function createView(type:Int):Int
 	{
-		#if ios
-			return cpp_call_create_view(type);
-		#end
-		
-		#if android
-			return 0;
-		#end
+		return cpp_call_create_view(type);
 	}
 	
 	/**
@@ -36,14 +24,9 @@ class BasisViewManager
 	*
 	* @param view the view to be added
 	**/
-	public static function addToRootView(view:BasisView):Void
+	public static function addToRootView(view:UIView):Void
 	{
-		#if ios
-			cpp_call_add_to_root_view(view.tag);
-		#elseif android
-			BaseActivity.getInstance().setContentView(view.nativeView);
-		#end
-		
+		cpp_call_add_to_root_view(view.tag);
 	}
 	
 	/**
@@ -53,7 +36,7 @@ class BasisViewManager
 	* @param view the view that will be dispatching the event
 	* @param handler the function that will be called when the event occurs
 	**/
-	public static function addEventListener(type:String, view:BasisView, handler:BasisView->String->Void):Void
+	public static function addEventListener(type:String, view:UIView, handler:UIView->String->Void):Void
 	{
 		getEventManager().addEventListener(type, view, handler);
 	}
@@ -65,7 +48,7 @@ class BasisViewManager
 	* @param view the view that will be dispatching the event
 	* @param handler the function that will be called when the event occurs
 	**/
-	public static function removeEventListener(type:String, view:BasisView, handler:BasisView->String->Void):Void
+	public static function removeEventListener(type:String, view:UIView, handler:UIView->String->Void):Void
 	{
 		getEventManager().removeEventListener(type, view, handler);
 	}
@@ -80,9 +63,7 @@ class BasisViewManager
 		if(_eventManager == null)
 		{
 			_eventManager = new EventManager();
-			#if ios
-				cpp_call_set_event_handler(_eventManager.handleEvent);
-			#end
+			cpp_call_set_event_handler(_eventManager.handleEvent);
 		}
 		return _eventManager;
 	}

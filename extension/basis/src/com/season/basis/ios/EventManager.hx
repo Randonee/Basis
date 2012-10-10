@@ -1,9 +1,11 @@
-package com.season.basis;
+package com.season.basis.ios;
+
+import com.season.basis.ios.ui.UIView;
 
 typedef BasisEventListener =
 {
-	view : BasisView, 
-	handler : BasisView->String->Void 
+	view : UIView, 
+	handler : UIView->String->Void 
 }
 
 
@@ -23,7 +25,7 @@ class EventManager
 	* @param view the view that will be dispatching the event
 	* @param handler the function that will be called when the event occurs
 	**/
-	public function addEventListener(type:String, view:BasisView, handler:BasisView->String->Void):Void
+	public function addEventListener(type:String, view:UIView, handler:UIView->String->Void):Void
 	{
 		removeEventListener(type, view, handler);
 		
@@ -53,7 +55,7 @@ class EventManager
 	* @param view the view that will be dispatching the event
 	* @param handler the function that will be called when the event occurs
 	**/
-	public function removeEventListener(type:String, view:BasisView, handler:BasisView->String->Void):Void
+	public function removeEventListener(type:String, view:UIView, handler:UIView->String->Void):Void
 	{
 		var key:String = Std.string(view.tag);
 		var objectListeners:Hash<Array<BasisEventListener>> = _eventListeners.get(key);
