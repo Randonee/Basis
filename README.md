@@ -10,21 +10,32 @@ The goal of basis is to provide cross platform access to native UI components.
 * iOS
 * Android
 
-iOS
+
+**iOS**
+
 To access native components a native extension is used to both create views and handle events.
-
-Android
-The android target must use a custom version of NME found here:
-	https://github.com/Randonee/NME
-To compile use the target -android_empty
-	haxelib run nme build build.nmml -android_empty
-
 
 To build the iOS native extension run these commands from extension/basis/project
 
 	haxelib run hxcpp Build.xml -Diphonesim
 	haxelib run hxcpp Build.xml -Diphoneos -DHXCPP_ARMV7
 	haxelib run hxcpp Build.xml -Diphoneos
+
+
+**Android**
+
+The android target must use a custom version of NME found here:
+
+	https://github.com/Randonee/NME
+	
+To compile use the target -android_empty
+
+	haxelib run nme build build.nmml -android_empty
+
+You can use layout xml the same way you can in an actual android project by saving them in project_dir/res/layout. You can then access them in haxe like this:
+
+	r.Layout.layout_name
+
 
 
 **License:**
