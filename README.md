@@ -5,10 +5,19 @@ Haxe Native UI Library
 
 The goal of basis is to provide cross platform access to native UI components.
 
-Supported platforms:
+**Supported platforms**
 
 * iOS
 * Android
+
+iOS
+To access native components a native extension is used to both create views and handle events.
+
+Android
+The android target must use a custom version of NME found here:
+	https://github.com/Randonee/NME
+To compile use the target -android_empty
+	haxelib run nme build build.nmml -android_empty
 
 
 To build the iOS native extension run these commands from extension/basis/project
