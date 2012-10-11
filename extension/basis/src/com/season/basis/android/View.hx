@@ -15,4 +15,6 @@ extern class View
 	
 	private function onLayout(changed:Bool, left:Int, top:Int, right:Int, bottom:Int):Void;
 	public function setLayoutParams(params:ViewGroupLayoutParams):Void;
+	
+	public function findViewById(id:Int):View;
 }

@@ -1,4 +1,4 @@
-package com.basis.example.views;
+package com.basis.example.views.ios;
 
 import com.season.basis.ios.ui.UIView;
 import com.season.basis.ios.ui.UILabel;
@@ -7,7 +7,7 @@ import com.season.basis.ios.ui.UIButton;
 import com.season.basis.ios.EventTypes;
 import com.season.basis.ios.mapkit.MKMapView;
 
-class ComponentDisplayView extends UIView
+class MainView extends UIView
 {
 	private var _inputLabel:UILabel;
 	private var _inputField:UITextField;

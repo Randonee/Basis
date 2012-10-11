@@ -1,13 +1,12 @@
 package com.basis.example;
 
-
-
 import com.season.basis.Util;
 #if ios
 	import com.season.basis.ios.ViewManager;
-	import com.basis.example.views.ComponentDisplayView;
+	import com.basis.example.views.ios.MainView;
 #elseif android
 	import com.season.basis.android.BaseActivity;
+	import com.basis.example.views.android.MainView;
 #end
 
 class Main
@@ -17,9 +16,9 @@ class Main
 		Util.enableTrace();
 		
 		#if ios
-			ViewManager.addToRootView(new ComponentDisplayView());
+			ViewManager.addToRootView(new MainView());
 		#elseif android
-			BaseActivity.getInstance().setContentView(r.Layout.main);
+			new MainView();
 		#end
 	}
 }
