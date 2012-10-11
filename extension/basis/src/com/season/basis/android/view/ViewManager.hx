@@ -1,4 +1,4 @@
-package com.season.basis.android;
+package com.season.basis.android.view;
 
 @:native("android.view.ViewManager")
 extern class ViewManager

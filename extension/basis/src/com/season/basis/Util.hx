@@ -3,7 +3,7 @@ package com.season.basis;
 #if ios
 import cpp.Lib;
 #elseif android
-import com.season.basis.android.Log;
+import com.season.basis.android.util.Log;
 #end
 
 class Util

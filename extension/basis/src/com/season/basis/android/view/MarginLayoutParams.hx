@@ -1,4 +1,4 @@
-package com.season.basis.android;
+package com.season.basis.android.view;
 
 @:native("android.view.ViewGroup.MarginLayoutParams")
 extern class MarginLayoutParams extends ViewGroupLayoutParams

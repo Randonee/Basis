@@ -1,4 +1,4 @@
-package com.season.basis.android;
+package com.season.basis.android.util;
 
 @:native("android.util.Log")
 extern class Log

@@ -5,7 +5,6 @@ import com.season.basis.Util;
 	import com.season.basis.ios.ViewManager;
 	import com.basis.example.views.ios.MainView;
 #elseif android
-	import com.season.basis.android.BaseActivity;
 	import com.basis.example.views.android.MainView;
 #end
 
@@ -13,7 +12,7 @@ class Main
 {
 	public static function main()
 	{
-		Util.enableTrace();
+		//Util.enableTrace();
 		
 		#if ios
 			ViewManager.addToRootView(new MainView());

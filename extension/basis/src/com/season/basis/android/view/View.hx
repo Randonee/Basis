@@ -1,4 +1,6 @@
-package com.season.basis.android;
+package com.season.basis.android.view;
+
+import com.season.basis.android.content.Context;
 
 @:native("android.view.View")
 extern class View
@@ -17,4 +19,15 @@ extern class View
 	public function setLayoutParams(params:ViewGroupLayoutParams):Void;
 	
 	public function findViewById(id:Int):View;
+	
+	
+	//Events
+	public function setOnClickListener(l:OnClickListener):Void;
+	public function setOnKeyListener(l:OnKeyListener):Bool;
 }
+
+@:native("android.view.View.OnClickListener")
+extern interface OnClickListener{public function onClick(v:View):Void;}
+
+@:native("android.view.View.OnKeyListener")
+extern interface OnKeyListener{public function onKey(v:View, keyCode:Int, event:KeyEvent):Bool;}
