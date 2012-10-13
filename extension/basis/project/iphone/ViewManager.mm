@@ -84,13 +84,13 @@ namespace basis
             case 3:
                 view = [UIButton buttonWithType:UIButtonTypeRoundedRect];
                 view.frame = CGRectMake(0,0, 200,200);
-                initFunction = &buttonInitEventListeners;
+                initFunction = &initUIButtonEventListeners;
                 break;
                 
             case 4:
                 view = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 200, 30)];
                 [(UITextField *)view setBorderStyle:UITextBorderStyleRoundedRect];
-                initFunction = &textFieldInitEventListeners;
+                initFunction = &initUITextFieldEventListeners;
                 break;
                 
             case 5:
@@ -100,7 +100,84 @@ namespace basis
            	case 6:
                 view = [[MKMapView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
                 break;
-                
+            case 7:
+                view = [[UIResponder alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+                break;
+			case 8:
+                view = [[UIAlertView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+                break;
+            case 9:
+                view = [[UICollectionReusableView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+                break;
+            case 10:
+                view = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+                break;
+            case 11:
+                view = [[UICollectionViewCell alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+                break;
+            case 12:
+                view = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+                break;
+            case 13:
+                view = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+                break;
+            case 14:
+                view = [[UIPageControl alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+                break;
+			case 15:
+                view = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+                break;
+			case 16:
+                view = [[UIResponder alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+                break;
+			case 17:
+                view = [[UIPopoverBackgroundView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+                break;
+			case 18:
+                view = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+                break;
+			case 19:
+                view = [[UIRefreshControl alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+                break;
+			case 20:
+                view = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+                break;
+			case 21:
+                view = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+                break;
+			case 22:
+                view = [[UISegmentedControl alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+                break;
+			case 23:
+                view = [[UISlider alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+                break;
+			case 24:
+                view = [[UIStepper alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+                break;
+			case 25:
+                view = [[UISwitch alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+                break;
+			case 26:
+                view = [[UITabBar alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+                break;
+			case 27:
+                view = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+                break;
+			case 28:
+                view = [[UITableViewCell alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+                break;
+			case 29:
+                view = [[UITableViewHeaderFooterView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+                break;
+			case 30:
+                view = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+                break;
+			case 31:
+                view = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+                break;
+			case 32:
+                view = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+                break;
             default:
                 view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
                 break;
@@ -119,10 +196,5 @@ namespace basis
     
     
     #include "Util.mm";
-    #include "UIViewExtern.mm";
-    #include "UIControlExtern.mm";
-    #include "UILabelExtern.mm";
-    #include "UIButtonExtern.mm";
-    #include "UITextFieldExtern.mm";
-    #include "UIImageViewExtern.mm";
+    #include "Extern.mm";
 }

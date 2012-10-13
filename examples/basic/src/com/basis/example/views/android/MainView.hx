@@ -35,7 +35,6 @@ class MainView implements OnKeyListener, implements OnClickListener
 	
 	public function onKey(v:View, actionId:Int, event:KeyEvent):Bool
 	{
-		trace("----------------------");
 		_outputField.setText("oo");
 		return true;
 	}

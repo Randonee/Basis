@@ -13,11 +13,6 @@ namespace basis
     void viewManager_doesNothing();
     
     #include "Util.h";
-    #include "UIViewExtern.h";
-    #include "UIControlExtern.h";
-    #include "UILabelExtern.h";
-    #include "UIButtonExtern.h";
-    #include "UITextFieldExtern.h";
-    #include "UIImageViewExtern.h";
+    #include "Extern.h";
 }
 #endif

@@ -2,7 +2,7 @@ package com.season.basis.ios;
 
 import cpp.Lib;
 
-import com.season.basis.ios.ui.UIView;
+import com.season.basis.ios.ViewBase;
 
 class ViewManager
 {	
@@ -24,7 +24,7 @@ class ViewManager
 	*
 	* @param view the view to be added
 	**/
-	public static function addToRootView(view:UIView):Void
+	public static function addToRootView(view:ViewBase):Void
 	{
 		cpp_call_add_to_root_view(view.tag);
 	}
@@ -36,7 +36,7 @@ class ViewManager
 	* @param view the view that will be dispatching the event
 	* @param handler the function that will be called when the event occurs
 	**/
-	public static function addEventListener(type:String, view:UIView, handler:UIView->String->Void):Void
+	public static function addEventListener(type:String, view:ViewBase, handler:ViewBase->String->Void):Void
 	{
 		getEventManager().addEventListener(type, view, handler);
 	}
@@ -48,7 +48,7 @@ class ViewManager
 	* @param view the view that will be dispatching the event
 	* @param handler the function that will be called when the event occurs
 	**/
-	public static function removeEventListener(type:String, view:UIView, handler:UIView->String->Void):Void
+	public static function removeEventListener(type:String, view:ViewBase, handler:ViewBase->String->Void):Void
 	{
 		getEventManager().removeEventListener(type, view, handler);
 	}
