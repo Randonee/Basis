@@ -19,32 +19,31 @@ class MainView extends UIView
 	public function new()
 	{
 		super();
-	//	this.width = 300;
-		//this.height = 400;
+		this.frame = [0.0 ,0,400,400];
 		
 		_inputLabel = new UILabel();
 		addSubview(_inputLabel);
 		_inputLabel.text  = "Input";
 		
-		_inputLabel.setFrame2([5,0,200,30]);
+		_inputLabel.frame = [5.0,0,200,30];
 		
 		_inputField= new UITextField();
 		addSubview(_inputField);
-		_inputField.setFrame2([5,30,200,30]);
+		_inputField.frame = [5.0,30,200,30];
 		_inputField.addEventListener(EventTypes.TEXTFIELD_TEXT_DID_CHANGE, onInputChanged);
 		
 		_outputLabel = new UILabel();
 		addSubview(_outputLabel);
 		_outputLabel.text  = "Output";
-		_outputLabel.setFrame2([5,80,200,30]);
+		_outputLabel.frame = [5.0,80,200,30];
 		
 		_outputField= new UITextField();
 		addSubview(_outputField);
-		_outputField.setFrame2([5,110,200,30]);
+		_outputField.frame = [5.0,110,200,30];
 		
 		_sampleButton = new UIButton();
-		_sampleButton.setFrame2([50,230,100,30]);
-		_sampleButton.setTitle("ddd", 0);
+		_sampleButton.frame = [50.0,160,100,30];
+		_sampleButton.setTitle("Button", 0);
 		_sampleButton.addEventListener(EventTypes.CONTROL_TOUCH_UP_INSIDE, onButtonClick);
 		addSubview(_sampleButton);
 		

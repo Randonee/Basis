@@ -99,8 +99,8 @@ DEFINE_PRIM (uialertview_buttonTitleAtIndex, 2);
 value uialertview_addButtonWithTitle(value tag, value tag1)
 {
 	UIAlertView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIAlertView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	int returnVar = (int)[view addButtonWithTitle:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	int returnVar = (int)[view addButtonWithTitle:arg1 ];
 	return alloc_int(returnVar);
 }
 DEFINE_PRIM (uialertview_addButtonWithTitle, 2);
@@ -135,8 +135,8 @@ DEFINE_PRIM (uialertview_getTitle, 1);
 void uialertview_setDelegate(value tag, value tag1)
 {
 	UIAlertView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIAlertView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	view.delegate = (view1);
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	view.delegate = (arg1);
 	
 }
 DEFINE_PRIM (uialertview_setDelegate, 2);
@@ -164,16 +164,16 @@ DEFINE_PRIM (uialertview_becomeFirstResponder, 1);
 void uialertview_replaceAlert(value tag, value tag1)
 {
 	UIAlertView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIAlertView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view replaceAlert:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view replaceAlert:arg1 ];
 	
 }
 DEFINE_PRIM (uialertview_replaceAlert, 2);
 void uialertview_presentSheetFromButtonBar(value tag, value tag1)
 {
 	UIAlertView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIAlertView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view presentSheetFromButtonBar:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view presentSheetFromButtonBar:arg1 ];
 	
 }
 DEFINE_PRIM (uialertview_presentSheetFromButtonBar, 2);
@@ -306,40 +306,40 @@ DEFINE_PRIM (uialertview_dismiss, 1);
 void uialertview_setDimView(value tag, value tag1)
 {
 	UIAlertView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIAlertView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view setDimView:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view setDimView:arg1 ];
 	
 }
 DEFINE_PRIM (uialertview_setDimView, 2);
 void uialertview_presentSheetToAboveView(value tag, value tag1)
 {
 	UIAlertView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIAlertView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view presentSheetToAboveView:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view presentSheetToAboveView:arg1 ];
 	
 }
 DEFINE_PRIM (uialertview_presentSheetToAboveView, 2);
 void uialertview_presentSheetInView(value tag, value tag1)
 {
 	UIAlertView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIAlertView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view presentSheetInView:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view presentSheetInView:arg1 ];
 	
 }
 DEFINE_PRIM (uialertview_presentSheetInView, 2);
 void uialertview_presentSheetFromAboveView(value tag, value tag1)
 {
 	UIAlertView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIAlertView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view presentSheetFromAboveView:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view presentSheetFromAboveView:arg1 ];
 	
 }
 DEFINE_PRIM (uialertview_presentSheetFromAboveView, 2);
 void uialertview_presentSheetFromBehindView(value tag, value tag1)
 {
 	UIAlertView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIAlertView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view presentSheetFromBehindView:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view presentSheetFromBehindView:arg1 ];
 	
 }
 DEFINE_PRIM (uialertview_presentSheetFromBehindView, 2);
@@ -437,8 +437,8 @@ DEFINE_PRIM (uialertview_context, 1);
 void uialertview_setContext(value tag, value tag1)
 {
 	UIAlertView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIAlertView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view setContext:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view setContext:arg1 ];
 	
 }
 DEFINE_PRIM (uialertview_setContext, 2);
@@ -452,9 +452,9 @@ DEFINE_PRIM (uialertview_buttonCount, 1);
 value uialertview_addButtonWithTitle2(value tag, value tag1, value tag2)
 {
 	UIAlertView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIAlertView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	UIAlertView *view2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
-	id returnVar = (id)[view addButtonWithTitle:view1 :view2 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	id arg2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
+	id returnVar = (id)[view addButtonWithTitle:arg1 :arg2 ];
 	return alloc_int((int)[returnVar getTag]);
 }
 DEFINE_PRIM (uialertview_addButtonWithTitle2, 3);
@@ -468,8 +468,8 @@ DEFINE_PRIM (uialertview_destructiveButton, 1);
 void uialertview_setDestructiveButton(value tag, value tag1)
 {
 	UIAlertView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIAlertView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view setDestructiveButton:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view setDestructiveButton:arg1 ];
 	
 }
 DEFINE_PRIM (uialertview_setDestructiveButton, 2);
@@ -490,8 +490,8 @@ DEFINE_PRIM (uialertview_defaultButton, 1);
 void uialertview_setDefaultButton(value tag, value tag1)
 {
 	UIAlertView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIAlertView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view setDefaultButton:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view setDefaultButton:arg1 ];
 	
 }
 DEFINE_PRIM (uialertview_setDefaultButton, 2);
@@ -568,24 +568,24 @@ DEFINE_PRIM (uialertview_subtitle, 1);
 void uialertview_setSubtitle(value tag, value tag1)
 {
 	UIAlertView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIAlertView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view setSubtitle:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view setSubtitle:arg1 ];
 	
 }
 DEFINE_PRIM (uialertview_setSubtitle, 2);
 void uialertview_setTaglineText(value tag, value tag1)
 {
 	UIAlertView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIAlertView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view setTaglineText:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view setTaglineText:arg1 ];
 	
 }
 DEFINE_PRIM (uialertview_setTaglineText, 2);
 void uialertview_setBodyText(value tag, value tag1)
 {
 	UIAlertView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIAlertView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view setBodyText:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view setBodyText:arg1 ];
 	
 }
 DEFINE_PRIM (uialertview_setBodyText, 2);
@@ -620,9 +620,9 @@ DEFINE_PRIM (uialertview_groupsTextFields, 1);
 value uialertview_addTextFieldWithValue(value tag, value tag1, value tag2)
 {
 	UIAlertView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIAlertView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	UIAlertView *view2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
-	id returnVar = (id)[view addTextFieldWithValue:view1 :view2 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	id arg2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
+	id returnVar = (id)[view addTextFieldWithValue:arg1 :arg2 ];
 	return alloc_int((int)[returnVar getTag]);
 }
 DEFINE_PRIM (uialertview_addTextFieldWithValue, 3);
@@ -678,40 +678,40 @@ DEFINE_PRIM (uibutton_titleForState, 2);
 void uibutton_setAttributedTitle(value tag, value tag1, value arg2)
 {
 	UIButton *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIButton *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view setAttributedTitle:view1 forState:val_int(arg2) ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view setAttributedTitle:arg1 forState:val_int(arg2) ];
 	
 }
 DEFINE_PRIM (uibutton_setAttributedTitle, 3);
 void uibutton_setBackgroundImage(value tag, value tag1, value arg2)
 {
 	UIButton *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIButton *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view setBackgroundImage:view1 forState:val_int(arg2) ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view setBackgroundImage:arg1 forState:val_int(arg2) ];
 	
 }
 DEFINE_PRIM (uibutton_setBackgroundImage, 3);
 void uibutton_setImage(value tag, value tag1, value arg2)
 {
 	UIButton *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIButton *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view setImage:view1 forState:val_int(arg2) ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view setImage:arg1 forState:val_int(arg2) ];
 	
 }
 DEFINE_PRIM (uibutton_setImage, 3);
 void uibutton_setTitleShadowColor(value tag, value tag1, value arg2)
 {
 	UIButton *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIButton *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view setTitleShadowColor:view1 forState:val_int(arg2) ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view setTitleShadowColor:arg1 forState:val_int(arg2) ];
 	
 }
 DEFINE_PRIM (uibutton_setTitleShadowColor, 3);
 void uibutton_setTitleColor(value tag, value tag1, value arg2)
 {
 	UIButton *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIButton *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view setTitleColor:view1 forState:val_int(arg2) ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view setTitleColor:arg1 forState:val_int(arg2) ];
 	
 }
 DEFINE_PRIM (uibutton_setTitleColor, 3);
@@ -830,40 +830,40 @@ DEFINE_PRIM (uibutton_title, 1);
 void uibutton_crossfadeToImage(value tag, value tag1, value arg2)
 {
 	UIButton *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIButton *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view crossfadeToImage:view1 forState:val_int(arg2) ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view crossfadeToImage:arg1 forState:val_int(arg2) ];
 	
 }
 DEFINE_PRIM (uibutton_crossfadeToImage, 3);
 void uibutton_setBackgroundImage2(value tag, value tag1, value arg2)
 {
 	UIButton *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIButton *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view setBackgroundImage:view1 forStates:val_int(arg2) ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view setBackgroundImage:arg1 forStates:val_int(arg2) ];
 	
 }
 DEFINE_PRIM (uibutton_setBackgroundImage2, 3);
 void uibutton_setImage2(value tag, value tag1, value arg2)
 {
 	UIButton *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIButton *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view setImage:view1 forStates:val_int(arg2) ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view setImage:arg1 forStates:val_int(arg2) ];
 	
 }
 DEFINE_PRIM (uibutton_setImage2, 3);
 void uibutton_setTitleShadowColor2(value tag, value tag1, value arg2)
 {
 	UIButton *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIButton *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view setTitleShadowColor:view1 forStates:val_int(arg2) ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view setTitleShadowColor:arg1 forStates:val_int(arg2) ];
 	
 }
 DEFINE_PRIM (uibutton_setTitleShadowColor2, 3);
 void uibutton_setTitleColor2(value tag, value tag1, value arg2)
 {
 	UIButton *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIButton *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view setTitleColor:view1 forStates:val_int(arg2) ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view setTitleColor:arg1 forStates:val_int(arg2) ];
 	
 }
 DEFINE_PRIM (uibutton_setTitleColor2, 3);
@@ -912,8 +912,8 @@ DEFINE_PRIM (uicontrol_sendActionsForControlEvents, 2);
 value uicontrol_actionsForTarget(value tag, value tag1, value arg2)
 {
 	UIControl *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIControl *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	id returnVar = (id)[view actionsForTarget:view1 forControlEvent:val_int(arg2) ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	id returnVar = (id)[view actionsForTarget:arg1 forControlEvent:val_int(arg2) ];
 	return alloc_int((int)[returnVar getTag]);
 }
 DEFINE_PRIM (uicontrol_actionsForTarget, 3);
@@ -983,35 +983,35 @@ DEFINE_PRIM (uicontrol_getHighlighted, 1);
 void uicontrol_cancelTrackingWithEvent(value tag, value tag1)
 {
 	UIControl *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIControl *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view cancelTrackingWithEvent:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view cancelTrackingWithEvent:arg1 ];
 	
 }
 DEFINE_PRIM (uicontrol_cancelTrackingWithEvent, 2);
 void uicontrol_endTrackingWithTouch(value tag, value tag1, value tag2)
 {
 	UIControl *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIControl *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	UIControl *view2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
-	[view endTrackingWithTouch:view1 :view2 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	id arg2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
+	[view endTrackingWithTouch:arg1 :arg2 ];
 	
 }
 DEFINE_PRIM (uicontrol_endTrackingWithTouch, 3);
 value uicontrol_continueTrackingWithTouch(value tag, value tag1, value tag2)
 {
 	UIControl *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIControl *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	UIControl *view2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
-	BOOL returnVar = (BOOL)(int)[view continueTrackingWithTouch:view1 :view2 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	id arg2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
+	BOOL returnVar = (BOOL)(int)[view continueTrackingWithTouch:arg1 :arg2 ];
 	return alloc_bool(returnVar);
 }
 DEFINE_PRIM (uicontrol_continueTrackingWithTouch, 3);
 value uicontrol_beginTrackingWithTouch(value tag, value tag1, value tag2)
 {
 	UIControl *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIControl *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	UIControl *view2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
-	BOOL returnVar = (BOOL)(int)[view beginTrackingWithTouch:view1 :view2 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	id arg2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
+	BOOL returnVar = (BOOL)(int)[view beginTrackingWithTouch:arg1 :arg2 ];
 	return alloc_bool(returnVar);
 }
 DEFINE_PRIM (uicontrol_beginTrackingWithTouch, 3);
@@ -1046,8 +1046,8 @@ DEFINE_PRIM (uicontrol_setTracking, 2);
 void uicontrol_removeTarget(value tag, value tag1, value arg2)
 {
 	UIControl *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIControl *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view removeTarget:view1 forEvents:val_int(arg2) ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view removeTarget:arg1 forEvents:val_int(arg2) ];
 	
 }
 DEFINE_PRIM (uicontrol_removeTarget, 3);
@@ -1180,8 +1180,8 @@ DEFINE_PRIM (uilabel_letterpressStyle, 1);
 void uilabel_setLetterpressStyle(value tag, value tag1)
 {
 	UILabel *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UILabel *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view setLetterpressStyle:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view setLetterpressStyle:arg1 ];
 	
 }
 DEFINE_PRIM (uilabel_setLetterpressStyle, 2);
@@ -1384,8 +1384,8 @@ DEFINE_PRIM (uilabel_color, 1);
 void uilabel_setColor(value tag, value tag1)
 {
 	UILabel *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UILabel *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view setColor:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view setColor:arg1 ];
 	
 }
 DEFINE_PRIM (uilabel_setColor, 2);
@@ -1427,32 +1427,32 @@ DEFINE_PRIM (uiresponder_becomeFirstResponder, 1);
 void uiresponder_remoteControlReceivedWithEvent(value tag, value tag1)
 {
 	UIResponder *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIResponder *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view remoteControlReceivedWithEvent:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view remoteControlReceivedWithEvent:arg1 ];
 	
 }
 DEFINE_PRIM (uiresponder_remoteControlReceivedWithEvent, 2);
 void uiresponder_motionCancelled(value tag, value arg1, value tag2)
 {
 	UIResponder *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIResponder *view2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
-	[view motionCancelled:val_int(arg1) :view2 ];
+	id arg2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
+	[view motionCancelled:val_int(arg1) :arg2 ];
 	
 }
 DEFINE_PRIM (uiresponder_motionCancelled, 3);
 void uiresponder_motionEnded(value tag, value arg1, value tag2)
 {
 	UIResponder *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIResponder *view2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
-	[view motionEnded:val_int(arg1) :view2 ];
+	id arg2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
+	[view motionEnded:val_int(arg1) :arg2 ];
 	
 }
 DEFINE_PRIM (uiresponder_motionEnded, 3);
 void uiresponder_motionBegan(value tag, value arg1, value tag2)
 {
 	UIResponder *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIResponder *view2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
-	[view motionBegan:val_int(arg1) :view2 ];
+	id arg2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
+	[view motionBegan:val_int(arg1) :arg2 ];
 	
 }
 DEFINE_PRIM (uiresponder_motionBegan, 3);
@@ -1498,6 +1498,21 @@ value uitextfield_getRightViewMode(value tag)
 	return alloc_int(returnVar);
 }
 DEFINE_PRIM (uitextfield_getRightViewMode, 1);
+void uitextfield_setRightView(value tag, value tag1)
+{
+	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	view.rightView = (arg1);
+	
+}
+DEFINE_PRIM (uitextfield_setRightView, 2);
+value uitextfield_getRightView(value tag)
+{
+	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
+	UIView* returnVar = (UIView*)view.rightView;
+	return alloc_int((int)[returnVar getTag]);
+}
+DEFINE_PRIM (uitextfield_getRightView, 1);
 void uitextfield_setLeftViewMode(value tag, value arg1)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
@@ -1512,6 +1527,21 @@ value uitextfield_getLeftViewMode(value tag)
 	return alloc_int(returnVar);
 }
 DEFINE_PRIM (uitextfield_getLeftViewMode, 1);
+void uitextfield_setLeftView(value tag, value tag1)
+{
+	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	view.leftView = (arg1);
+	
+}
+DEFINE_PRIM (uitextfield_setLeftView, 2);
+value uitextfield_getLeftView(value tag)
+{
+	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
+	UIView* returnVar = (UIView*)view.leftView;
+	return alloc_int((int)[returnVar getTag]);
+}
+DEFINE_PRIM (uitextfield_getLeftView, 1);
 void uitextfield_setClearButtonMode(value tag, value arg1)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
@@ -1557,75 +1587,75 @@ DEFINE_PRIM (uitextfield_selectionGranularity, 1);
 void uitextfield_setBaseWritingDirection(value tag, value arg1, value tag2)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
-	[view setBaseWritingDirection:val_int(arg1) :view2 ];
+	id arg2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
+	[view setBaseWritingDirection:val_int(arg1) :arg2 ];
 	
 }
 DEFINE_PRIM (uitextfield_setBaseWritingDirection, 3);
 value uitextfield_baseWritingDirectionForPosition(value tag, value tag1, value arg2)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	int returnVar = (int)[view baseWritingDirectionForPosition:view1 inDirection:val_int(arg2) ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	int returnVar = (int)[view baseWritingDirectionForPosition:arg1 inDirection:val_int(arg2) ];
 	return alloc_int(returnVar);
 }
 DEFINE_PRIM (uitextfield_baseWritingDirectionForPosition, 3);
 value uitextfield_characterRangeByExtendingPosition(value tag, value tag1, value arg2)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	id returnVar = (id)[view characterRangeByExtendingPosition:view1 inDirection:val_int(arg2) ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	id returnVar = (id)[view characterRangeByExtendingPosition:arg1 inDirection:val_int(arg2) ];
 	return alloc_int((int)[returnVar getTag]);
 }
 DEFINE_PRIM (uitextfield_characterRangeByExtendingPosition, 3);
 value uitextfield_positionWithinRange(value tag, value tag1, value arg2)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	id returnVar = (id)[view positionWithinRange:view1 farthestInDirection:val_int(arg2) ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	id returnVar = (id)[view positionWithinRange:arg1 farthestInDirection:val_int(arg2) ];
 	return alloc_int((int)[returnVar getTag]);
 }
 DEFINE_PRIM (uitextfield_positionWithinRange, 3);
 value uitextfield_offsetFromPosition(value tag, value tag1, value tag2)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	UITextField *view2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
-	int returnVar = (int)[view offsetFromPosition:view1 :view2 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	id arg2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
+	int returnVar = (int)[view offsetFromPosition:arg1 :arg2 ];
 	return alloc_int(returnVar);
 }
 DEFINE_PRIM (uitextfield_offsetFromPosition, 3);
 value uitextfield_comparePosition(value tag, value tag1, value tag2)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	UITextField *view2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
-	int returnVar = (int)[view comparePosition:view1 :view2 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	id arg2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
+	int returnVar = (int)[view comparePosition:arg1 :arg2 ];
 	return alloc_int(returnVar);
 }
 DEFINE_PRIM (uitextfield_comparePosition, 3);
 value uitextfield_positionFromPosition(value tag, value tag1, value arg2, value arg3)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	id returnVar = (id)[view positionFromPosition:view1 inDirection:val_int(arg2) offset:val_int(arg3) ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	id returnVar = (id)[view positionFromPosition:arg1 inDirection:val_int(arg2) offset:val_int(arg3) ];
 	return alloc_int((int)[returnVar getTag]);
 }
 DEFINE_PRIM (uitextfield_positionFromPosition, 4);
 value uitextfield_positionFromPosition2(value tag, value tag1, value arg2)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	id returnVar = (id)[view positionFromPosition:view1 offset:val_int(arg2) ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	id returnVar = (id)[view positionFromPosition:arg1 offset:val_int(arg2) ];
 	return alloc_int((int)[returnVar getTag]);
 }
 DEFINE_PRIM (uitextfield_positionFromPosition2, 3);
 value uitextfield_textRangeFromPosition(value tag, value tag1, value tag2)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	UITextField *view2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
-	id returnVar = (id)[view textRangeFromPosition:view1 :view2 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	id arg2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
+	id returnVar = (id)[view textRangeFromPosition:arg1 :arg2 ];
 	return alloc_int((int)[returnVar getTag]);
 }
 DEFINE_PRIM (uitextfield_textRangeFromPosition, 3);
@@ -1639,17 +1669,17 @@ DEFINE_PRIM (uitextfield_unmarkText, 1);
 void uitextfield_replaceRange(value tag, value tag1, value tag2)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	UITextField *view2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
-	[view replaceRange:view1 :view2 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	id arg2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
+	[view replaceRange:arg1 :arg2 ];
 	
 }
 DEFINE_PRIM (uitextfield_replaceRange, 3);
 value uitextfield_textInRange(value tag, value tag1)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	id returnVar = (id)[view textInRange:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	id returnVar = (id)[view textInRange:arg1 ];
 	return alloc_int((int)[returnVar getTag]);
 }
 DEFINE_PRIM (uitextfield_textInRange, 2);
@@ -1670,8 +1700,8 @@ DEFINE_PRIM (uitextfield_metadataDictionariesForDictationResults, 1);
 void uitextfield_removeDictationResultPlaceholder(value tag, value tag1, value arg2)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view removeDictationResultPlaceholder:view1 willInsertResult:val_bool(arg2) ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view removeDictationResultPlaceholder:arg1 willInsertResult:val_bool(arg2) ];
 	
 }
 DEFINE_PRIM (uitextfield_removeDictationResultPlaceholder, 3);
@@ -1685,17 +1715,17 @@ DEFINE_PRIM (uitextfield_insertDictationResultPlaceholder, 1);
 void uitextfield_insertDictationResult(value tag, value tag1, value tag2)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	UITextField *view2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
-	[view insertDictationResult:view1 :view2 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	id arg2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
+	[view insertDictationResult:arg1 :arg2 ];
 	
 }
 DEFINE_PRIM (uitextfield_insertDictationResult, 3);
 void uitextfield_insertText(value tag, value tag1)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view insertText:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view insertText:arg1 ];
 	
 }
 DEFINE_PRIM (uitextfield_insertText, 2);
@@ -1716,88 +1746,88 @@ DEFINE_PRIM (uitextfield_inPopover, 1);
 void uitextfield_replace(value tag, value tag1)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view replace:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view replace:arg1 ];
 	
 }
 DEFINE_PRIM (uitextfield_replace, 2);
 void uitextfield_toggleUnderline(value tag, value tag1)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view toggleUnderline:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view toggleUnderline:arg1 ];
 	
 }
 DEFINE_PRIM (uitextfield_toggleUnderline, 2);
 void uitextfield_toggleItalics(value tag, value tag1)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view toggleItalics:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view toggleItalics:arg1 ];
 	
 }
 DEFINE_PRIM (uitextfield_toggleItalics, 2);
 void uitextfield_toggleBoldface(value tag, value tag1)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view toggleBoldface:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view toggleBoldface:arg1 ];
 	
 }
 DEFINE_PRIM (uitextfield_toggleBoldface, 2);
 void uitextfield_makeTextWritingDirectionLeftToRight(value tag, value tag1)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view makeTextWritingDirectionLeftToRight:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view makeTextWritingDirectionLeftToRight:arg1 ];
 	
 }
 DEFINE_PRIM (uitextfield_makeTextWritingDirectionLeftToRight, 2);
 void uitextfield_makeTextWritingDirectionRightToLeft(value tag, value tag1)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view makeTextWritingDirectionRightToLeft:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view makeTextWritingDirectionRightToLeft:arg1 ];
 	
 }
 DEFINE_PRIM (uitextfield_makeTextWritingDirectionRightToLeft, 2);
 void uitextfield_selectAll(value tag, value tag1)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view selectAll:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view selectAll:arg1 ];
 	
 }
 DEFINE_PRIM (uitextfield_selectAll, 2);
 void uitextfield_select(value tag, value tag1)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view select:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view select:arg1 ];
 	
 }
 DEFINE_PRIM (uitextfield_select, 2);
 void uitextfield_paste(value tag, value tag1)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view paste:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view paste:arg1 ];
 	
 }
 DEFINE_PRIM (uitextfield_paste, 2);
 void uitextfield_copy(value tag, value tag1)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view copy:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view copy:arg1 ];
 	
 }
 DEFINE_PRIM (uitextfield_copy, 2);
 void uitextfield_cut(value tag, value tag1)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view cut:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view cut:arg1 ];
 	
 }
 DEFINE_PRIM (uitextfield_cut, 2);
@@ -1825,8 +1855,8 @@ DEFINE_PRIM (uitextfield_selectedText, 1);
 value uitextfield_selectionRectsForRange(value tag, value tag1)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	id returnVar = (id)[view selectionRectsForRange:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	id returnVar = (id)[view selectionRectsForRange:arg1 ];
 	return alloc_int((int)[returnVar getTag]);
 }
 DEFINE_PRIM (uitextfield_selectionRectsForRange, 2);
@@ -1924,8 +1954,8 @@ DEFINE_PRIM (uitextfield_setTextCentersHorizontally, 2);
 void uitextfield_setLabel(value tag, value tag1)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view setLabel:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view setLabel:arg1 ];
 	
 }
 DEFINE_PRIM (uitextfield_setLabel, 2);
@@ -1953,8 +1983,8 @@ DEFINE_PRIM (uitextfield_setBecomesFirstResponderOnClearButtonTap, 2);
 void uitextfield_setIcon(value tag, value tag1)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view setIcon:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view setIcon:arg1 ];
 	
 }
 DEFINE_PRIM (uitextfield_setIcon, 2);
@@ -1989,8 +2019,8 @@ DEFINE_PRIM (uitextfield_setInactiveHasDimAppearance, 2);
 void uitextfield_setTextFont(value tag, value tag1)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view setTextFont:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view setTextFont:arg1 ];
 	
 }
 DEFINE_PRIM (uitextfield_setTextFont, 2);
@@ -2039,33 +2069,33 @@ DEFINE_PRIM (uitextfield_supportedPasteboardTypesForCurrentSelection, 1);
 value uitextfield_fieldEditor(value tag, value tag1, value tag2)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	UITextField *view2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
-	BOOL returnVar = (BOOL)(int)[view fieldEditor:view1 :view2 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	id arg2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
+	BOOL returnVar = (BOOL)(int)[view fieldEditor:arg1 :arg2 ];
 	return alloc_bool(returnVar);
 }
 DEFINE_PRIM (uitextfield_fieldEditor, 3);
 void uitextfield_fieldEditorDidChangeSelection(value tag, value tag1)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view fieldEditorDidChangeSelection:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view fieldEditorDidChangeSelection:arg1 ];
 	
 }
 DEFINE_PRIM (uitextfield_fieldEditorDidChangeSelection, 2);
 void uitextfield_selectAllFromFieldEditor(value tag, value tag1)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view selectAllFromFieldEditor:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view selectAllFromFieldEditor:arg1 ];
 	
 }
 DEFINE_PRIM (uitextfield_selectAllFromFieldEditor, 2);
 void uitextfield_fieldEditorDidChange(value tag, value tag1)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view fieldEditorDidChange:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view fieldEditorDidChange:arg1 ];
 	
 }
 DEFINE_PRIM (uitextfield_fieldEditorDidChange, 2);
@@ -2079,57 +2109,57 @@ DEFINE_PRIM (uitextfield_customOverlayContainer, 1);
 void uitextfield_keyboardInputChangedSelection(value tag, value tag1)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view keyboardInputChangedSelection:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view keyboardInputChangedSelection:arg1 ];
 	
 }
 DEFINE_PRIM (uitextfield_keyboardInputChangedSelection, 2);
 value uitextfield_keyboardInputChanged(value tag, value tag1)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	BOOL returnVar = (BOOL)(int)[view keyboardInputChanged:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	BOOL returnVar = (BOOL)(int)[view keyboardInputChanged:arg1 ];
 	return alloc_bool(returnVar);
 }
 DEFINE_PRIM (uitextfield_keyboardInputChanged, 2);
 value uitextfield_keyboardInputShouldDelete(value tag, value tag1)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	BOOL returnVar = (BOOL)(int)[view keyboardInputShouldDelete:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	BOOL returnVar = (BOOL)(int)[view keyboardInputShouldDelete:arg1 ];
 	return alloc_bool(returnVar);
 }
 DEFINE_PRIM (uitextfield_keyboardInputShouldDelete, 2);
 value uitextfield_keyboardInput(value tag, value tag1, value tag2, value arg3)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	UITextField *view2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
-	BOOL returnVar = (BOOL)(int)[view keyboardInput:view1 :view2 isMarkedText:val_bool(arg3) ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	id arg2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
+	BOOL returnVar = (BOOL)(int)[view keyboardInput:arg1 :arg2 isMarkedText:val_bool(arg3) ];
 	return alloc_bool(returnVar);
 }
 DEFINE_PRIM (uitextfield_keyboardInput, 4);
 void uitextfield_willDetachFieldEditor(value tag, value tag1)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view willDetachFieldEditor:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view willDetachFieldEditor:arg1 ];
 	
 }
 DEFINE_PRIM (uitextfield_willDetachFieldEditor, 2);
 void uitextfield_attachFieldEditor(value tag, value tag1)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view attachFieldEditor:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view attachFieldEditor:arg1 ];
 	
 }
 DEFINE_PRIM (uitextfield_attachFieldEditor, 2);
 void uitextfield_willAttachFieldEditor(value tag, value tag1)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view willAttachFieldEditor:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view willAttachFieldEditor:arg1 ];
 	
 }
 DEFINE_PRIM (uitextfield_willAttachFieldEditor, 2);
@@ -2248,16 +2278,16 @@ DEFINE_PRIM (uitextfield_finishedSettingPlaceholder, 1);
 value uitextfield_createTextLabelWithTextColor(value tag, value tag1)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	id returnVar = (id)[view createTextLabelWithTextColor:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	id returnVar = (id)[view createTextLabelWithTextColor:arg1 ];
 	return alloc_int((int)[returnVar getTag]);
 }
 DEFINE_PRIM (uitextfield_createTextLabelWithTextColor, 2);
 value uitextfield_createPlaceholderLabelWithFont(value tag, value tag1, value arg2)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	id returnVar = (id)[view createPlaceholderLabelWithFont:view1 andTextAlignment:val_int(arg2) ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	id returnVar = (id)[view createPlaceholderLabelWithFont:arg1 andTextAlignment:val_int(arg2) ];
 	return alloc_int((int)[returnVar getTag]);
 }
 DEFINE_PRIM (uitextfield_createPlaceholderLabelWithFont, 3);
@@ -2306,8 +2336,8 @@ DEFINE_PRIM (uitextfield_shadowColor, 1);
 void uitextfield_setShadowColor(value tag, value tag1)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view setShadowColor:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view setShadowColor:arg1 ];
 	
 }
 DEFINE_PRIM (uitextfield_setShadowColor, 2);
@@ -2356,8 +2386,8 @@ DEFINE_PRIM (uitextfield_getSecureTextEntry, 1);
 void uitextfield_forwardInvocation(value tag, value tag1)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UITextField *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view forwardInvocation:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view forwardInvocation:arg1 ];
 	
 }
 DEFINE_PRIM (uitextfield_forwardInvocation, 2);
@@ -2501,84 +2531,97 @@ value uiview_getTag(value tag)
 	return alloc_int(returnVar);
 }
 DEFINE_PRIM (uiview_getTag, 1);
-value uiview_canHandleSwipes(value tag)
+value uiview_getSuperview(value tag)
 {
 	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	BOOL returnVar = (BOOL)(int)[view canHandleSwipes];
-	return alloc_bool(returnVar);
-}
-DEFINE_PRIM (uiview_canHandleSwipes, 1);
-value uiview_tapDelegate(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	id returnVar = (id)[view tapDelegate];
+	UIView* returnVar = (UIView*)view.superview;
 	return alloc_int((int)[returnVar getTag]);
 }
-DEFINE_PRIM (uiview_tapDelegate, 1);
-void uiview_setTapDelegate(value tag, value tag1)
+DEFINE_PRIM (uiview_getSuperview, 1);
+void uiview_setFrame(value tag, value arg1)
 {
 	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view setTapDelegate:view1 ];
+	view.frame = arrayToCGRect(arg1);
 	
 }
-DEFINE_PRIM (uiview_setTapDelegate, 2);
-value uiview_nsli_contentHeightVariable(value tag)
+DEFINE_PRIM (uiview_setFrame, 2);
+value uiview_getFrame(value tag)
 {
 	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	id returnVar = (id)[view nsli_contentHeightVariable];
-	return alloc_int((int)[returnVar getTag]);
+	CGRect returnVar = (CGRect)view.frame;
+	return cgRectToArray(returnVar);
 }
-DEFINE_PRIM (uiview_nsli_contentHeightVariable, 1);
-value uiview_nsli_contentWidthVariable(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	id returnVar = (id)[view nsli_contentWidthVariable];
-	return alloc_int((int)[returnVar getTag]);
-}
-DEFINE_PRIM (uiview_nsli_contentWidthVariable, 1);
-value uiview_nsli_minYVariable(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	id returnVar = (id)[view nsli_minYVariable];
-	return alloc_int((int)[returnVar getTag]);
-}
-DEFINE_PRIM (uiview_nsli_minYVariable, 1);
-value uiview_nsli_minXVariable(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	id returnVar = (id)[view nsli_minXVariable];
-	return alloc_int((int)[returnVar getTag]);
-}
-DEFINE_PRIM (uiview_nsli_minXVariable, 1);
-value uiview_nsli_boundsHeightVariable(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	id returnVar = (id)[view nsli_boundsHeightVariable];
-	return alloc_int((int)[returnVar getTag]);
-}
-DEFINE_PRIM (uiview_nsli_boundsHeightVariable, 1);
-value uiview_nsli_boundsWidthVariable(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	id returnVar = (id)[view nsli_boundsWidthVariable];
-	return alloc_int((int)[returnVar getTag]);
-}
-DEFINE_PRIM (uiview_nsli_boundsWidthVariable, 1);
-value uiview_retain(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	id returnVar = (id)[view retain];
-	return alloc_int((int)[returnVar getTag]);
-}
-DEFINE_PRIM (uiview_retain, 1);
+DEFINE_PRIM (uiview_getFrame, 1);
 void uiview_setBounds(value tag, value arg1)
 {
 	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	[view setBounds:arrayToCGRect(arg1) ];
+	view.bounds = arrayToCGRect(arg1);
 	
 }
 DEFINE_PRIM (uiview_setBounds, 2);
+value uiview_getBounds(value tag)
+{
+	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
+	CGRect returnVar = (CGRect)view.bounds;
+	return cgRectToArray(returnVar);
+}
+DEFINE_PRIM (uiview_getBounds, 1);
+void uiview_setClipsToBounds(value tag, value arg1)
+{
+	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
+	view.clipsToBounds = val_bool(arg1);
+	
+}
+DEFINE_PRIM (uiview_setClipsToBounds, 2);
+value uiview_getClipsToBounds(value tag)
+{
+	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
+	BOOL returnVar = (BOOL)(int)view.clipsToBounds;
+	return alloc_bool(returnVar);
+}
+DEFINE_PRIM (uiview_getClipsToBounds, 1);
+void uiview_setExclusiveTouch(value tag, value arg1)
+{
+	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
+	view.exclusiveTouch = val_bool(arg1);
+	
+}
+DEFINE_PRIM (uiview_setExclusiveTouch, 2);
+value uiview_getExclusiveTouch(value tag)
+{
+	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
+	BOOL returnVar = (BOOL)(int)view.exclusiveTouch;
+	return alloc_bool(returnVar);
+}
+DEFINE_PRIM (uiview_getExclusiveTouch, 1);
+void uiview_setMultipleTouchEnabled(value tag, value arg1)
+{
+	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
+	view.multipleTouchEnabled = val_bool(arg1);
+	
+}
+DEFINE_PRIM (uiview_setMultipleTouchEnabled, 2);
+value uiview_getMultipleTouchEnabled(value tag)
+{
+	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
+	BOOL returnVar = (BOOL)(int)view.multipleTouchEnabled;
+	return alloc_bool(returnVar);
+}
+DEFINE_PRIM (uiview_getMultipleTouchEnabled, 1);
+void uiview_setOpaque(value tag, value arg1)
+{
+	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
+	view.opaque = val_bool(arg1);
+	
+}
+DEFINE_PRIM (uiview_setOpaque, 2);
+value uiview_getOpaque(value tag)
+{
+	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
+	BOOL returnVar = (BOOL)(int)view.opaque;
+	return alloc_bool(returnVar);
+}
+DEFINE_PRIM (uiview_getOpaque, 1);
 void uiview_sizeToFit(value tag)
 {
 	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
@@ -2586,13 +2629,6 @@ void uiview_sizeToFit(value tag)
 	
 }
 DEFINE_PRIM (uiview_sizeToFit, 1);
-void uiview_setAutoresizingMask(value tag, value arg1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	[view setAutoresizingMask:val_int(arg1) ];
-	
-}
-DEFINE_PRIM (uiview_setAutoresizingMask, 2);
 value uiview_autoresizesSubviews(value tag)
 {
 	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
@@ -2600,62 +2636,6 @@ value uiview_autoresizesSubviews(value tag)
 	return alloc_bool(returnVar);
 }
 DEFINE_PRIM (uiview_autoresizesSubviews, 1);
-void uiview_setAutoresizesSubviews(value tag, value arg1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	[view setAutoresizesSubviews:val_bool(arg1) ];
-	
-}
-DEFINE_PRIM (uiview_setAutoresizesSubviews, 2);
-void uiview_setFrame(value tag, value arg1, value arg2)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	[view setFrame:arrayToCGRect(arg1) forFields:val_int(arg2) ];
-	
-}
-DEFINE_PRIM (uiview_setFrame, 3);
-value uiview_isExclusiveTouch(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	BOOL returnVar = (BOOL)(int)[view isExclusiveTouch];
-	return alloc_bool(returnVar);
-}
-DEFINE_PRIM (uiview_isExclusiveTouch, 1);
-void uiview_setExclusiveTouch(value tag, value arg1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	[view setExclusiveTouch:val_bool(arg1) ];
-	
-}
-DEFINE_PRIM (uiview_setExclusiveTouch, 2);
-value uiview_isMultipleTouchEnabled(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	BOOL returnVar = (BOOL)(int)[view isMultipleTouchEnabled];
-	return alloc_bool(returnVar);
-}
-DEFINE_PRIM (uiview_isMultipleTouchEnabled, 1);
-void uiview_setMultipleTouchEnabled(value tag, value arg1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	[view setMultipleTouchEnabled:val_bool(arg1) ];
-	
-}
-DEFINE_PRIM (uiview_setMultipleTouchEnabled, 2);
-void uiview_setFrame2(value tag, value arg1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	[view setFrame:arrayToCGRect(arg1) ];
-	
-}
-DEFINE_PRIM (uiview_setFrame2, 2);
-void uiview_layoutBelowIfNeeded(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	[view layoutBelowIfNeeded];
-	
-}
-DEFINE_PRIM (uiview_layoutBelowIfNeeded, 1);
 void uiview_layoutIfNeeded(value tag)
 {
 	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
@@ -2673,90 +2653,44 @@ DEFINE_PRIM (uiview_setNeedsLayout, 1);
 value uiview_viewWithTag(value tag, value arg1)
 {
 	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	id returnVar = (id)[view viewWithTag:val_int(arg1) ];
+	UIView* returnVar = (UIView*)[view viewWithTag:val_int(arg1) ];
 	return alloc_int((int)[returnVar getTag]);
 }
 DEFINE_PRIM (uiview_viewWithTag, 2);
 value uiview_isDescendantOfView(value tag, value tag1)
 {
 	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	BOOL returnVar = (BOOL)(int)[view isDescendantOfView:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	BOOL returnVar = (BOOL)(int)[view isDescendantOfView:arg1 ];
 	return alloc_bool(returnVar);
 }
 DEFINE_PRIM (uiview_isDescendantOfView, 2);
-void uiview_movedToWindow(value tag, value tag1)
+void uiview_insertSubview(value tag, value tag1, value arg2)
 {
 	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view movedToWindow:view1 ];
-	
-}
-DEFINE_PRIM (uiview_movedToWindow, 2);
-void uiview_movedFromWindow(value tag, value tag1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view movedFromWindow:view1 ];
-	
-}
-DEFINE_PRIM (uiview_movedFromWindow, 2);
-void uiview_viewDidMoveToSuperview(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	[view viewDidMoveToSuperview];
-	
-}
-DEFINE_PRIM (uiview_viewDidMoveToSuperview, 1);
-void uiview_viewWillMoveToSuperview(value tag, value tag1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view viewWillMoveToSuperview:view1 ];
-	
-}
-DEFINE_PRIM (uiview_viewWillMoveToSuperview, 2);
-void uiview_movedToSuperview(value tag, value tag1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view movedToSuperview:view1 ];
-	
-}
-DEFINE_PRIM (uiview_movedToSuperview, 2);
-void uiview_movedFromSuperview(value tag, value tag1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view movedFromSuperview:view1 ];
-	
-}
-DEFINE_PRIM (uiview_movedFromSuperview, 2);
-void uiview_deferredBecomeFirstResponder(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	[view deferredBecomeFirstResponder];
-	
-}
-DEFINE_PRIM (uiview_deferredBecomeFirstResponder, 1);
-void uiview_insertSubview(value tag, value tag1, value tag2)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	UIView *view2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
-	[view insertSubview:view1 :view2 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view insertSubview:arg1 atIndex:val_int(arg2) ];
 	
 }
 DEFINE_PRIM (uiview_insertSubview, 3);
 void uiview_insertSubview2(value tag, value tag1, value tag2)
 {
 	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	UIView *view2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
-	[view insertSubview:view1 :view2 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	id arg2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
+	[view insertSubview:arg1 :arg2 ];
 	
 }
 DEFINE_PRIM (uiview_insertSubview2, 3);
+void uiview_insertSubview3(value tag, value tag1, value tag2)
+{
+	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	id arg2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
+	[view insertSubview:arg1 :arg2 ];
+	
+}
+DEFINE_PRIM (uiview_insertSubview3, 3);
 void uiview_didMoveToWindow(value tag)
 {
 	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
@@ -2764,14 +2698,6 @@ void uiview_didMoveToWindow(value tag)
 	
 }
 DEFINE_PRIM (uiview_didMoveToWindow, 1);
-void uiview_willMoveToWindow(value tag, value tag1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view willMoveToWindow:view1 ];
-	
-}
-DEFINE_PRIM (uiview_willMoveToWindow, 2);
 void uiview_didMoveToSuperview(value tag)
 {
 	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
@@ -2782,66 +2708,48 @@ DEFINE_PRIM (uiview_didMoveToSuperview, 1);
 void uiview_willMoveToSuperview(value tag, value tag1)
 {
 	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view willMoveToSuperview:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view willMoveToSuperview:arg1 ];
 	
 }
 DEFINE_PRIM (uiview_willMoveToSuperview, 2);
 void uiview_willRemoveSubview(value tag, value tag1)
 {
 	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view willRemoveSubview:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view willRemoveSubview:arg1 ];
 	
 }
 DEFINE_PRIM (uiview_willRemoveSubview, 2);
 void uiview_didAddSubview(value tag, value tag1)
 {
 	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view didAddSubview:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view didAddSubview:arg1 ];
 	
 }
 DEFINE_PRIM (uiview_didAddSubview, 2);
 void uiview_sendSubviewToBack(value tag, value tag1)
 {
 	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view sendSubviewToBack:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view sendSubviewToBack:arg1 ];
 	
 }
 DEFINE_PRIM (uiview_sendSubviewToBack, 2);
 void uiview_bringSubviewToFront(value tag, value tag1)
 {
 	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view bringSubviewToFront:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view bringSubviewToFront:arg1 ];
 	
 }
 DEFINE_PRIM (uiview_bringSubviewToFront, 2);
-void uiview_insertSubview3(value tag, value tag1, value tag2)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	UIView *view2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
-	[view insertSubview:view1 :view2 ];
-	
-}
-DEFINE_PRIM (uiview_insertSubview3, 3);
-void uiview_insertSubview4(value tag, value tag1, value tag2)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	UIView *view2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
-	[view insertSubview:view1 :view2 ];
-	
-}
-DEFINE_PRIM (uiview_insertSubview4, 3);
 void uiview_addSubview(value tag, value tag1)
 {
 	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view addSubview:view1 ];
+	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
+	[view addSubview:arg1 ];
 	
 }
 DEFINE_PRIM (uiview_addSubview, 2);
@@ -2852,14 +2760,6 @@ void uiview_exchangeSubviewAtIndex(value tag, value arg1, value arg2)
 	
 }
 DEFINE_PRIM (uiview_exchangeSubviewAtIndex, 3);
-void uiview_insertSubview5(value tag, value tag1, value arg2)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view insertSubview:view1 atIndex:val_int(arg2) ];
-	
-}
-DEFINE_PRIM (uiview_insertSubview5, 3);
 void uiview_removeFromSuperview(value tag)
 {
 	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
@@ -2867,84 +2767,6 @@ void uiview_removeFromSuperview(value tag)
 	
 }
 DEFINE_PRIM (uiview_removeFromSuperview, 1);
-value uiview_window(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	id returnVar = (id)[view window];
-	return alloc_int((int)[returnVar getTag]);
-}
-DEFINE_PRIM (uiview_window, 1);
-value uiview_subviews(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	id returnVar = (id)[view subviews];
-	return alloc_int((int)[returnVar getTag]);
-}
-DEFINE_PRIM (uiview_subviews, 1);
-value uiview_superview(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	id returnVar = (id)[view superview];
-	return alloc_int((int)[returnVar getTag]);
-}
-DEFINE_PRIM (uiview_superview, 1);
-value uiview_containsView(value tag, value tag1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	BOOL returnVar = (BOOL)(int)[view containsView:view1 ];
-	return alloc_bool(returnVar);
-}
-DEFINE_PRIM (uiview_containsView, 2);
-void uiview_recursivelyForceDisplayIfNeeded(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	[view recursivelyForceDisplayIfNeeded];
-	
-}
-DEFINE_PRIM (uiview_recursivelyForceDisplayIfNeeded, 1);
-void uiview_forceDisplayIfNeeded(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	[view forceDisplayIfNeeded];
-	
-}
-DEFINE_PRIM (uiview_forceDisplayIfNeeded, 1);
-void uiview_setContentsPosition(value tag, value arg1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	[view setContentsPosition:val_int(arg1) ];
-	
-}
-DEFINE_PRIM (uiview_setContentsPosition, 2);
-void uiview_setClearsContext(value tag, value arg1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	[view setClearsContext:val_bool(arg1) ];
-	
-}
-DEFINE_PRIM (uiview_setClearsContext, 2);
-value uiview_isHiddenOrHasHiddenAncestor(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	BOOL returnVar = (BOOL)(int)[view isHiddenOrHasHiddenAncestor];
-	return alloc_bool(returnVar);
-}
-DEFINE_PRIM (uiview_isHiddenOrHasHiddenAncestor, 1);
-value uiview_isHidden(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	BOOL returnVar = (BOOL)(int)[view isHidden];
-	return alloc_bool(returnVar);
-}
-DEFINE_PRIM (uiview_isHidden, 1);
-void uiview_setHidden(value tag, value arg1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	[view setHidden:val_bool(arg1) ];
-	
-}
-DEFINE_PRIM (uiview_setHidden, 2);
 value uiview_clearsContextBeforeDrawing(value tag)
 {
 	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
@@ -2952,69 +2774,6 @@ value uiview_clearsContextBeforeDrawing(value tag)
 	return alloc_bool(returnVar);
 }
 DEFINE_PRIM (uiview_clearsContextBeforeDrawing, 1);
-void uiview_setClearsContextBeforeDrawing(value tag, value arg1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	[view setClearsContextBeforeDrawing:val_bool(arg1) ];
-	
-}
-DEFINE_PRIM (uiview_setClearsContextBeforeDrawing, 2);
-value uiview_isOpaque(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	BOOL returnVar = (BOOL)(int)[view isOpaque];
-	return alloc_bool(returnVar);
-}
-DEFINE_PRIM (uiview_isOpaque, 1);
-void uiview_setOpaque(value tag, value arg1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	[view setOpaque:val_bool(arg1) ];
-	
-}
-DEFINE_PRIM (uiview_setOpaque, 2);
-void uiview_setFixedBackgroundPattern(value tag, value arg1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	[view setFixedBackgroundPattern:val_bool(arg1) ];
-	
-}
-DEFINE_PRIM (uiview_setFixedBackgroundPattern, 2);
-value uiview_clipsToBounds(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	BOOL returnVar = (BOOL)(int)[view clipsToBounds];
-	return alloc_bool(returnVar);
-}
-DEFINE_PRIM (uiview_clipsToBounds, 1);
-void uiview_setClipsToBounds(value tag, value arg1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	[view setClipsToBounds:val_bool(arg1) ];
-	
-}
-DEFINE_PRIM (uiview_setClipsToBounds, 2);
-void uiview_setNeedsDisplayOnBoundsChange(value tag, value arg1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	[view setNeedsDisplayOnBoundsChange:val_bool(arg1) ];
-	
-}
-DEFINE_PRIM (uiview_setNeedsDisplayOnBoundsChange, 2);
-value uiview_needsDisplayOnBoundsChange(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	BOOL returnVar = (BOOL)(int)[view needsDisplayOnBoundsChange];
-	return alloc_bool(returnVar);
-}
-DEFINE_PRIM (uiview_needsDisplayOnBoundsChange, 1);
-value uiview_needsDisplay(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	BOOL returnVar = (BOOL)(int)[view needsDisplay];
-	return alloc_bool(returnVar);
-}
-DEFINE_PRIM (uiview_needsDisplay, 1);
 void uiview_setNeedsDisplayInRect(value tag, value arg1)
 {
 	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
@@ -3036,50 +2795,6 @@ void uiview_drawRect(value tag, value arg1)
 	
 }
 DEFINE_PRIM (uiview_drawRect, 2);
-void uiview_setContentStretch(value tag, value arg1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	[view setContentStretch:arrayToCGRect(arg1) ];
-	
-}
-DEFINE_PRIM (uiview_setContentStretch, 2);
-value uiview_contentMode(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	int returnVar = (int)[view contentMode];
-	return alloc_int(returnVar);
-}
-DEFINE_PRIM (uiview_contentMode, 1);
-void uiview_setContentMode(value tag, value arg1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	[view setContentMode:val_int(arg1) ];
-	
-}
-DEFINE_PRIM (uiview_setContentMode, 2);
-void uiview_addAnimation(value tag, value tag1, value tag2)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	UIView *view2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
-	[view addAnimation:view1 :view2 ];
-	
-}
-DEFINE_PRIM (uiview_addAnimation, 3);
-void uiview_setClipsSubviews(value tag, value arg1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	[view setClipsSubviews:val_bool(arg1) ];
-	
-}
-DEFINE_PRIM (uiview_setClipsSubviews, 2);
-value uiview_isEnabled(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	BOOL returnVar = (BOOL)(int)[view isEnabled];
-	return alloc_bool(returnVar);
-}
-DEFINE_PRIM (uiview_isEnabled, 1);
 void uiview_removeAllGestureRecognizers(value tag)
 {
 	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
@@ -3087,91 +2802,6 @@ void uiview_removeAllGestureRecognizers(value tag)
 	
 }
 DEFINE_PRIM (uiview_removeAllGestureRecognizers, 1);
-void uiview_removeGestureRecognizer(value tag, value tag1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view removeGestureRecognizer:view1 ];
-	
-}
-DEFINE_PRIM (uiview_removeGestureRecognizer, 2);
-void uiview_addGestureRecognizer(value tag, value tag1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view addGestureRecognizer:view1 ];
-	
-}
-DEFINE_PRIM (uiview_addGestureRecognizer, 2);
-void uiview_setGestureRecognizers(value tag, value tag1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view setGestureRecognizers:view1 ];
-	
-}
-DEFINE_PRIM (uiview_setGestureRecognizers, 2);
-value uiview_gestureRecognizers(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	id returnVar = (id)[view gestureRecognizers];
-	return alloc_int((int)[returnVar getTag]);
-}
-DEFINE_PRIM (uiview_gestureRecognizers, 1);
-value uiview_actionForLayer(value tag, value tag1, value tag2)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	UIView *view2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
-	id returnVar = (id)[view actionForLayer:view1 :view2 ];
-	return alloc_int((int)[returnVar getTag]);
-}
-DEFINE_PRIM (uiview_actionForLayer, 3);
-void uiview_layoutSublayersOfLayer(value tag, value tag1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view layoutSublayersOfLayer:view1 ];
-	
-}
-DEFINE_PRIM (uiview_layoutSublayersOfLayer, 2);
-void uiview_setValue(value tag, value tag1, value tag2)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	UIView *view2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
-	[view setValue:view1 :view2 ];
-	
-}
-DEFINE_PRIM (uiview_setValue, 3);
-value uiview_recursiveDescription(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	id returnVar = (id)[view recursiveDescription];
-	return alloc_int((int)[returnVar getTag]);
-}
-DEFINE_PRIM (uiview_recursiveDescription, 1);
-value uiview_description(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	id returnVar = (id)[view description];
-	return alloc_int((int)[returnVar getTag]);
-}
-DEFINE_PRIM (uiview_description, 1);
-value uiview_scriptingInfoWithChildren(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	id returnVar = (id)[view scriptingInfoWithChildren];
-	return alloc_int((int)[returnVar getTag]);
-}
-DEFINE_PRIM (uiview_scriptingInfoWithChildren, 1);
-value uiview_useBlockyMagnificationInClassic(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	BOOL returnVar = (BOOL)(int)[view useBlockyMagnificationInClassic];
-	return alloc_bool(returnVar);
-}
-DEFINE_PRIM (uiview_useBlockyMagnificationInClassic, 1);
 value uiview_endEditing(value tag, value arg1)
 {
 	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
@@ -3179,126 +2809,6 @@ value uiview_endEditing(value tag, value arg1)
 	return alloc_bool(returnVar);
 }
 DEFINE_PRIM (uiview_endEditing, 2);
-value uiview_stateForGestureType(value tag, value arg1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	int returnVar = (int)[view stateForGestureType:val_int(arg1) ];
-	return alloc_int(returnVar);
-}
-DEFINE_PRIM (uiview_stateForGestureType, 2);
-value uiview_valueForGestureAttribute(value tag, value arg1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	id returnVar = (id)[view valueForGestureAttribute:val_int(arg1) ];
-	return alloc_int((int)[returnVar getTag]);
-}
-DEFINE_PRIM (uiview_valueForGestureAttribute, 2);
-void uiview_setValue2(value tag, value tag1, value arg2)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view setValue:view1 forGestureAttribute:val_int(arg2) ];
-	
-}
-DEFINE_PRIM (uiview_setValue2, 3);
-value uiview_enabledGestures(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	int returnVar = (int)[view enabledGestures];
-	return alloc_int(returnVar);
-}
-DEFINE_PRIM (uiview_enabledGestures, 1);
-void uiview_setEnabledGestures(value tag, value arg1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	[view setEnabledGestures:val_int(arg1) ];
-	
-}
-DEFINE_PRIM (uiview_setEnabledGestures, 2);
-value uiview_gestureDelegate(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	id returnVar = (id)[view gestureDelegate];
-	return alloc_int((int)[returnVar getTag]);
-}
-DEFINE_PRIM (uiview_gestureDelegate, 1);
-void uiview_setGestureDelegate(value tag, value tag1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view setGestureDelegate:view1 ];
-	
-}
-DEFINE_PRIM (uiview_setGestureDelegate, 2);
-value uiview_canHandleGestures(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	BOOL returnVar = (BOOL)(int)[view canHandleGestures];
-	return alloc_bool(returnVar);
-}
-DEFINE_PRIM (uiview_canHandleGestures, 1);
-void uiview_animator(value tag, value tag1, value tag2)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	UIView *view2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
-	[view animator:view1 :view2 ];
-	
-}
-DEFINE_PRIM (uiview_animator, 3);
-void uiview_animator2(value tag, value tag1, value tag2)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	UIView *view2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
-	[view animator:view1 :view2 ];
-	
-}
-DEFINE_PRIM (uiview_animator2, 3);
-value uiview_needsWebDocumentViewEventsDirectly(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	BOOL returnVar = (BOOL)(int)[view needsWebDocumentViewEventsDirectly];
-	return alloc_bool(returnVar);
-}
-DEFINE_PRIM (uiview_needsWebDocumentViewEventsDirectly, 1);
-value uiview_compareTextEffectsOrdering(value tag, value tag1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	int returnVar = (int)[view compareTextEffectsOrdering:view1 ];
-	return alloc_int(returnVar);
-}
-DEFINE_PRIM (uiview_compareTextEffectsOrdering, 2);
-value uiview_textEffectsVisibilityLevelWhenKey(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	int returnVar = (int)[view textEffectsVisibilityLevelWhenKey];
-	return alloc_int(returnVar);
-}
-DEFINE_PRIM (uiview_textEffectsVisibilityLevelWhenKey, 1);
-value uiview_textEffectsVisibilityLevel(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	int returnVar = (int)[view textEffectsVisibilityLevel];
-	return alloc_int(returnVar);
-}
-DEFINE_PRIM (uiview_textEffectsVisibilityLevel, 1);
-void uiview_drawRect2(value tag, value arg1, value tag2)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
-	[view drawRect:arrayToCGRect(arg1) :view2 ];
-	
-}
-DEFINE_PRIM (uiview_drawRect2, 3);
-value uiview_viewPrintFormatter(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	id returnVar = (id)[view viewPrintFormatter];
-	return alloc_int((int)[returnVar getTag]);
-}
-DEFINE_PRIM (uiview_viewPrintFormatter, 1);
 void uiview_exerciseAmbiguityInLayout(value tag)
 {
 	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
@@ -3313,127 +2823,6 @@ value uiview_hasAmbiguousLayout(value tag)
 	return alloc_bool(returnVar);
 }
 DEFINE_PRIM (uiview_hasAmbiguousLayout, 1);
-value uiview_constraintsAffectingLayoutForAxis(value tag, value arg1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	id returnVar = (id)[view constraintsAffectingLayoutForAxis:val_int(arg1) ];
-	return alloc_int((int)[returnVar getTag]);
-}
-DEFINE_PRIM (uiview_constraintsAffectingLayoutForAxis, 2);
-void uiview_removeConstraints(value tag, value tag1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view removeConstraints:view1 ];
-	
-}
-DEFINE_PRIM (uiview_removeConstraints, 2);
-void uiview_removeConstraint(value tag, value tag1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view removeConstraint:view1 ];
-	
-}
-DEFINE_PRIM (uiview_removeConstraint, 2);
-void uiview_addConstraints(value tag, value tag1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view addConstraints:view1 ];
-	
-}
-DEFINE_PRIM (uiview_addConstraints, 2);
-void uiview_addConstraint(value tag, value tag1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	[view addConstraint:view1 ];
-	
-}
-DEFINE_PRIM (uiview_addConstraint, 2);
-value uiview_constraints(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	id returnVar = (id)[view constraints];
-	return alloc_int((int)[returnVar getTag]);
-}
-DEFINE_PRIM (uiview_constraints, 1);
-value uiview_nsli_isFlipped(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	BOOL returnVar = (BOOL)(int)[view nsli_isFlipped];
-	return alloc_bool(returnVar);
-}
-DEFINE_PRIM (uiview_nsli_isFlipped, 1);
-value uiview_nsli_descriptionIncludesPointer(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	BOOL returnVar = (BOOL)(int)[view nsli_descriptionIncludesPointer];
-	return alloc_bool(returnVar);
-}
-DEFINE_PRIM (uiview_nsli_descriptionIncludesPointer, 1);
-value uiview_nsli_description(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	id returnVar = (id)[view nsli_description];
-	return alloc_int((int)[returnVar getTag]);
-}
-DEFINE_PRIM (uiview_nsli_description, 1);
-value uiview_nsli_superitem(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	id returnVar = (id)[view nsli_superitem];
-	return alloc_int((int)[returnVar getTag]);
-}
-DEFINE_PRIM (uiview_nsli_superitem, 1);
-value uiview_nsli_layoutEngine(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	id returnVar = (id)[view nsli_layoutEngine];
-	return alloc_int((int)[returnVar getTag]);
-}
-DEFINE_PRIM (uiview_nsli_layoutEngine, 1);
-value uiview_nsis_valueOfVariableIsUserObservable(value tag, value tag1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	BOOL returnVar = (BOOL)(int)[view nsis_valueOfVariableIsUserObservable:view1 ];
-	return alloc_bool(returnVar);
-}
-DEFINE_PRIM (uiview_nsis_valueOfVariableIsUserObservable, 2);
-value uiview_nsis_shouldIntegralizeVariable(value tag, value tag1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	BOOL returnVar = (BOOL)(int)[view nsis_shouldIntegralizeVariable:view1 ];
-	return alloc_bool(returnVar);
-}
-DEFINE_PRIM (uiview_nsis_shouldIntegralizeVariable, 2);
-value uiview_nsis_descriptionOfVariable(value tag, value tag1)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	id returnVar = (id)[view nsis_descriptionOfVariable:view1 ];
-	return alloc_int((int)[returnVar getTag]);
-}
-DEFINE_PRIM (uiview_nsis_descriptionOfVariable, 2);
-void uiview_nsis_valueOfVariable(value tag, value tag1, value tag2)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	UIView *view1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
-	UIView *view2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
-	[view nsis_valueOfVariable:view1 :view2 ];
-	
-}
-DEFINE_PRIM (uiview_nsis_valueOfVariable, 3);
-value uiview_userInterfaceItemIdentifier(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	id returnVar = (id)[view userInterfaceItemIdentifier];
-	return alloc_int((int)[returnVar getTag]);
-}
-DEFINE_PRIM (uiview_userInterfaceItemIdentifier, 1);
 void uiview_updateConstraintsIfNeeded(value tag)
 {
 	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
@@ -3448,13 +2837,6 @@ void uiview_setTranslatesAutoresizingMaskIntoConstraints(value tag, value arg1)
 	
 }
 DEFINE_PRIM (uiview_setTranslatesAutoresizingMaskIntoConstraints, 2);
-value uiview_needsLayout(value tag)
-{
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
-	BOOL returnVar = (BOOL)(int)[view needsLayout];
-	return alloc_bool(returnVar);
-}
-DEFINE_PRIM (uiview_needsLayout, 1);
 value uiview_translatesAutoresizingMaskIntoConstraints(value tag)
 {
 	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];

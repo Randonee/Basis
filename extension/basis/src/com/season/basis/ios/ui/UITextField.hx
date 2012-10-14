@@ -24,6 +24,18 @@ class UITextField extends UIControl
 		return cpp_uitextfield_getRightViewMode(_tag);
 	}
 	private static var cpp_uitextfield_getRightViewMode = Lib.load("basis", "uitextfield_getRightViewMode", 1);
+	public var rightView(getRightView, setRightView) : UIView;
+	private function setRightView(value:UIView):UIView
+	{
+		cpp_uitextfield_setRightView(_tag, value);
+		return cpp_uitextfield_getRightView(_tag);
+	}
+	private static var cpp_uitextfield_setRightView = Lib.load("basis", "uitextfield_setRightView", 2);
+	private function getRightView():UIView
+	{
+		return cpp_uitextfield_getRightView(_tag);
+	}
+	private static var cpp_uitextfield_getRightView = Lib.load("basis", "uitextfield_getRightView", 1);
 	public var leftViewMode(getLeftViewMode, setLeftViewMode) : Int;
 	private function setLeftViewMode(value:Int):Int
 	{
@@ -36,6 +48,18 @@ class UITextField extends UIControl
 		return cpp_uitextfield_getLeftViewMode(_tag);
 	}
 	private static var cpp_uitextfield_getLeftViewMode = Lib.load("basis", "uitextfield_getLeftViewMode", 1);
+	public var leftView(getLeftView, setLeftView) : UIView;
+	private function setLeftView(value:UIView):UIView
+	{
+		cpp_uitextfield_setLeftView(_tag, value);
+		return cpp_uitextfield_getLeftView(_tag);
+	}
+	private static var cpp_uitextfield_setLeftView = Lib.load("basis", "uitextfield_setLeftView", 2);
+	private function getLeftView():UIView
+	{
+		return cpp_uitextfield_getLeftView(_tag);
+	}
+	private static var cpp_uitextfield_getLeftView = Lib.load("basis", "uitextfield_getLeftView", 1);
 	public var clearButtonMode(getClearButtonMode, setClearButtonMode) : Int;
 	private function setClearButtonMode(value:Int):Int
 	{
