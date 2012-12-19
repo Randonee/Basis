@@ -7,21 +7,21 @@
  	
 	<set name="BUILD_DIR" value="build" />
 	
-	<set name="RES_DIR" value="res" />
-	
 	<classpath name="src" />
 	
-	<haxelib name="nme" if="ios"/>
+	<ndll name="std" if="ios" />
+	<ndll name="regexp" if="ios" />
+	<ndll name="zlib" if="ios" />
 	
-	<ndll name="std" />
-	<ndll name="regexp" />
-	<ndll name="zlib" />
-	<ndll name="nme" haxelib="nme" if="ios"/>
 	
 	<include path="../../extension/basis" />
-	
 	<setenv name="HXCPP_LOAD_DEBUG" value="1" if="ios" />
 	
+	
+	<setenv name="ARM7" value="0" if="android" />
+	<setenv name="ARM7-only" value="1" if="android" />
+	
+	<template path="res" rename="../bin/res" if="android" />
 	
 	<!-- This is a required iOS framework -->
 	<dependency name="UIKit.framework" if="ios" />

@@ -10,7 +10,7 @@ AutoGCRoot *eventHandler;
 	eventHandler = handler;
 }
 
--(void) callHanlders:(int) viewTag :(char*) type
+-(void) callHanlders:(int) viewTag :(const char*) type
 {
 	val_call2(eventHandler->get(), alloc_string(type), alloc_int(viewTag));
 }

@@ -5,19 +5,19 @@ import com.season.basis.Util;
 	import com.season.basis.ios.ViewManager;
 	import com.basis.example.views.ios.MainView;
 #elseif android
-	import com.basis.example.views.android.MainView;
+	//import com.basis.example.views.android.MainView;
 #end
 
 class Main
 {
 	public static function main()
 	{
-		//Util.enableTrace();
-		
+		Util.enableTrace();
+		trace("ddd");
 		#if ios
 			ViewManager.addToRootView(new MainView());
 		#elseif android
-			new MainView();
+		//	new MainView();
 		#end
 	}
 }

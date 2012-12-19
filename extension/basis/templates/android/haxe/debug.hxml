@@ -1,0 +1,6 @@
+-main ApplicationMain ::HAXE_FLAGS::
+-cp ::BUILD_DIR::/android/haxe
+-java ::CPP_DIR::
+-D android
+-D no-compilation
+-debug

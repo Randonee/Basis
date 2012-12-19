@@ -24,7 +24,7 @@ value uialertview_getDelegate(value tag)
 {
 	UIAlertView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
 	id returnVar = (id)view.delegate;
-	return alloc_int((int)[returnVar getTag]);
+	return alloc_int((int)[returnVar tag]);
 }
 DEFINE_PRIM (uialertview_getDelegate, 1);
 void uialertview_setMessage(value tag, value arg1)
@@ -136,7 +136,7 @@ value uibutton_getTitleLabel(value tag)
 {
 	UIButton *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
 	UILabel* returnVar = (UILabel*)view.titleLabel;
-	return alloc_int((int)[returnVar getTag]);
+	return alloc_int((int)[returnVar tag]);
 }
 DEFINE_PRIM (uibutton_getTitleLabel, 1);
 value uibutton_backgroundRectForBounds(value tag, value arg1)
@@ -235,7 +235,7 @@ value uicollectionview_getBackgroundView(value tag)
 {
 	UICollectionView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
 	UIView* returnVar = (UIView*)view.backgroundView;
-	return alloc_int((int)[returnVar getTag]);
+	return alloc_int((int)[returnVar tag]);
 }
 DEFINE_PRIM (uicollectionview_getBackgroundView, 1);
 void uicollectionview_reloadData(value tag)
@@ -257,14 +257,14 @@ value uicollectionviewcell_getBackgroundView(value tag)
 {
 	UICollectionViewCell *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
 	UIView* returnVar = (UIView*)view.backgroundView;
-	return alloc_int((int)[returnVar getTag]);
+	return alloc_int((int)[returnVar tag]);
 }
 DEFINE_PRIM (uicollectionviewcell_getBackgroundView, 1);
 value uicollectionviewcell_getContentView(value tag)
 {
 	UICollectionViewCell *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
 	UIView* returnVar = (UIView*)view.contentView;
-	return alloc_int((int)[returnVar getTag]);
+	return alloc_int((int)[returnVar tag]);
 }
 DEFINE_PRIM (uicollectionviewcell_getContentView, 1);
 void uicollectionviewcell_setHighlighted(value tag, value arg1)
@@ -307,7 +307,7 @@ value uicollectionviewcell_getSelectedBackgroundView(value tag)
 {
 	UICollectionViewCell *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
 	UIView* returnVar = (UIView*)view.selectedBackgroundView;
-	return alloc_int((int)[returnVar getTag]);
+	return alloc_int((int)[returnVar tag]);
 }
 DEFINE_PRIM (uicollectionviewcell_getSelectedBackgroundView, 1);
 void uicontrol_setEnabled(value tag, value arg1)
@@ -1163,7 +1163,7 @@ value uitableview_getBackgroundView(value tag)
 {
 	UITableView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
 	UIView* returnVar = (UIView*)view.backgroundView;
-	return alloc_int((int)[returnVar getTag]);
+	return alloc_int((int)[returnVar tag]);
 }
 DEFINE_PRIM (uitableview_getBackgroundView, 1);
 void uitableview_setEditing(value tag, value arg1)
@@ -1192,7 +1192,7 @@ value uitableview_getTableFooterView(value tag)
 {
 	UITableView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
 	UIView* returnVar = (UIView*)view.tableFooterView;
-	return alloc_int((int)[returnVar getTag]);
+	return alloc_int((int)[returnVar tag]);
 }
 DEFINE_PRIM (uitableview_getTableFooterView, 1);
 void uitableview_setTableHeaderView(value tag, value tag1)
@@ -1207,7 +1207,7 @@ value uitableview_getTableHeaderView(value tag)
 {
 	UITableView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
 	UIView* returnVar = (UIView*)view.tableHeaderView;
-	return alloc_int((int)[returnVar getTag]);
+	return alloc_int((int)[returnVar tag]);
 }
 DEFINE_PRIM (uitableview_getTableHeaderView, 1);
 void uitableview_beginUpdates(value tag)
@@ -1221,14 +1221,14 @@ value uitableview_dequeueReusableCellWithIdentifier(value tag, value arg1)
 {
 	UITableView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
 	id returnVar = (id)[view dequeueReusableCellWithIdentifier:[NSString stringWithCString:val_string(arg1)encoding:NSUTF8StringEncoding] ];
-	return alloc_int((int)[returnVar getTag]);
+	return alloc_int((int)[returnVar tag]);
 }
 DEFINE_PRIM (uitableview_dequeueReusableCellWithIdentifier, 2);
 value uitableview_dequeueReusableHeaderFooterViewWithIdentifier(value tag, value arg1)
 {
 	UITableView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
 	id returnVar = (id)[view dequeueReusableHeaderFooterViewWithIdentifier:[NSString stringWithCString:val_string(arg1)encoding:NSUTF8StringEncoding] ];
-	return alloc_int((int)[returnVar getTag]);
+	return alloc_int((int)[returnVar tag]);
 }
 DEFINE_PRIM (uitableview_dequeueReusableHeaderFooterViewWithIdentifier, 2);
 void uitableview_endUpdates(value tag)
@@ -1264,21 +1264,21 @@ value uitableviewcell_getBackgroundView(value tag)
 {
 	UITableViewCell *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
 	UIView* returnVar = (UIView*)view.backgroundView;
-	return alloc_int((int)[returnVar getTag]);
+	return alloc_int((int)[returnVar tag]);
 }
 DEFINE_PRIM (uitableviewcell_getBackgroundView, 1);
 value uitableviewcell_getContentView(value tag)
 {
 	UITableViewCell *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
 	UIView* returnVar = (UIView*)view.contentView;
-	return alloc_int((int)[returnVar getTag]);
+	return alloc_int((int)[returnVar tag]);
 }
 DEFINE_PRIM (uitableviewcell_getContentView, 1);
 value uitableviewcell_getDetailTextLabel(value tag)
 {
 	UITableViewCell *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
 	UILabel* returnVar = (UILabel*)view.detailTextLabel;
-	return alloc_int((int)[returnVar getTag]);
+	return alloc_int((int)[returnVar tag]);
 }
 DEFINE_PRIM (uitableviewcell_getDetailTextLabel, 1);
 void uitableviewcell_setEditing(value tag, value arg1)
@@ -1307,7 +1307,7 @@ value uitableviewcell_getEditingAccessoryView(value tag)
 {
 	UITableViewCell *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
 	UIView* returnVar = (UIView*)view.editingAccessoryView;
-	return alloc_int((int)[returnVar getTag]);
+	return alloc_int((int)[returnVar tag]);
 }
 DEFINE_PRIM (uitableviewcell_getEditingAccessoryView, 1);
 void uitableviewcell_setMultipleSelectionBackgroundView(value tag, value tag1)
@@ -1322,7 +1322,7 @@ value uitableviewcell_getMultipleSelectionBackgroundView(value tag)
 {
 	UITableViewCell *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
 	UIView* returnVar = (UIView*)view.multipleSelectionBackgroundView;
-	return alloc_int((int)[returnVar getTag]);
+	return alloc_int((int)[returnVar tag]);
 }
 DEFINE_PRIM (uitableviewcell_getMultipleSelectionBackgroundView, 1);
 value uitableviewcell_getReuseIdentifier(value tag)
@@ -1358,7 +1358,7 @@ value uitableviewcell_getSelectedBackgroundView(value tag)
 {
 	UITableViewCell *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
 	UIView* returnVar = (UIView*)view.selectedBackgroundView;
-	return alloc_int((int)[returnVar getTag]);
+	return alloc_int((int)[returnVar tag]);
 }
 DEFINE_PRIM (uitableviewcell_getSelectedBackgroundView, 1);
 void uitableviewcell_setShouldIndentWhileEditing(value tag, value arg1)
@@ -1400,7 +1400,7 @@ value uitableviewcell_getTextLabel(value tag)
 {
 	UITableViewCell *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
 	UILabel* returnVar = (UILabel*)view.textLabel;
-	return alloc_int((int)[returnVar getTag]);
+	return alloc_int((int)[returnVar tag]);
 }
 DEFINE_PRIM (uitableviewcell_getTextLabel, 1);
 void uitableviewcell_prepareForReuse(value tag)
@@ -1429,21 +1429,21 @@ value uitableviewheaderfooterview_getBackgroundView(value tag)
 {
 	UITableViewHeaderFooterView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
 	UIView* returnVar = (UIView*)view.backgroundView;
-	return alloc_int((int)[returnVar getTag]);
+	return alloc_int((int)[returnVar tag]);
 }
 DEFINE_PRIM (uitableviewheaderfooterview_getBackgroundView, 1);
 value uitableviewheaderfooterview_getContentView(value tag)
 {
 	UITableViewHeaderFooterView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
 	UIView* returnVar = (UIView*)view.contentView;
-	return alloc_int((int)[returnVar getTag]);
+	return alloc_int((int)[returnVar tag]);
 }
 DEFINE_PRIM (uitableviewheaderfooterview_getContentView, 1);
 value uitableviewheaderfooterview_getDetailTextLabel(value tag)
 {
 	UITableViewHeaderFooterView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
 	UILabel* returnVar = (UILabel*)view.detailTextLabel;
-	return alloc_int((int)[returnVar getTag]);
+	return alloc_int((int)[returnVar tag]);
 }
 DEFINE_PRIM (uitableviewheaderfooterview_getDetailTextLabel, 1);
 value uitableviewheaderfooterview_getReuseIdentifier(value tag)
@@ -1457,7 +1457,7 @@ value uitableviewheaderfooterview_getTextLabel(value tag)
 {
 	UITableViewHeaderFooterView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
 	UILabel* returnVar = (UILabel*)view.textLabel;
-	return alloc_int((int)[returnVar getTag]);
+	return alloc_int((int)[returnVar tag]);
 }
 DEFINE_PRIM (uitableviewheaderfooterview_getTextLabel, 1);
 void uitableviewheaderfooterview_prepareForReuse(value tag)
@@ -1542,7 +1542,7 @@ value uitextfield_getLeftView(value tag)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
 	UIView* returnVar = (UIView*)view.leftView;
-	return alloc_int((int)[returnVar getTag]);
+	return alloc_int((int)[returnVar tag]);
 }
 DEFINE_PRIM (uitextfield_getLeftView, 1);
 void uitextfield_setPlaceholder(value tag, value arg1)
@@ -1571,7 +1571,7 @@ value uitextfield_getRightView(value tag)
 {
 	UITextField *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
 	UIView* returnVar = (UIView*)view.rightView;
-	return alloc_int((int)[returnVar getTag]);
+	return alloc_int((int)[returnVar tag]);
 }
 DEFINE_PRIM (uitextfield_getRightView, 1);
 void uitextfield_setText(value tag, value arg1)
@@ -1858,7 +1858,7 @@ value uiview_getSuperview(value tag)
 {
 	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
 	UIView* returnVar = (UIView*)view.superview;
-	return alloc_int((int)[returnVar getTag]);
+	return alloc_int((int)[returnVar tag]);
 }
 DEFINE_PRIM (uiview_getSuperview, 1);
 void uiview_setUserInteractionEnabled(value tag, value arg1)
@@ -1960,7 +1960,7 @@ void uiview_insertSubview(value tag, value tag1, value tag2)
 	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
 	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
 	id arg2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
-	[view insertSubview:arg1 :arg2 ];
+	[view insertSubview:arg1 belowSubview:arg2 ];
 	
 }
 DEFINE_PRIM (uiview_insertSubview, 3);
@@ -1969,7 +1969,7 @@ void uiview_insertSubview2(value tag, value tag1, value tag2)
 	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
 	id arg1 = [views objectForKey:[NSNumber numberWithInt:val_int(tag1)]];
 	id arg2 = [views objectForKey:[NSNumber numberWithInt:val_int(tag2)]];
-	[view insertSubview:arg1 :arg2 ];
+	[view insertSubview:arg1 aboveSubview:arg2 ];
 	
 }
 DEFINE_PRIM (uiview_insertSubview2, 3);
@@ -2091,7 +2091,7 @@ value uiview_viewForBaselineLayout(value tag)
 {
 	UIView *view = [views objectForKey:[NSNumber numberWithInt:val_int(tag)]];
 	UIView* returnVar = (UIView*)[view viewForBaselineLayout];
-	return alloc_int((int)[returnVar getTag]);
+	return alloc_int((int)[returnVar tag]);
 }
 DEFINE_PRIM (uiview_viewForBaselineLayout, 1);
 void uiview_willMoveToSuperview(value tag, value tag1)
@@ -2274,181 +2274,134 @@ DEFINE_PRIM (uiwindow_resignKeyWindow, 1);
 void initUIViewEventListeners(int tag)
 {
 	initUIResponderEventListeners(tag);
-	UIView *view = [views objectForKey:[NSNumber numberWithInt:tag]];
 	
 }
 void initUIButtonEventListeners(int tag)
 {
 	initUIControlEventListeners(tag);
-	UIButton *view = [views objectForKey:[NSNumber numberWithInt:tag]];
 	
 }
 void initUIResponderEventListeners(int tag)
 {
-	UIResponder *view = [views objectForKey:[NSNumber numberWithInt:tag]];
-	
 }
 void initUILabelEventListeners(int tag)
 {
 	initUIViewEventListeners(tag);
-	UILabel *view = [views objectForKey:[NSNumber numberWithInt:tag]];
 	
 }
 void initUIImageViewEventListeners(int tag)
 {
 	initUIViewEventListeners(tag);
-	UIImageView *view = [views objectForKey:[NSNumber numberWithInt:tag]];
-	
 }
+/*
 void initMKMapViewEventListeners(int tag)
 {
 	initUIViewEventListeners(tag);
-	MKMapView *view = [views objectForKey:[NSNumber numberWithInt:tag]];
 	
 }
+*/
 void initUIAlertViewEventListeners(int tag)
 {
 	initUIViewEventListeners(tag);
-	UIAlertView *view = [views objectForKey:[NSNumber numberWithInt:tag]];
 	
 }
 void initUICollectionReusableViewEventListeners(int tag)
 {
 	initUIViewEventListeners(tag);
-	UICollectionReusableView *view = [views objectForKey:[NSNumber numberWithInt:tag]];
 	
 }
 void initUICollectionViewEventListeners(int tag)
 {
 	initUIScrollViewEventListeners(tag);
-	UICollectionView *view = [views objectForKey:[NSNumber numberWithInt:tag]];
 	
 }
 void initUICollectionViewCellEventListeners(int tag)
 {
 	initUICollectionReusableViewEventListeners(tag);
-	UICollectionViewCell *view = [views objectForKey:[NSNumber numberWithInt:tag]];
 	
 }
 void initUIDatePickerEventListeners(int tag)
 {
 	initUIControlEventListeners(tag);
-	UIDatePicker *view = [views objectForKey:[NSNumber numberWithInt:tag]];
 	
 }
 void initUINavigationBarEventListeners(int tag)
 {
 	initUIViewEventListeners(tag);
-	UINavigationBar *view = [views objectForKey:[NSNumber numberWithInt:tag]];
 	
 }
 void initUIPageControlEventListeners(int tag)
 {
 	initUIViewEventListeners(tag);
-	UIPageControl *view = [views objectForKey:[NSNumber numberWithInt:tag]];
 	
 }
 void initUIPickerViewEventListeners(int tag)
 {
 	initUIViewEventListeners(tag);
-	UIPickerView *view = [views objectForKey:[NSNumber numberWithInt:tag]];
-	
 }
 void initUIPopoverBackgroundViewEventListeners(int tag)
 {
 	initUIViewEventListeners(tag);
-	UIPopoverBackgroundView *view = [views objectForKey:[NSNumber numberWithInt:tag]];
-	
 }
 void initUIProgressViewEventListeners(int tag)
 {
 	initUIViewEventListeners(tag);
-	UIProgressView *view = [views objectForKey:[NSNumber numberWithInt:tag]];
-	
 }
 void initUIRefreshControlEventListeners(int tag)
 {
 	initUIControlEventListeners(tag);
-	UIRefreshControl *view = [views objectForKey:[NSNumber numberWithInt:tag]];
-	
 }
 void initUIScrollViewEventListeners(int tag)
 {
 	initUIViewEventListeners(tag);
-	UIScrollView *view = [views objectForKey:[NSNumber numberWithInt:tag]];
-	
 }
 void initUISearchBarEventListeners(int tag)
 {
 	initUIViewEventListeners(tag);
-	UISearchBar *view = [views objectForKey:[NSNumber numberWithInt:tag]];
-	
 }
 void initUISegmentedControlEventListeners(int tag)
 {
 	initUIControlEventListeners(tag);
-	UISegmentedControl *view = [views objectForKey:[NSNumber numberWithInt:tag]];
-	
 }
 void initUISliderEventListeners(int tag)
 {
 	initUIControlEventListeners(tag);
-	UISlider *view = [views objectForKey:[NSNumber numberWithInt:tag]];
-	
 }
 void initUIStepperEventListeners(int tag)
 {
 	initUIControlEventListeners(tag);
-	UIStepper *view = [views objectForKey:[NSNumber numberWithInt:tag]];
-	
 }
 void initUISwitchEventListeners(int tag)
 {
 	initUIControlEventListeners(tag);
-	UISwitch *view = [views objectForKey:[NSNumber numberWithInt:tag]];
-	
 }
 void initUITabBarEventListeners(int tag)
 {
 	initUIViewEventListeners(tag);
-	UITabBar *view = [views objectForKey:[NSNumber numberWithInt:tag]];
-	
 }
 void initUITableViewEventListeners(int tag)
 {
 	initUIScrollViewEventListeners(tag);
-	UITableView *view = [views objectForKey:[NSNumber numberWithInt:tag]];
-	
 }
 void initUITableViewCellEventListeners(int tag)
 {
 	initUIViewEventListeners(tag);
-	UITableViewCell *view = [views objectForKey:[NSNumber numberWithInt:tag]];
-	
 }
 void initUITableViewHeaderFooterViewEventListeners(int tag)
 {
 	initUIViewEventListeners(tag);
-	UITableViewHeaderFooterView *view = [views objectForKey:[NSNumber numberWithInt:tag]];
-	
 }
 void initUITextViewEventListeners(int tag)
 {
 	initUIScrollViewEventListeners(tag);
-	UITextView *view = [views objectForKey:[NSNumber numberWithInt:tag]];
-	
 }
 void initUIWebViewEventListeners(int tag)
 {
 	initUIViewEventListeners(tag);
-	UIWebView *view = [views objectForKey:[NSNumber numberWithInt:tag]];
-	
 }
 void initUIWindowEventListeners(int tag)
 {
 	initUIViewEventListeners(tag);
-	UIWindow *view = [views objectForKey:[NSNumber numberWithInt:tag]];
-	
 }
 void initUIControlEventListeners(int tag)
 {

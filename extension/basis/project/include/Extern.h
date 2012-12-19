@@ -224,7 +224,7 @@ void initUIButtonEventListeners(int tag);
 void initUIResponderEventListeners(int tag);
 void initUILabelEventListeners(int tag);
 void initUIImageViewEventListeners(int tag);
-void initMKMapViewEventListeners(int tag);
+//void initMKMapViewEventListeners(int tag);
 void initUIAlertViewEventListeners(int tag);
 void initUICollectionReusableViewEventListeners(int tag);
 void initUICollectionViewEventListeners(int tag);

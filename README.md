@@ -24,13 +24,7 @@ To build the iOS native extension run these commands from extension/basis/projec
 
 **Android**
 
-The android target must use a custom version of NME found here:
-
-	https://github.com/Randonee/NME
-	
-To compile use the target -android_empty
-
-	haxelib run nme build build.nmml -android_empty
+Android compiles in java only which means the nme lib is not available
 
 You can use layout xml the same way you can in an actual android project by saving them in project_dir/res/layout. You can then access them in haxe like this:
 

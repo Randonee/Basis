@@ -1,6 +1,6 @@
 #import "ViewManager.h"
 #import <UIKit/UIKit.h>
-#import <MapKit/MapKit.h>
+//#import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import <Foundation/Foundation.h>
 #import "EventManager.h"
@@ -98,7 +98,7 @@ namespace basis
                 break;
                 
            	case 6:
-                view = [[MKMapView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+            //    view = [[MKMapView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
                 break;
             case 7:
                 view = [[UIResponder alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];

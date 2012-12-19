@@ -6,6 +6,8 @@ import com.season.basis.android.widget.TextView;
 import com.season.basis.android.widget.Button;
 import com.season.basis.android.view.View;
 import com.season.basis.android.view.KeyEvent;
+import android.r.Id;
+import android.r.Layout;
 
 class MainView implements OnKeyListener, implements OnClickListener
 {
@@ -17,15 +19,15 @@ class MainView implements OnKeyListener, implements OnClickListener
 	
 	public function new()
 	{
-		BaseActivity.getInstance().setContentView(r.Layout.main);
-		_inputField = cast(BaseActivity.getInstance().findViewById(r.Id.inputField), EditText);
-		_outputField = cast(BaseActivity.getInstance().findViewById(r.Id.outputField), EditText);
-		_sampleButton = cast(BaseActivity.getInstance().findViewById(r.Id.sampleButton), Button);
+/*		BaseActivity.getInstance().setContentView(Layout.main);
+		_inputField = cast(BaseActivity.getInstance().findViewById(Id.inputField), EditText);
+		_outputField = cast(BaseActivity.getInstance().findViewById(Id.outputField), EditText);
+		_sampleButton = cast(BaseActivity.getInstance().findViewById(Id.sampleButton), Button);
 		
 		_inputField.setOnKeyListener(this);
 		_sampleButton.setOnClickListener(this);
 		
-		
+		*/
 	}
 	
 	public function onClick(v:View):Void

@@ -2,5 +2,13 @@
 <project>
 	<classpath name="" />
 	<classpath name="src" ></classpath>
-	<ndll name="basis" />
+	<ndll name="basis" if="ios"/>
+	<haxelib name="nme" if="ios"/>
+	<ndll name="nme" haxelib="nme" if="ios"/>
+	
+	
+	<template path="templates/android/haxe" rename="../haxe" if="android" />
+	<template path="templates/android/bin" rename="../bin" if="android" />
+	<template path="templates/android/obj" rename="../obj" if="android" />
+	
 </project>
