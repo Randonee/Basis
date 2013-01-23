@@ -1,35 +1,14 @@
 Basis
 =====
 
-Haxe Native UI Library
+Haxe Native UI Development
 
 The goal of basis is to provide cross platform access to native UI components.
+Basis holds basic project handling logic and uses other haxelibs to target specific platforms
 
-**Supported platforms**
-
-* iOS
-* Android
-
-
-**iOS**
-
-To access native components a native extension is used to both create views and handle events.
-
-To build the iOS native extension run these commands from extension/basis/project
-
-	haxelib run hxcpp Build.xml -Diphonesim
-	haxelib run hxcpp Build.xml -Diphoneos -DHXCPP_ARMV7
-	haxelib run hxcpp Build.xml -Diphoneos
-
-
-**Android**
-
-Android compiles in java only which means the nme lib is not available
-
-You can use layout xml the same way you can in an actual android project by saving them in project_dir/res/layout. You can then access them in haxe like this:
-
-	r.Layout.layout_name
-
+Platform specific haxelibs
+	BasisApple
+	BasisAndroid
 
 
 **License:**
