@@ -1,0 +1,3 @@
+-cp src
+-neko build/run.n
+-main basis.Main

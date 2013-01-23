@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-	<string name="input_label">Input:</string>
-	<string name="enter_text_message">Enter a message</string>
-	<string name="output_label">Output:</string>
-	<string name="button_label">Button</string>
-</resources>

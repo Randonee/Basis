@@ -1,56 +1,9 @@
-<project basedir="." default="iphone">
-	
-	<!--
-		This is an ant build file.
-		To use:
-		1. install ant: http://ant.apache.org
-		2. Goto the directory containing this file
-		3. Run one of the following commands to run an example
-			a) ant iphone
-			b) ant android
-	-->
-	
-	<target name="iphone">
-		<delete dir="extension/basis/project/obj" failOnError="false" includeEmptyDirs="true"/>
-				
-		<exec dir="extension/basis/project" failonerror="true" executable="haxelib">
-			<arg line="run hxcpp Build.xml -Diphonesim" />
-		</exec>
-
-		<exec dir="extension/basis/project" failonerror="true" executable="haxelib">
-			<arg line="run hxcpp Build.xml -Diphoneos -DHXCPP_ARMV7" />
-		</exec>
-		<exec dir="extension/basis/project" failonerror="true" executable="haxelib">
-			<arg line="run hxcpp Build.xml -Diphoneos" />
-		</exec>
-		<exec dir="examples/basic" failonerror="true" executable="haxelib">
-			<arg line="run nme test build.nmml ios -simulator" />
-		</exec>
-	</target>
+<project basedir="." default="neko">
 	
 	
-	<target name="android">
-		<exec dir="examples/basic" failonerror="true" executable="haxelib">
-			<arg line="run nme test build.nmml android" />
-		</exec>
-	</target>
 	
-	<target name="androidemu">
-		<exec dir="examples/basic" failonerror="true" executable="haxelib">
-			<arg line="run nme build build.nmml android_empty" />
-		</exec>
+	<target name="neko">
 		
-		<exec dir="." failonerror="false" executable="/opt/android_sdk/platform-tools/adb">
-			<arg line="uninstall com.basis.example" />
-		</exec>
-		
-		<exec dir="." failonerror="true" executable="/opt/android_sdk/platform-tools/adb">
-			<arg line="install examples/basic/build/android_empty/bin/bin/BasicExample-debug.apk" />
-		</exec>
-		
-		<exec dir="." failonerror="true" executable="/opt/android_sdk/platform-tools/adb">
-			<arg line="shell am start -a android.intent.action.MAIN -n com.basis.example/com.basis.example.MainActivity" />
-		</exec>
 	</target>
 	
 	
@@ -66,6 +19,36 @@
 		</copy>
 		
 		<zip destfile="build/basis.zip" basedir="build/basis" />
+	</target>
+	
+	<target name="testlib">
+		<delete dir="build"/>
+		<mkdir dir="build/testlib/"/>
+		<mkdir dir="build/testlib/Basis"/>
+		<mkdir dir="build/testlib/Basis/0,0,1"/>
+		
+		<exec dir="." failonerror="true" executable="haxe">
+			<arg line="build.hxml" />
+		</exec>
+		
+		<copy todir="build/testlib/Basis/0,0,1">
+			<fileset dir="src"/>
+		</copy>
+		
+		<copy file="haxelib.xml" tofile="build/testlib/Basis/0,0,1/haxelib.xml"/>
+		<copy file="build/run.n" tofile="build/testlib/Basis/0,0,1/run.n"/>
+		
+		<exec dir="." failonerror="true" executable="chmod">
+			<arg line="755 build/testlib/Basis/0,0,1/run.n" />
+		</exec>
+		
+		<echo file="build/testlib/Basis/.current" >0.0.1</echo>
+		
+		<delete dir="/usr/lib/haxe/lib/Basis"/>
+		
+		<copy todir="/usr/lib/haxe/lib/Basis">
+			<fileset dir="build/testlib/Basis"/>
+		</copy>
 	</target>
 	
 </project>
