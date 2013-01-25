@@ -1,54 +1,35 @@
 <project basedir="." default="neko">
 	
-	
-	
-	<target name="neko">
-		
-	</target>
-	
-	
-	<target name="haxelib">
+	<target name="buildHaxelib">
 		<delete dir="build"/>
 		<mkdir dir="build/"/>
-		<mkdir dir="build/basis"/>
-		
-		<copy todir="build/basis">
-			<fileset dir="extension/basis/src/com"/>
-			<fileset dir="extension/basis/ndll"/>
-			<file file="extension/basis/haxelib.xml"/>
-		</copy>
-		
-		<zip destfile="build/basis.zip" basedir="build/basis" />
-	</target>
-	
-	<target name="testlib">
-		<delete dir="build"/>
-		<mkdir dir="build/testlib/"/>
-		<mkdir dir="build/testlib/Basis"/>
-		<mkdir dir="build/testlib/Basis/0,0,1"/>
+		<mkdir dir="build/Basis"/>
+		<mkdir dir="build/Basis/0,0,1"/>
 		
 		<exec dir="." failonerror="true" executable="haxe">
 			<arg line="build.hxml" />
 		</exec>
 		
-		<copy todir="build/testlib/Basis/0,0,1">
+		<copy todir="build/Basis/0,0,1">
 			<fileset dir="src"/>
 		</copy>
 		
-		<copy file="haxelib.xml" tofile="build/testlib/Basis/0,0,1/haxelib.xml"/>
-		<copy file="build/run.n" tofile="build/testlib/Basis/0,0,1/run.n"/>
+		<copy file="haxelib.xml" tofile="build/Basis/0,0,1/haxelib.xml"/>
+		<copy file="build/run.n" tofile="build/Basis/0,0,1/run.n"/>
 		
 		<exec dir="." failonerror="true" executable="chmod">
-			<arg line="755 build/testlib/Basis/0,0,1/run.n" />
+			<arg line="755 build/Basis/0,0,1/run.n" />
 		</exec>
+		<echo file="build/Basis/.current" >0.0.1</echo>
 		
-		<echo file="build/testlib/Basis/.current" >0.0.1</echo>
+		<zip destfile="build/basis.zip" basedir="build/basis" />
+	</target>
 		
-		<delete dir="/usr/lib/haxe/lib/Basis"/>
-		
-		<copy todir="/usr/lib/haxe/lib/Basis">
-			<fileset dir="build/testlib/Basis"/>
-		</copy>
+	<target name="testlib">
+		<antcall target="buildHaxelib" />
+		<exec dir="." failonerror="true" executable="haxelib">
+			<arg line="test build/Basis.zip" />
+		</exec>
 	</target>
 	
 </project>

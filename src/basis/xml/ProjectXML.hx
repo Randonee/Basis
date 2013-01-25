@@ -23,6 +23,7 @@ class ProjectXML
 	public var baseBuildPath(default, null):String;
 	public var targets(default, null):Hash<Target>;
 	public var srcPaths(default, null):Array<String>;
+	public var haxeLibs(default, null):Array<String>;
 	
 	private var _fastXML:Fast;
 	
@@ -31,6 +32,7 @@ class ProjectXML
 		this.xmlPath = xmlPath;
 		targets = new Hash<Target>();
 		srcPaths = new Array<String>();
+		haxeLibs = new Array<String>();
 	}
 	
 	public function parse():Void
@@ -50,6 +52,9 @@ class ProjectXML
 			
 		for( src in _fastXML.nodes.src )
 			parseSrc(src);
+			
+		for( haxelib in _fastXML.nodes.haxelib )
+			parseHaxelib(haxelib);
 			
 		parseBaseBuildPath(_fastXML.node.builddir);
 	}
@@ -77,5 +82,10 @@ class ProjectXML
 	private function parseSrc(src:Fast):Void
 	{
 		srcPaths.push(src.att.path);
+	}
+	
+	private function parseHaxelib(haxelib:Fast):Void
+	{
+		haxeLibs.push(haxelib.att.name);
 	}
 }
