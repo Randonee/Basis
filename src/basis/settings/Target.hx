@@ -82,4 +82,18 @@ class Target
 		collection.push(value);
 	}
 	
+	public function getSettingsContext(?obj:Dynamic=null):Dynamic
+	{
+		if(obj == null)
+			obj = {};
+			
+		for(key in settings.keys())
+			Reflect.setField(obj, key, settings.get(key));
+		
+		if(parentTarget != null)
+			obj = parentTarget.getSettingsContext(obj);
+		
+		return obj;
+	}
+	
 }
