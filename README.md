@@ -8,7 +8,7 @@ Basis holds basic project handling logic and uses other haxelibs to target speci
 
 **Installation**
 
-run command :
+run command (make sure Bases has a capital "B"):
 
 	haxelib install Basis
 
