@@ -39,7 +39,7 @@ class ProcessUtil
 		
 		if (path != "")
 		{
-			oldPath = Sys.getCwd ();
+			oldPath = Sys.getCwd();
 			Sys.setCwd (path);
 		}
 		

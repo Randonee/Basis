@@ -11,7 +11,7 @@
 		</exec>
 		
 		<copy todir="build/Basis/0,0,1">
-			<fileset dir="src"/>
+			<fileset dir="buildtool/src"/>
 		</copy>
 		
 		<copy file="haxelib.xml" tofile="build/Basis/0,0,1/haxelib.xml"/>
