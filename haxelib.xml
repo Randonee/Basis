@@ -4,6 +4,8 @@
     <tag v="android"/>
     <tag v="ios"/>
     <tag v="cross"/>
+    <depends name="BasisApple"/>
+    <depends name="BasisAndroid"/>
     <description>Basis</description>
     <version name="0.0.1">alpha</version>
 </project>
