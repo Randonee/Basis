@@ -12,17 +12,15 @@ run command :
 
 	"haxlib install Basis"
 
-
-
-**Platform specific haxelibs**
-
-* [BasisApple](https://github.com/Randonee/BasisApple)
-* [BasisAndroid](https://github.com/Randonee/BasisAndroid)
-	
 	
 **Examples**
 
-Goto platform links above for example applications
+There are examples for each target. See the other Basis haxelib targets bellow for examples.
+
+* [BasisApple](https://github.com/Randonee/BasisApple)
+* [BasisAndroid](https://github.com/Randonee/BasisAndroid)
+
+
 
 
 **License:**
