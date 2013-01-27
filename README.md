@@ -7,15 +7,18 @@ The goal of basis is to provide cross platform access to native UI components.
 Basis holds basic project handling logic and uses other haxelibs to target specific platforms
 
 Installation
+
 	run command "haxlib install Basis"
 
 
 Platform specific haxelibs
-	[BasisApple](https://github.com/Randonee/BasisApple)
-	[BasisAndroid](https://github.com/Randonee/BasisAndroid)
+
+	* [BasisApple](https://github.com/Randonee/BasisApple)
+	* [BasisAndroid](https://github.com/Randonee/BasisAndroid)
 	
 	
 Example applications
+
 	Goto platform links above for example applications
 
 
