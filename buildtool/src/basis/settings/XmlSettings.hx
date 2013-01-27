@@ -48,6 +48,12 @@ class XmlSettings implements ISettings
 		if(targetXML.hasNode.main)
 			parseMain(targetXML.node.main, currentTarget);
 			
+		if(targetXML.hasNode.debug)
+			parseDebug(targetXML.node.debug, currentTarget);
+			
+		if(targetXML.hasNode.runWhenFinished)
+			parseRunWHenFinished(targetXML.node.debug, currentTarget);
+			
 		if(targetXML.hasNode.builddir)
 			parseBaseBuildPath(targetXML.node.builddir, currentTarget);
 			
@@ -76,6 +82,16 @@ class XmlSettings implements ISettings
 	private function parseMain(mainXML:Fast, currentTarget:Target):Void
 	{
 		currentTarget.setSetting(Target.MAIN, mainXML.att.classpath);
+	}
+	
+	private function parseDebug(xml:Fast, currentTarget:Target):Void
+	{
+		currentTarget.setSetting(Target.DEBUG, xml.att.value.toLowerCase());
+	}
+	
+	private function parseRunWHenFinished(xml:Fast, currentTarget:Target):Void
+	{
+		currentTarget.setSetting(Target.RUN_WHEN_FINISHED, xml.att.value.toLowerCase());
 	}
 	
 	private function parseSourcePath(src:Fast, currentTarget):Void

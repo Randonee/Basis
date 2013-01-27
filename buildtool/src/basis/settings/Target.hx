@@ -7,6 +7,8 @@ class Target
 	static inline public var NAME:String = "name";
 	static inline public var MAIN:String = "main";
 	static inline public var TYPE:String = "type";
+	static inline public var DEBUG:String = "debug";
+	static inline public var RUN_WHEN_FINISHED:String = "runWhenFinished";
 	static inline public var BUILD_DIR:String = "buildDir";
 	
 	//Collections
