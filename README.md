@@ -10,7 +10,7 @@ Basis holds basic project handling logic and uses other haxelibs to target speci
 
 run command :
 
-	"haxlib install Basis"
+	haxelib install Basis
 
 	
 **Examples**
