@@ -12,12 +12,14 @@ class BuildTool
 	private var _settings:ISettings;
 	private var _settingsFileName:String;
 	private var _settingsDirectory:String;
+	private var _buildTargetName:String;
 	
 	public function new():Void
 	{
 		var args:Array<String> = Sys.args();
-		if(args.length == 2)
+		if(args.length == 3)
 		{
+			_buildTargetName = args[1];
 			var settingsPath = args[0];
 			var index:Int = settingsPath.lastIndexOf("/");
 			if(index >= 0)
@@ -27,11 +29,11 @@ class BuildTool
 				if(args[0].indexOf("/") == 0)
 					_settingsDirectory = settingsPath.substring(0, index);
 				else
-					_settingsDirectory = args[1] + "/" + settingsPath.substring(0, index);
+					_settingsDirectory = args[2] + "/" + settingsPath.substring(0, index);
 			}
 			else
 			{
-				_settingsDirectory = args[1];
+				_settingsDirectory = args[2];
 				_settingsFileName = args[0];
 			}
 			
@@ -56,25 +58,31 @@ class BuildTool
 	
 	private function getSettings_complete(target:Target):Void
 	{
-		for(childTarget in target.subTargets)
-		{
-			if(childTarget.hasSetting(Target.TYPE))
-			{
-				switch(childTarget.getSetting(Target.TYPE).toLowerCase())
-				{
-					case "apple":
-						Sys.command( "haxelib", ["run", "BasisApple", _settingsDirectory + _settingsFileName]);
-				
-					case "android":
-						Sys.command( "haxelib", ["run", "BasisAndroid", _settingsDirectory + _settingsFileName]);
-				}
-			}
-			else
-				neko.Lib.println("No type for target: " + target.getSetting(Target.NAME));
+		var buildTarget:Target = target.getTargetWithName(_buildTargetName);
+		if(buildTarget == null)
+			throw("Target not found: "+ _buildTargetName);
 			
-			var buildPath:String = childTarget.getSetting(Target.BUILD_DIR);
-			if(!FileSystem.exists(buildPath))
-				FileSystem.createDirectory(buildPath);
+		compileTarget(buildTarget);
+		
+	}
+	
+	private function compileTarget(target:Target):Void
+	{
+		if(target.hasSetting(Target.TYPE))
+		{
+			switch(target.getSetting(Target.TYPE).toLowerCase())
+			{
+				case "apple":
+					Sys.command( "haxelib", ["run", "BasisApple", _settingsDirectory + _settingsFileName, target.name]);
+			
+				case "android":
+					Sys.command( "haxelib", ["run", "BasisAndroid", _settingsDirectory + _settingsFileName, target.name]);
+			}
+		}
+		else
+		{
+			for(childTarget in target.subTargets)
+				compileTarget(target);
 		}
 	}
 	

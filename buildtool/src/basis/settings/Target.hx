@@ -4,7 +4,7 @@ package basis.settings;
 class Target
 {
 	//Settings
-	static inline public var NAME:String = "name";
+	static inline public var APP_NAME:String = "appName";
 	static inline public var MAIN:String = "main";
 	static inline public var TYPE:String = "type";
 	static inline public var DEBUG:String = "debug";
@@ -19,6 +19,7 @@ class Target
 	
 	public var subTargets(default, null):Array<Target>;
 	public var parentTarget(default, null):Target;
+	public var name(default, default):String;
 	
 	private var settingCollections:Hash<Array<String>>;
 	private var settings:Hash<String>;
@@ -96,6 +97,21 @@ class Target
 			obj = parentTarget.getSettingsContext(obj);
 		
 		return obj;
+	}
+	
+	public function getTargetWithName(targetName:String):Target
+	{
+		if(name == targetName)
+			return this;
+		
+		for(target in subTargets)
+		{
+			var subTarget:Target = target.getTargetWithName(targetName);
+			if(subTarget != null)
+				return subTarget;
+		}
+		
+		return null;
 	}
 	
 }

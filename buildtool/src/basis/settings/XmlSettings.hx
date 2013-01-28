@@ -39,8 +39,10 @@ class XmlSettings implements ISettings
 	
 	private function parseTarget(targetXML:Fast, currentTarget:Target):Void
 	{
-		if(targetXML.has.name)
-			currentTarget.setSetting(Target.NAME, targetXML.att.name);
+		currentTarget.name = targetXML.att.name;
+		
+		if(targetXML.hasNode.appName)
+			parseAppName(targetXML.node.appName, currentTarget);
 		
 		if(targetXML.has.type)
 			currentTarget.setSetting(Target.TYPE, targetXML.att.type.toLowerCase());
@@ -72,6 +74,11 @@ class XmlSettings implements ISettings
 			currentTarget.subTargets.push(childTarget);
 			parseTarget(childTargetXML, childTarget);
 		}
+	}
+	
+	private function parseAppName(buildDir:Fast, currentTarget:Target):Void
+	{
+		currentTarget.setSetting(Target.APP_NAME, buildDir.att.value);
 	}
 	
 	private function parseBaseBuildPath(buildDir:Fast, currentTarget:Target):Void
