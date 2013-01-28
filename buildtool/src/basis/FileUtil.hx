@@ -8,6 +8,9 @@ import sys.io.FileOutput;
 import haxe.io.Path;
 import haxe.Template;
 
+/**
+* Much of this code was modified from NME helpers
+**/
 class FileUtil
 {
 	static public function deleteDirectoryRecursive(directoryName:String):Void 
@@ -32,6 +35,21 @@ class FileUtil
         } 
 	}
 	
+	static public function getFileExtention(path:String):String
+	{
+		return Path.extension(path);
+	}
+	
+	public static function read(path : String) : Array<String>
+	{
+		return sys.FileSystem.readDirectory(path);
+	}
+	
+	
+	/**
+	* Creates a directory.
+	* If a directory in the path does not exist it will be created
+	**/
 	static public function createDirectory(path:String):Void
 	{
 		var parts:Array<String> = path.split("/");
@@ -45,13 +63,12 @@ class FileUtil
 		}
 	}
 	
-	static public function getFileExtention(path:String):String
-	{
-		return Path.extension(path);
-	}
-	
-	
-	public static function getHaxelib (library:String):String
+	/**
+	* gets a path to a haxelib
+	* 
+	* @param library name of haxelib
+	**/
+	public static function getHaxelib(library:String):String
 	{
 		var proc = new Process ("haxelib", ["path", library ]);
 		var result = "";
@@ -79,43 +96,27 @@ class FileUtil
 		return result;
 	}
 	
-	public static function read(path : String) : Array<String>
-	{
-		return sys.FileSystem.readDirectory(path);
-	}
-	
+	/**
+	* Copies contents of one directoy into another. If the destination directory does not exist it will be created
+	* 
+	* @param sourcePath source directory
+	* @param destinationPath destination directory
+	* @param settings If set each file will be treated as a haxe template and the settings will be applied.
+	* @param ifNewer only copy if the source is newer than the destination.
+	**/
 	public static function copyInto(sourcePath : String, destinationPath : String, ?settings:Dynamic=null, ?ifNewer:Bool=false) : Void 
 	{
 		privateCopyInto(sourcePath, destinationPath, settings, ifNewer);
 	}
 	
-	
-	private static function privateCopyInto(source:String, destination:String, ?settings:Dynamic=null, ?ifNewer:Bool=false) : Void
-	{
-		if(!sys.FileSystem.exists(destination))
-			FileSystem.createDirectory(destination);
-		
-		var items = read(source);
-		
-		for(itemName in items)
-		{
-			var itemPath = source + "/" + itemName;
-			
-			if(itemName.charAt(0) != ".")
-			{
-				if(FileSystem.isDirectory(itemPath))
-				{
-					privateCopyInto(itemPath, destination + "/" + itemName, settings, ifNewer);
-				} 
-				else 
-				{	
-					copyFile(itemPath, destination + "/" + itemName, settings, ifNewer);	
-				}
-			}
-		}	
-	}
-	
-	
+	/**
+	* Copies a file
+	* 
+	* @param source source file
+	* @param destination destination file
+	* @param settings If set the file will be treated as a haxe template and the settings will be applied.
+	* @param ifNewer only copy if the source is newer than the destination.
+	**/
 	public static function copyFile (source:String, destination:String, ?settings:Dynamic=null, ?ifNewer:Bool=false)
 	{
 		var extension:String = Path.extension (source);
@@ -150,7 +151,12 @@ class FileUtil
 		}
 	}
 	
-	
+	/**
+	* Checks if file is newer than another
+	* 
+	* @param source source file
+	* @param destination destination file
+	**/
 	public static function isNewer (source:String, destination:String):Bool
 	{
 		if (source == null || !FileSystem.exists (source))
@@ -166,6 +172,32 @@ class FileUtil
 			}
 		}
 		return true;
+	}
+	
+	
+	private static function privateCopyInto(source:String, destination:String, ?settings:Dynamic=null, ?ifNewer:Bool=false) : Void
+	{
+		if(!sys.FileSystem.exists(destination))
+			FileSystem.createDirectory(destination);
+		
+		var items = read(source);
+		
+		for(itemName in items)
+		{
+			var itemPath = source + "/" + itemName;
+			
+			if(itemName.charAt(0) != ".")
+			{
+				if(FileSystem.isDirectory(itemPath))
+				{
+					privateCopyInto(itemPath, destination + "/" + itemName, settings, ifNewer);
+				} 
+				else 
+				{	
+					copyFile(itemPath, destination + "/" + itemName, settings, ifNewer);	
+				}
+			}
+		}	
 	}
 	
 }
