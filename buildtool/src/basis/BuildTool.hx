@@ -40,7 +40,7 @@ class BuildTool
 			Sys.setCwd(_settingsDirectory);
 		}
 		else
-			throw("Can't find build file make sure args are correct. Example: haxelib run basis build.xml");
+			throw("Can't find build file make sure args are correct. Example: haxelib run basis build.xml targetName");
 	}
 	
 	public function build():Void
