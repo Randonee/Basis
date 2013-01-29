@@ -54,7 +54,7 @@ class XmlSettings implements ISettings
 			parseDebug(targetXML.node.debug, currentTarget);
 			
 		if(targetXML.hasNode.runWhenFinished)
-			parseRunWHenFinished(targetXML.node.debug, currentTarget);
+			parseRunWHenFinished(targetXML.node.runWhenFinished, currentTarget);
 			
 		if(targetXML.hasNode.builddir)
 			parseBaseBuildPath(targetXML.node.builddir, currentTarget);
