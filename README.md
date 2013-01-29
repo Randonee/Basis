@@ -25,6 +25,7 @@ There are examples for each target. See the other Basis haxelib targets bellow f
 
 **License:**
 
+	Copyright (c) 2013 Basis Contributors
     Unless indicated otherwise, this code is provided under a MIT-style license. 
 
     Permission is hereby granted, free of charge, to any person obtaining a 
