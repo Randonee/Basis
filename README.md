@@ -25,9 +25,7 @@ There are examples for each target. See the other Basis haxelib targets bellow f
 
 **License:**
 
-    Unless indicated otherwise, this code was created by Aaron Spjut and
-    provided under a MIT-style license. 
-    Copyright (c) Aaron Spjut. All rights reserved.
+    Unless indicated otherwise, this code is provided under a MIT-style license. 
 
     Permission is hereby granted, free of charge, to any person obtaining a 
     copy of this software and associated documentation files (the "Software"),
