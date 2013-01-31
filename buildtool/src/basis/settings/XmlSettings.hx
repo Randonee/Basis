@@ -62,6 +62,9 @@ class XmlSettings implements ISettings
 		for( source in targetXML.nodes.source )
 			parseSourcePath(source, currentTarget);
 			
+		for( arg in targetXML.nodes.haxeArg )
+			parseHaxeArg(arg, currentTarget);
+			
 		for( haxelib in targetXML.nodes.haxelib )
 			parseHaxelib(haxelib, currentTarget);
 			
@@ -111,9 +114,9 @@ class XmlSettings implements ISettings
 		currentTarget.addToCollection(Target.HAXE_LIBS, haxelib.att.name);
 	}
 	
-	private function parseCommandLineArgument(arg:Fast, currentTarget):Void
+	private function parseHaxeArg(arg:Fast, currentTarget):Void
 	{
-		currentTarget.addToCollection(Target.COMMAND_LINE_ARGUMENTS, arg.att.name);
+		currentTarget.addToCollection(Target.HAXE_ARGS, arg.att.value);
 	}
 	
 	private function parseAssetPath(assetPathXML:Fast, currentTarget):Void

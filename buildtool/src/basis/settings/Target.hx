@@ -15,7 +15,7 @@ class Target
 	static inline public var SOURCE_PATHS:String = "sourcePaths";
 	static inline public var HAXE_LIBS:String = "haxeLibs";
 	static inline public var ASSET_PATHS:String = "assetPaths";
-	static inline public var COMMAND_LINE_ARGUMENTS:String = "commandLineArguments";
+	static inline public var HAXE_ARGS:String = "haxeArgs";
 	
 	public var subTargets(default, null):Array<Target>;
 	public var parentTarget(default, null):Target;
