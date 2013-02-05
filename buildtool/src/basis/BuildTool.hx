@@ -20,13 +20,13 @@ class BuildTool
 		if(args.length == 3)
 		{
 			_buildTargetName = args[1];
-			var settingsPath = args[0];
+			var settingsPath = FileUtil.cleanPath(args[0]);
 			var index:Int = settingsPath.lastIndexOf("/");
 			if(index >= 0)
 			{
 				_settingsFileName = settingsPath.substring(index);
 				
-				if(args[0].indexOf("/") == 0)
+				if(args[0].indexOf("/") == 0 || args[0].indexOf(":") > 0)
 					_settingsDirectory = settingsPath.substring(0, index);
 				else
 					_settingsDirectory = args[2] + "/" + settingsPath.substring(0, index);
@@ -36,7 +36,6 @@ class BuildTool
 				_settingsDirectory = args[2];
 				_settingsFileName = args[0];
 			}
-			
 			Sys.setCwd(_settingsDirectory);
 		}
 		else
@@ -45,15 +44,15 @@ class BuildTool
 	
 	public function build():Void
 	{
-		try
-		{
+	//	try
+		//{
 			_settings = createSettings(_settingsDirectory + _settingsFileName);
 			_settings.retrieve(getSettings_complete, getSettings_error);
-		}
+	/*	}
 		catch(error:String)
 		{
 			endWithError(error);
-		}
+		}*/
 	}
 	
 	private function getSettings_complete(target:Target):Void

@@ -13,8 +13,18 @@ import haxe.Template;
 **/
 class FileUtil
 {
+	static public function cleanPath(path:String):String
+	{
+		path = StringTools.replace(path, '\\', '/');
+		path = StringTools.replace(path, '//', '/');
+		while(path.charAt(path.length-1) == "/" && path.length > 0)
+			path = path.substring(0, path.length-1);
+		return path;
+	}
+
 	static public function deleteDirectoryRecursive(directoryName:String):Void 
-	{ 
+	{
+		directoryName = cleanPath(directoryName);
  		for (item in FileSystem.readDirectory(directoryName)) 
         { 
                 var path:String = directoryName + '/' + item; 
@@ -52,12 +62,15 @@ class FileUtil
 	**/
 	static public function createDirectory(path:String):Void
 	{
+		path = cleanPath(path);
 		var parts:Array<String> = path.split("/");
 		
 		var currDir:String = "";
-		for(part in parts)
+		for(a in 0...parts.length)
 		{
-			currDir += part + "/";
+			if(a != 0 && a != parts.length-1)
+				currDir += "/";
+			currDir += parts[a];
 			if(!FileSystem.exists(currDir))
 				FileSystem.createDirectory(currDir);
 		}
@@ -177,6 +190,8 @@ class FileUtil
 	
 	private static function privateCopyInto(source:String, destination:String, ?settings:Dynamic=null, ?ifNewer:Bool=false) : Void
 	{
+		source = cleanPath(source);
+		destination = cleanPath(destination);
 		if(!sys.FileSystem.exists(destination))
 			FileSystem.createDirectory(destination);
 		
