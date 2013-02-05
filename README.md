@@ -8,6 +8,8 @@ Basis holds basic project handling logic and uses other haxelibs to target speci
 
 **Installation**
 
+You will need tools specific to the platform you are building (android sdk, xcode...)
+
 run command (make sure Basis has a capital "B"):
 
 	haxelib install Basis
