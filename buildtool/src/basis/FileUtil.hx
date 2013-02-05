@@ -68,7 +68,7 @@ class FileUtil
 		var currDir:String = "";
 		for(a in 0...parts.length)
 		{
-			if(a != 0 && a != parts.length-1)
+			if(a != 0)
 				currDir += "/";
 			currDir += parts[a];
 			if(!FileSystem.exists(currDir))
