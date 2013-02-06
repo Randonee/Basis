@@ -3,16 +3,23 @@ Basis
 
 Haxe Native UI Development
 
-The goal of basis is to provide cross platform access to native UI components.
-Basis holds basic project handling logic and uses other haxelibs to target specific platforms
+The goal of basis is to provide access to native UI components. For example, in ios one would use UIView and in android one would use android.View along with layout xml.
+
+Basis is the core haxelib which works with other haxlibs. One haxelib per platform group.
+
+Currently platform groups in development are:
+
+* [BasisApple](https://github.com/Randonee/BasisApple)
+* [BasisAndroid](https://github.com/Randonee/BasisAndroid)
 
 **Installation**
 
-You will need tools specific to the platform you are building (android sdk, xcode...)
-
-run command (make sure Basis has a capital "B"):
+* run command (make sure Basis has a capital "B"):
 
 	haxelib install Basis
+
+* You will also need tools specific to the platform you are building (android sdk, xcode...). See specific platform for more instruction.
+
 
 	
 **Examples**
