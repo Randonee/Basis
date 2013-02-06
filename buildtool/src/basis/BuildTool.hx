@@ -44,15 +44,15 @@ class BuildTool
 	
 	public function build():Void
 	{
-	//	try
-		//{
+		try
+		{
 			_settings = createSettings(_settingsDirectory + _settingsFileName);
 			_settings.retrieve(getSettings_complete, getSettings_error);
-	/*	}
+		}
 		catch(error:String)
 		{
 			endWithError(error);
-		}*/
+		}
 	}
 	
 	private function getSettings_complete(target:Target):Void
