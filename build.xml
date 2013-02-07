@@ -20,7 +20,7 @@
 		<exec dir="." failonerror="true" executable="chmod">
 			<arg line="755 build/Basis/0,0,2/run.n" />
 		</exec>
-		<echo file="build/Basis/.current" >0.0.1</echo>
+		<echo file="build/Basis/.current" >0.0.2</echo>
 		
 		<zip destfile="build/basis.zip" basedir="build/basis" />
 	</target>
