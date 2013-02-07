@@ -4,21 +4,21 @@
 		<delete dir="build"/>
 		<mkdir dir="build/"/>
 		<mkdir dir="build/Basis"/>
-		<mkdir dir="build/Basis/0,0,1"/>
+		<mkdir dir="build/Basis/0,0,2"/>
 		
 		<exec dir="." failonerror="true" executable="haxe">
 			<arg line="build.hxml" />
 		</exec>
 		
-		<copy todir="build/Basis/0,0,1">
+		<copy todir="build/Basis/0,0,2">
 			<fileset dir="buildtool/src"/>
 		</copy>
 		
-		<copy file="haxelib.xml" tofile="build/Basis/0,0,1/haxelib.xml"/>
-		<copy file="build/run.n" tofile="build/Basis/0,0,1/run.n"/>
+		<copy file="haxelib.xml" tofile="build/Basis/0,0,2/haxelib.xml"/>
+		<copy file="build/run.n" tofile="build/Basis/0,0,2/run.n"/>
 		
 		<exec dir="." failonerror="true" executable="chmod">
-			<arg line="755 build/Basis/0,0,1/run.n" />
+			<arg line="755 build/Basis/0,0,2/run.n" />
 		</exec>
 		<echo file="build/Basis/.current" >0.0.1</echo>
 		
