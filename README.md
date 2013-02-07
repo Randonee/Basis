@@ -31,6 +31,16 @@ There are examples for each target. See the other Basis haxelib targets bellow f
 
 
 
+**Building From Source**
+
+1. Download each haxelib source (Basis, BasisApple, BasisAndroid)
+2. Run command "ant haxelib" from the root of the Basis directory
+3. Run command "ant haxelib" from both BasisApple and BasisAndroid
+
+If your working on the core Basis code you will need to build Basis then the other haxelibs before using them.
+
+
+
 
 **License:**
 
