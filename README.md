@@ -38,7 +38,8 @@ There are examples for each target. See the other Basis haxelib targets bellow f
 
 
 
-**Building From Source**
+Building From Source
+----------------
 
 1. Download each haxelib source (Basis, BasisApple, BasisAndroid)
 2. Run command "ant testlib" from the root of the Basis directory
