@@ -17,6 +17,11 @@ Current haxelibs in development:
 * run command (make sure Basis has a capital "B"):
 
 	haxelib install Basis
+	
+* Install haxelibs for platforms you wish to build
+
+	haxelib install BasisApple
+	haxelib install BasisAndroid	
 
 * You will also need tools specific to the platform you are building (android sdk, xcode...). See specific platform for more instruction.
 

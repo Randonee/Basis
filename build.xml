@@ -26,7 +26,9 @@
 	</target>
 		
 	<target name="testlib">
-		<delete dir="/usr/lib/haxe/lib/Basis"/>
+		<exec dir="." failonerror="false" executable="haxelib">
+			<arg line="remove Basis" />
+		</exec>
 		<antcall target="buildHaxelib" />
 		<exec dir="." failonerror="true" executable="haxelib">
 			<arg line="test build/Basis.zip" />
