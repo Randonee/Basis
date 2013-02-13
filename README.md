@@ -12,13 +12,14 @@ Current haxelibs in development:
 * [BasisApple](https://github.com/Randonee/BasisApple) (ios, and eventually osx)
 * [BasisAndroid](https://github.com/Randonee/BasisAndroid)
 
-**Installation**
+Installation
+----------------
 
-* run command (make sure Basis has a capital "B"):
+run command (make sure Basis has a capital "B"):
 
 	haxelib install Basis
 	
-* Install haxelibs for platforms you wish to build
+Install haxelibs for platforms you wish to build
 
 	haxelib install BasisApple
 	haxelib install BasisAndroid	
@@ -27,7 +28,8 @@ Current haxelibs in development:
 
 
 	
-**Examples**
+Examples
+----------------
 
 There are examples for each target. See the other Basis haxelib targets bellow for examples.
 
@@ -46,6 +48,83 @@ If your working on the core Basis code you will need to build Basis then the oth
 
 
 
+Build xml format
+----------------
+
+Example
+
+	<target name="main">
+		<appName value="Example" />
+		<source path="src" />
+		<builddir path="build" />
+		<target name="apple" type="Apple">
+			<framework name="UIKit" />
+			<framework name="Foundation" />
+			<framework name="CoreGraphics" />
+			<framework name="QuartzCore" />
+			<target name="ipad">
+				<device type="ios" />
+				<simulator use="true" type="ipad"/>
+				<main classpath="example.ApplicationMain" />
+				<debug value="true" />
+				<runWhenFinished value="true" />
+			</target>
+		</target>
+	</target>
+
+The build files work similar to CSS in that all tags apply to child targets.
+In the example above the appName node would apply to the apple target and ipad target.
+When a target is built each sub target (if any) will also be built.
+
+Build xml Node Reference
+----------------
+
+**See platform specific haxelib for nodes specific to that haxelib**
+
+Attributes are optional unless marked otherwise.
+
+* target
+	* Attributes
+		* name (required)
+			* The name of the target. This is what you will call from the command line. For example if you want to build the apple target: haxelib run basis build.xml apple
+		* type
+			* The haxelib that will build the target "apple" for BasisApple and "android" for BasisAndroid
+* appName
+	* Attributes
+		* value
+			* The name of the application		
+* source
+	* Attributes
+		* path
+			* A directory with haxe source to be included
+* builddir
+	* Attributes
+		* path
+			* where the build output will go
+* haxelib
+	* Attributes
+		* name
+			* the name of a haxelib to include
+* main
+	* Attributes
+		* classpath
+			* the fill class path to the main class
+* debug
+	* Attributes
+		* value
+			* if "true" build debug build
+* haxeArg
+	* Attributes
+		* value
+			* haxe compiler arg. Example <haxeArg value="-D spod_macro" />
+* runWhenFinished
+	* Attributes
+		* value
+			* if true the app will be run after it is built
+			
+			
+			
+			
 
 **License:**
 
