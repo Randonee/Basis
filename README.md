@@ -117,7 +117,7 @@ Attributes are optional unless marked otherwise.
 * haxeArg
 	* Attributes
 		* value
-			* haxe compiler arg. Example <haxeArg value="-D spod_macro" />
+			* haxe compiler arg. Example `<haxeArg value="-D spod_macro" />`
 * runWhenFinished
 	* Attributes
 		* value
