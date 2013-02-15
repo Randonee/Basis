@@ -122,6 +122,10 @@ Attributes are optional unless marked otherwise.
 	* Attributes
 		* value
 			* if true the app will be run after it is built
+* asset
+	* Attributes
+		* path
+			* path to an asset directory
 			
 			
 			
