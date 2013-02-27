@@ -41,9 +41,11 @@ There are examples for each target. See the other Basis haxelib targets bellow f
 Building From Source
 ----------------
 
+Haxe 3 is required for the latest in trunk
+
 1. Download each haxelib source (Basis, BasisApple, BasisAndroid)
-2. Run command "ant testlib" from the root of the Basis directory
-3. Run command "ant testlib" from both BasisApple and BasisAndroid
+2. Run command "ant installib" from the root of the Basis directory
+3. Run command "ant installib" from both BasisApple and BasisAndroid
 
 If your working on the core Basis code you will need to build Basis then the other haxelibs before using them.
 
