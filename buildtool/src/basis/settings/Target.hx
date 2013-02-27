@@ -21,16 +21,16 @@ class Target
 	public var parentTarget(default, null):Target;
 	public var name(default, default):String;
 	
-	private var settingCollections:Hash<Array<String>>;
-	private var settings:Hash<String>;
+	private var settingCollections:Map<String, Array<String>>;
+	private var settings:Map<String, String>;
 	
 	
 	public function new(?parentTarget:Target = null)
 	{
 		this.parentTarget = parentTarget;
 		
-		settingCollections = new Hash<Array<String>>();
-		settings = new Hash<String>();
+		settingCollections = new Map<String, Array<String>>();
+		settings = new Map<String, String>();
 		subTargets = new Array<Target>();
 	}
 	

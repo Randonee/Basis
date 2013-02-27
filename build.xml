@@ -25,13 +25,13 @@
 		<zip destfile="build/basis.zip" basedir="build/basis" />
 	</target>
 		
-	<target name="testlib">
+	<target name="installib">
 		<exec dir="." failonerror="false" executable="haxelib">
 			<arg line="remove Basis" />
 		</exec>
 		<antcall target="buildHaxelib" />
 		<exec dir="." failonerror="true" executable="haxelib">
-			<arg line="test build/Basis.zip" />
+			<arg line="install build/Basis.zip" />
 		</exec>
 	</target>
 	
