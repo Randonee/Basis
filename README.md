@@ -66,7 +66,7 @@ Example
 			<framework name="CoreGraphics" />
 			<framework name="QuartzCore" />
 			<target name="ipad">
-				<device type="ios" />
+				<os type="ios" />
 				<simulator use="true" type="ipad"/>
 				<main classpath="example.ApplicationMain" />
 				<debug value="true" />
