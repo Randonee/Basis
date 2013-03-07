@@ -51,7 +51,7 @@ If your working on the core Basis code you will need to build Basis then the oth
 
 
 
-Build xml format
+Build file format (.basis extension)
 ----------------
 
 Example
@@ -89,7 +89,7 @@ Attributes are optional unless marked otherwise.
 * target
 	* Attributes
 		* name (required)
-			* The name of the target. This is what you will call from the command line. For example if you want to build the apple target: haxelib run basis build.xml apple
+			* The name of the target. This is what you will call from the command line. For example if you want to build the apple target: haxelib run basis build.basis apple
 		* type
 			* The haxelib that will build the target "apple" for BasisApple and "android" for BasisAndroid
 * appName
