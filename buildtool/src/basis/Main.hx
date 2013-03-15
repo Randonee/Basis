@@ -4,6 +4,13 @@ class Main
 {
 	static public function main():Void
 	{
-		new BuildTool().build();
+		try
+		{
+			new BuildTool().build();
+		}
+		catch(error:String)
+		{
+			neko.Lib.println(error);
+		}
 	}
 }

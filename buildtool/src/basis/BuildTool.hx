@@ -36,23 +36,19 @@ class BuildTool
 				_settingsDirectory = args[2];
 				_settingsFileName = args[0];
 			}
+			if(!FileSystem.exists(_settingsDirectory))
+				throw("Build file not found: " + _settingsDirectory);
+				
 			Sys.setCwd(_settingsDirectory);
 		}
 		else
-			throw("Can't find build file make sure args are correct. Example: haxelib run basis build.xml targetName");
+			throw("Not enough arguments. Example: haxelib run basis build.xml targetName");
 	}
 	
 	public function build():Void
 	{
-		try
-		{
-			_settings = createSettings(_settingsDirectory + _settingsFileName);
-			_settings.retrieve(getSettings_complete, getSettings_error);
-		}
-		catch(error:String)
-		{
-			endWithError(error);
-		}
+		_settings = createSettings(_settingsDirectory + _settingsFileName);
+		_settings.retrieve(getSettings_complete, getSettings_error);
 	}
 	
 	private function getSettings_complete(target:Target):Void
@@ -92,11 +88,6 @@ class BuildTool
 	
 	private function getSettings_error(error:String):Void
 	{
-		endWithError(error);
-	}
-	
-	private function endWithError(error:String):Void
-	{
-		neko.Lib.println(error);
+		throw(error);
 	}
 }
