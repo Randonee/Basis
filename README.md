@@ -127,9 +127,19 @@ Attributes are optional unless marked otherwise.
 * asset
 	* Attributes
 		* path
-			* path to an asset directory
-			
-			
+			* path to an asset directory		
+* includeSettings
+	* An xml file that can include any of the setting nodes above. The settings in this file will be applied to the target the includeSettings node is a child of.
+	* Attributes
+		* path
+			* path to a settings file
+
+Example includeSettings file:
+
+	<settings>
+		<source path="path/to/src"/>
+		<main classpath="com.package.Main"/>
+	</settings>
 			
 			
 

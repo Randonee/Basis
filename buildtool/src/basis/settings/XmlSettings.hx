@@ -10,6 +10,7 @@ class XmlSettings implements ISettings
 
 	public var xmlPath(default, null):String;
 	private var _fastXML:Fast;
+	private var _errorHandler:String->Void;
 	
 	public function new(xmlPath:String)
 	{
@@ -21,14 +22,18 @@ class XmlSettings implements ISettings
 	public function retrieve(completeHandler:Target->Void, errorHandler:String->Void):Void
 	{
 		if(!FileSystem.exists(xmlPath))
+		{
 			errorHandler("File not found: " + xmlPath);
+			return;
+		}
+		
+		_errorHandler = errorHandler;
 		
 		var data:String = File.getContent(xmlPath);
 		var xml:Xml = Xml.parse(data);
 		_fastXML = new  Fast(xml.firstElement());
 		
 		parseTarget(_fastXML, target);
-		
 		completeHandler(target);
 	}
 	
@@ -41,35 +46,10 @@ class XmlSettings implements ISettings
 	{
 		currentTarget.name = targetXML.att.name;
 		
-		if(targetXML.hasNode.appName)
-			parseAppName(targetXML.node.appName, currentTarget);
-		
 		if(targetXML.has.type)
 			currentTarget.setSetting(Target.TYPE, targetXML.att.type.toLowerCase());
-			
-		if(targetXML.hasNode.main)
-			parseMain(targetXML.node.main, currentTarget);
-			
-		if(targetXML.hasNode.debug)
-			parseDebug(targetXML.node.debug, currentTarget);
-			
-		if(targetXML.hasNode.runWhenFinished)
-			parseRunWHenFinished(targetXML.node.runWhenFinished, currentTarget);
-			
-		if(targetXML.hasNode.builddir)
-			parseBaseBuildPath(targetXML.node.builddir, currentTarget);
-			
-		for( source in targetXML.nodes.source )
-			parseSourcePath(source, currentTarget);
-			
-		for( arg in targetXML.nodes.haxeArg )
-			parseHaxeArg(arg, currentTarget);
-			
-		for( haxelib in targetXML.nodes.haxelib )
-			parseHaxelib(haxelib, currentTarget);
-			
-		for( asset in targetXML.nodes.asset )
-			parseAssetPath(asset, currentTarget);
+		
+		parseSettings(targetXML, currentTarget);
 		
 		for(childTargetXML in targetXML.nodes.target)
 		{
@@ -79,9 +59,59 @@ class XmlSettings implements ISettings
 		}
 	}
 	
+	private function parseSettings(settingsXML:Fast, currentTarget:Target):Void
+	{
+		if(settingsXML.hasNode.appName)
+			parseAppName(settingsXML.node.appName, currentTarget);
+		
+		if(settingsXML.hasNode.main)
+			parseMain(settingsXML.node.main, currentTarget);
+			
+		if(settingsXML.hasNode.debug)
+			parseDebug(settingsXML.node.debug, currentTarget);
+			
+		if(settingsXML.hasNode.runWhenFinished)
+			parseRunWHenFinished(settingsXML.node.runWhenFinished, currentTarget);
+			
+		if(settingsXML.hasNode.builddir)
+			parseBaseBuildPath(settingsXML.node.builddir, currentTarget);
+			
+		if(settingsXML.hasNode.includeSettings)
+			parseIncludeSettings(settingsXML.node.includeSettings, currentTarget);
+			
+		for( source in settingsXML.nodes.source )
+			parseSourcePath(source, currentTarget);
+			
+		for( arg in settingsXML.nodes.haxeArg )
+			parseHaxeArg(arg, currentTarget);
+			
+		for( haxelib in settingsXML.nodes.haxelib )
+			parseHaxelib(haxelib, currentTarget);
+			
+		for( asset in settingsXML.nodes.asset )
+			parseAssetPath(asset, currentTarget);
+	}
+	
+	
 	private function parseAppName(buildDir:Fast, currentTarget:Target):Void
 	{
 		currentTarget.setSetting(Target.APP_NAME, buildDir.att.value);
+	}
+	
+	private function parseIncludeSettings(nodeXML:Fast, currentTarget:Target):Void
+	{
+		var settingsPath:String = nodeXML.att.path;
+		if(!FileSystem.exists(settingsPath))
+		{
+			_errorHandler("Error: Settings file not found: " + settingsPath);
+			return;
+		}
+		
+		var data:String = File.getContent(settingsPath);
+		var xml:Xml = Xml.parse(data);
+		var settingsXML:Fast = new  Fast(xml.firstElement());
+		
+		parseSettings(settingsXML, currentTarget);
 	}
 	
 	private function parseBaseBuildPath(buildDir:Fast, currentTarget:Target):Void
