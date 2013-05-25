@@ -1,7 +1,7 @@
 Basis
 =====
 
-Haxe Native UI Development
+Haxe Native UI Development (haxe 3 only)
 
 The goal of Basis is to provide access to native UI components. For example, in ios one would use UIView and in android one would use android.View along with layout xml.
 
@@ -15,14 +15,14 @@ Current haxelibs in development:
 Installation
 ----------------
 
-run command (make sure Basis has a capital "B"):
+run command:
 
-	haxelib install Basis
+	haxelib install basis
 	
 Install haxelibs for platforms you wish to build
 
-	haxelib install BasisApple
-	haxelib install BasisAndroid	
+	haxelib install basisApple
+	haxelib install basisAndroid	
 
 * You will also need tools specific to the platform you are building (android sdk, xcode...). See specific platform for more instruction.
 
@@ -41,11 +41,9 @@ There are examples for each target. See the other Basis haxelib targets bellow f
 Building From Source
 ----------------
 
-Haxe 3 is required for the latest in trunk
-
 1. Download each haxelib source (Basis, BasisApple, BasisAndroid)
-2. Run command "ant installib" from the root of the Basis directory
-3. Run command "ant installib" from both BasisApple and BasisAndroid
+2. Run command "ant install" from the root of the Basis directory
+3. Run command "ant install" from both BasisApple and BasisAndroid
 
 If your working on the core Basis code you will need to build Basis then the other haxelibs before using them.
 

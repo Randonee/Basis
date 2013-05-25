@@ -1,0 +1,11 @@
+{
+  "name": "basis",
+  "url" : "https://github.com/Randonee/Basis",
+  "license": "MIT",
+  "tags": ["cross"],
+  "description": "The goal of Basis is to provide access to native UI components",
+  "version": "0.0.3-alpha",
+  "releasenote": "alpha",
+  "contributors": [],
+  "dependencies": {}
+}

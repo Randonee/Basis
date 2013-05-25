@@ -1,37 +1,40 @@
 <project basedir="." default="neko">
 	
+	<property name="version" value="0.0.3-alpha"/>
+	<property name="versionDir" value="0,0,3-alpha"/>
+	
 	<target name="buildHaxelib">
 		<delete dir="build"/>
 		<mkdir dir="build/"/>
 		<mkdir dir="build/Basis"/>
-		<mkdir dir="build/Basis/0,0,2"/>
+		<mkdir dir="build/Basis/${versionDir}"/>
 		
 		<exec dir="." failonerror="true" executable="haxe">
 			<arg line="build.hxml" />
 		</exec>
 		
-		<copy todir="build/Basis/0,0,2">
+		<copy todir="build/Basis/${versionDir}">
 			<fileset dir="buildtool/src"/>
 		</copy>
 		
-		<copy file="haxelib.xml" tofile="build/Basis/0,0,2/haxelib.xml"/>
-		<copy file="build/run.n" tofile="build/Basis/0,0,2/run.n"/>
+		<copy file="haxelib.json" tofile="build/Basis/${versionDir}/haxelib.json"/>
+		<copy file="build/run.n" tofile="build/Basis/${versionDir}/run.n"/>
 		
 		<exec dir="." failonerror="true" executable="chmod">
-			<arg line="755 build/Basis/0,0,2/run.n" />
+			<arg line="755 build/Basis/${versionDir}/run.n" />
 		</exec>
-		<echo file="build/Basis/.current" >0.0.2</echo>
+		<echo file="build/Basis/.current" >${version}</echo>
 		
 		<zip destfile="build/basis.zip" basedir="build/basis" />
 	</target>
 		
-	<target name="installib">
+	<target name="install">
 		<exec dir="." failonerror="false" executable="haxelib">
 			<arg line="remove Basis" />
 		</exec>
 		<antcall target="buildHaxelib" />
 		<exec dir="." failonerror="true" executable="haxelib">
-			<arg line="install build/Basis.zip" />
+			<arg line="local build/Basis.zip" />
 		</exec>
 	</target>
 	

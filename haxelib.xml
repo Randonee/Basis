@@ -1,9 +1,0 @@
-<project name="Basis" url="https://github.com/Randonee/Basis" license="MIT">
-    <user name="randonee"/>
-    <tag v="apple"/>
-    <tag v="android"/>
-    <tag v="ios"/>
-    <tag v="cross"/>
-    <description>Basis</description>
-    <version name="0.0.2">alpha</version>
-</project>
