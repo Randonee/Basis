@@ -147,6 +147,7 @@ class FileUtil
              extension == "json" ||
              extension == "cpp" ||
              extension == "mm" ||
+             extension == "xib" ||
              extension == "properties"))
        {
 			var fileContents:String = File.getContent (source);
@@ -155,7 +156,6 @@ class FileUtil
 			var fileOutput:FileOutput = File.write (destination, true);
 			fileOutput.writeString (result);
 			fileOutput.close ();
-			
 		}
 		else
 		{
