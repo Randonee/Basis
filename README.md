@@ -9,7 +9,7 @@ Basis is the core haxelib which works with other haxlibs.
 
 Current haxelibs in development:
 
-* [BasisApple](https://github.com/Randonee/BasisApple) (ios, and eventually osx)
+* [BasisApple](https://github.com/Randonee/BasisApple) (ios and osx)
 * [BasisAndroid](https://github.com/Randonee/BasisAndroid)
 
 Installation
