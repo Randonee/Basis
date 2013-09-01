@@ -82,6 +82,9 @@ class XmlSettings implements ISettings
 		for( source in settingsXML.nodes.source )
 			parseSourcePath(source, currentTarget);
 			
+		for( nativeSource in settingsXML.nodes.nativeSource )
+			parseNativeSourcePath(nativeSource, currentTarget);
+			
 		for( arg in settingsXML.nodes.haxeArg )
 			parseHaxeArg(arg, currentTarget);
 			
@@ -137,6 +140,11 @@ class XmlSettings implements ISettings
 	private function parseSourcePath(src:Fast, currentTarget):Void
 	{
 		currentTarget.addToCollection(Target.SOURCE_PATHS, src.att.path);
+	}
+	
+	private function parseNativeSourcePath(src:Fast, currentTarget):Void
+	{
+		currentTarget.addToCollection(Target.NATIVE_SOURCE_PATHS, src.att.path);
 	}
 	
 	private function parseHaxelib(haxelib:Fast, currentTarget):Void

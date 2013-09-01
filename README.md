@@ -98,6 +98,10 @@ Attributes are optional unless marked otherwise.
 	* Attributes
 		* path
 			* A directory with haxe source to be included
+* nativeSource
+	* Attributes
+		* path
+			* A directory with native source to be included (objc, java...)
 * builddir
 	* Attributes
 		* path

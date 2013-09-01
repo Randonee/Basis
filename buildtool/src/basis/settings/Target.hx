@@ -13,6 +13,7 @@ class Target
 	
 	//Collections
 	static inline public var SOURCE_PATHS:String = "sourcePaths";
+	static inline public var NATIVE_SOURCE_PATHS:String = "nativeSourcePaths";
 	static inline public var HAXE_LIBS:String = "haxeLibs";
 	static inline public var ASSET_PATHS:String = "assetPaths";
 	static inline public var HAXE_ARGS:String = "haxeArgs";
