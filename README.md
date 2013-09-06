@@ -1,9 +1,10 @@
 Basis
 =====
 
-Haxe Native UI Development (haxe 3 only)
+Haxe Native Development (haxe 3 only)
 
-The goal of Basis is to provide access to native UI components. For example, in ios one would use UIView and in android one would use android.View along with layout xml.
+The goal of Basis is to provide access to native APIs and allow easy building of projects. For example, in ios you would need an xcode project and in android you would need an android project. Basis will create all needed files then compile and run if wanted.
+For an API example, in ios one would use UIView and in android one would use android.View along with layout xml. This is the same in Basis but everything is haxe.
 
 Basis is the core haxelib which works with other haxlibs. 
 
