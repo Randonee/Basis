@@ -6,35 +6,35 @@
 	<target name="buildHaxelib">
 		<delete dir="build"/>
 		<mkdir dir="build/"/>
-		<mkdir dir="build/Basis"/>
-		<mkdir dir="build/Basis/${versionDir}"/>
+		<mkdir dir="build/basis"/>
+		<mkdir dir="build/basis/${versionDir}"/>
 		
 		<exec dir="." failonerror="true" executable="haxe">
 			<arg line="build.hxml" />
 		</exec>
 		
-		<copy todir="build/Basis/${versionDir}">
+		<copy todir="build/basis/${versionDir}">
 			<fileset dir="buildtool/src"/>
 		</copy>
 		
-		<copy file="haxelib.json" tofile="build/Basis/${versionDir}/haxelib.json"/>
-		<copy file="build/run.n" tofile="build/Basis/${versionDir}/run.n"/>
+		<copy file="haxelib.json" tofile="build/basis/${versionDir}/haxelib.json"/>
+		<copy file="build/run.n" tofile="build/basis/${versionDir}/run.n"/>
 		
 		<exec dir="." failonerror="true" executable="chmod">
-			<arg line="755 build/Basis/${versionDir}/run.n" />
+			<arg line="755 build/basis/${versionDir}/run.n" />
 		</exec>
-		<echo file="build/Basis/.current" >${version}</echo>
+		<echo file="build/basis/.current" >${version}</echo>
 		
 		<zip destfile="build/basis.zip" basedir="build/basis" />
 	</target>
 		
 	<target name="install">
 		<exec dir="." failonerror="false" executable="haxelib">
-			<arg line="remove Basis" />
+			<arg line="remove basis" />
 		</exec>
 		<antcall target="buildHaxelib" />
 		<exec dir="." failonerror="true" executable="haxelib">
-			<arg line="local build/Basis.zip" />
+			<arg line="local build/basis.zip" />
 		</exec>
 	</target>
 	
