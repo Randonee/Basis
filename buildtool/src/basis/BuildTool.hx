@@ -68,10 +68,10 @@ class BuildTool
 			switch(target.getSetting(Target.TYPE).toLowerCase())
 			{
 				case "apple":
-					Sys.command( "haxelib", ["run", "BasisApple", _settingsDirectory + _settingsFileName, target.name]);
+					Sys.command( "haxelib", ["run", "basisApple", _settingsDirectory + _settingsFileName, target.name]);
 			
 				case "android":
-					Sys.command( "haxelib", ["run", "BasisAndroid", _settingsDirectory + _settingsFileName, target.name]);
+					Sys.command( "haxelib", ["run", "basisAndroid", _settingsDirectory + _settingsFileName, target.name]);
 			}
 		}
 		else
